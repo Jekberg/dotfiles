@@ -1,0 +1,133 @@
+/*
+ * Not all options have been populated in this file. The list of options not
+ * set will be listed in ``rofi -dump-config | less``.
+ */
+
+@import "~/.config/rofi/theme.rasi"
+@theme  "theme"
+
+configuration {
+    /*
+     * General
+     */
+    modes                     : "window,drun";
+    pid                       : "/run/user/1000/rofi.pid";
+    terminal                  : "alacritty";
+    font                      : "mono 12";
+    dpi                       : -1;
+    eh                        : 1;
+    threads                   : 0;
+    click-to-exit             : true;
+    cycle                     : true;
+    hover-select              : true;
+    show-icons                : true;
+    steal-focus               : false;
+    fixed-num-lines           : false;
+    xserver-i300-workaround   : false;
+
+    /*
+     * Searching
+     *
+     * The cache is stored in the rofi-entry-history.txt file.
+     */
+    cache-dir                 : "~/.cache/";
+    filter                    : "";
+    matching                  : "fuzzy";
+    ignored-prefixes          : "";
+    sorting-method            : "normal";
+    max-history-size          : 100;
+    scroll-method             : 1;
+    auto-select               : false;
+    case-sensitive            : false;
+    disable-history           : false;
+    normalize-match           : false;
+    sort                      : false;
+    tokenize                  : true;
+
+    /*
+     * Layout
+     */
+    m                         : "-5";
+    location                  : 0;
+    xoffset                   : 0;
+    yoffset                   : 0;
+    sidebar-mode              : false;
+
+    /*
+     * Drun
+     */
+    display-drun              : "";
+    drun-match-fields         : "name,generic,exec,categories,keywords";
+    drun-display-format       : "{name}";
+    drun-reload-desktop-cache : false;
+    drun-show-actions         : false;
+    drun-url-launcher         : "xdg-open";
+    drun-use-desktop-cache    : false;
+
+    /*
+     * Window
+     *
+     * I don't think the window-command is honoured. No matter what I set this
+     * to, it always works for switching to the window. Perhaps this is because
+     * of a difference in the wayland fork of rofi? Another thing to note is
+     * that the thumbnail does not work on wayland AFAICS. This needs further
+     * exploration, but leave it on for now.
+     */
+    display-window            : "";
+    display-windowcd          : "";
+    window-format             : "{t}";
+    window-command            : "hyprctl dispatch focuswindow {window}";
+    window-thumbnail          : true;
+    window-match-fields       : "all";
+
+    /*
+     * Keybindings
+     *
+     * TODO: Use '^' to navigate to the front of the search input. But I am not
+     *       sure how to refer to this character. So far "Caret" and
+     *       "Curcumflex" has not worked.
+     */
+    kb-primary-paste          : ["Control+V"];
+    kb-secondary-paste        : ["Control+v"];
+    kb-clear-line             : ["Control+Escape"];
+    kb-move-front             : ["Control+Home"];
+    kb-move-end               : ["Control+End"];
+    kb-move-word-back         : ["Control+b"];
+    kb-move-word-forward      : ["Control+w"];
+    kb-move-char-back         : ["Control+Left"];
+    kb-move-char-forward      : ["Control+Right"];
+    kb-remove-word-back       : ["Control+BackSpace"];
+    kb-remove-word-forward    : ["Control+Delete"];
+    kb-remove-char-forward    : ["Delete"];
+    kb-remove-char-back       : ["BackSpace"];
+    kb-remove-to-eol          : ["Control+Shift+End"];
+    kb-remove-to-sol          : ["Control+Shift+Home"];
+    kb-accept-entry           : ["Return"];
+    kb-row-left               : ["Left"];
+    kb-row-right              : ["Right"];
+    kb-row-up                 : ["Up"];
+    kb-row-down               : ["Down"];
+    kb-element-next           : ["Tab"];
+    kb-element-prev           : ["Shift+Tab"];
+    kb-page-prev              : ["Page_Up"];
+    kb-page-next              : ["Page_Down"];
+    kb-row-first              : ["Home"];
+    kb-row-last               : ["End"];
+    kb-entry-history-up       : ["Control+Up"];
+    kb-entry-history-down     : ["Control+Down"];
+    kb-row-select             : ["Control+space"];
+    kb-cancel                 : ["Escape"];
+    ml-row-left               : ["ScrollLeft"];
+    ml-row-right              : ["ScrollRight"];
+    ml-row-up                 : ["ScrollUp"];
+    ml-row-down               : ["ScrollDown"];
+    me-select-entry           : ["MouseSecondary"];
+    me-accept-entry           : ["MousePrimary", "MouseDPrimary"];
+
+    timeout {
+        action : "kb-cancel";
+        delay  : 0;
+    }
+}
+
+
