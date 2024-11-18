@@ -1,0 +1,208 @@
+/*
+ * The rofi theme configuration file.
+ *
+ * For reference, this is the rofi layout:
+ *
+ * ┌────────────────────────────────────────────────────────────────────────────────────┐
+ * │ window {BOX:vertical}                                                              │
+ * │ ┌───────────────────────────────────────────────────────────────────────────────┐  │
+ * │ │ mainbox  {BOX:vertical}                                                       │  │
+ * │ │ ┌───────────────────────────────────────────────────────────────────────────┐ │  │
+ * │ │ │ inputbar {BOX:horizontal}                                                 │ │  │
+ * │ │ │ ┌─────────┐ ┌─┐ ┌───────────────────────────────┐ ┌───┐ ┌───┐ ┌───┐ ┌───┐ │ │  │
+ * │ │ │ │ prompt  │ │:│ │ entry                         │ │#fr│ │ / │ │#ns│ │ci │ │ │  │
+ * │ │ │ └─────────┘ └─┘ └───────────────────────────────┘ └───┘ └───┘ └───┘ └───┘ │ │  │
+ * │ │ └───────────────────────────────────────────────────────────────────────────┘ │  │
+ * │ │                                                                               │  │
+ * │ │ ┌───────────────────────────────────────────────────────────────────────────┐ │  │
+ * │ │ │ message                                                                   │ │  │
+ * │ │ │ ┌───────────────────────────────────────────────────────────────────────┐ │ │  │
+ * │ │ │ │ textbox                                                               │ │ │  │
+ * │ │ │ └───────────────────────────────────────────────────────────────────────┘ │ │  │
+ * │ │ └───────────────────────────────────────────────────────────────────────────┘ │  │
+ * │ │                                                                               │  │
+ * │ │ ┌───────────────────────────────────────────────────────────────────────────┐ │  │
+ * │ │ │ listview                                                                  │ │  │
+ * │ │ │ ┌─────────────────────────────────────────────────────────────────────┐   │ │  │
+ * │ │ │ │ element                                                             │   │ │  │
+ * │ │ │ │ ┌─────────────────┐ ┌─────────────────────────────────────────────┐ │   │ │  │
+ * │ │ │ │ │element─icon     │ │element─text                                 │ │   │ │  │
+ * │ │ │ │ └─────────────────┘ └─────────────────────────────────────────────┘ │   │ │  │
+ * │ │ │ └─────────────────────────────────────────────────────────────────────┘   │ │  │
+ * │ │ └───────────────────────────────────────────────────────────────────────────┘ │  │
+ * │ │                                                                               │  │
+ * │ │ ┌───────────────────────────────────────────────────────────────────────────┐ │  │
+ * │ │ │  mode─switcher {BOX:horizontal}                                           │ │  │
+ * │ │ │ ┌───────────────┐   ┌───────────────┐  ┌──────────────┐ ┌───────────────┐ │ │  │
+ * │ │ │ │ Button        │   │ Button        │  │ Button       │ │ Button        │ │ │  │
+ * │ │ │ └───────────────┘   └───────────────┘  └──────────────┘ └───────────────┘ │ │  │
+ * │ │ └───────────────────────────────────────────────────────────────────────────┘ │  │
+ * │ └───────────────────────────────────────────────────────────────────────────────┘  │
+ * └────────────────────────────────────────────────────────────────────────────────────┘
+ *
+ * - ci is the case-indicator
+ * - fr is the num-filtered-rows
+ * - ns is the num-rows
+ */
+
+/*
+ * The default style options. This saves some effort in not haaving to set
+ * the same values over and over.
+ */
+* {
+    /*
+     * Commonly used colours.
+     *
+     * Since the same color might be used in different contexts, keep the
+     * opacity consistent acroess all the colours. Around 81% opacity. Alas
+     * is does not seem possible to set the colour (in hex) and the opacity
+     * independently.
+     */
+    color-neonred      : #F70135D0;
+    color-neonblue     : #467AFFD0;
+    color-neonorange   : #FF5C00D0;
+    color-neonwhite    : #FBFFFFD0;
+    color-chromesilver : #E0E0E0D0;
+    color-matteblack   : #28282BD0;
+
+    /*
+     * Global configurations.
+     *
+     * Specific styling will be applied the components. But this will be the
+     * defaults.
+     */
+    background-color   : @color-matteblack;
+    border             : 0px;
+    border-radius      : 10px 10px 10px 10px;
+    border-color       : @color-chromesilver;
+    padding            : 0px;
+    placeholder-color  : @color-matteblack;
+    spacing            : 0px;
+    text-color         : @color-neonwhite;
+}
+
+/*
+ * The main window.
+ */
+window {
+    border           : 2px 2px 2px 2px;
+    padding          : 2px 2px 2px 2px;
+    width            : 720px;
+    height           : 480px;
+    background-color : @color-matteblack;
+    border-color     : @color-chromesilver;
+    children         : [ mainbox ];
+    transparency     : "real";
+}
+
+mainbox {
+    background-color : transparent;
+    border-color     : transparent; 
+}
+
+/*
+ * The input bar component.
+ */
+inputbar {
+    background-color : inherit;
+    border-color     : inherit; 
+    children         : [ entry ];
+    padding          : 8px 8px 8px 8px;
+}
+
+entry {
+    background-color : @color-neonwhite;
+    border           : 0px;
+    border-color     : inherit;
+    cursor           : text;
+    horizontal-align : 0.5;
+    vertical-align   : 0.5;
+    placeholder      : "Search...";
+    text-color       : @color-matteblack;
+}
+
+/*
+ * The message component.
+ *
+ * The message itself is presented in the textbox. The colour of the text will
+ * depend on if it is informative or an error.
+ */
+message {
+    background-color : transparent;
+    text-color       : @color-neonblue;
+    padding          : 0px 10px 0px 10px;
+}
+
+error-message {
+    background-color : inherit;
+    text-color       : @color-neonred;
+    padding          : 10px 10px 10px 10px;
+}
+
+textbox {
+    background-color : inherit;
+    text-color       : inherit;
+    padding          : inherit;
+}
+
+/*
+ * The list view component.
+ */
+listview {
+    background-color : inherit;
+    border-color     : inherit; 
+    dynamic          : true;
+    fixed-height     : false;
+    flow             : vertical;
+    layout           : vertical;
+    padding          : 8px 0px 0px 0px;
+    scrollbar        : true;
+    spacing          : 2px ;
+    columns          : 1;
+    rows             : 8;
+}
+
+element {
+    cursor           : pointer;
+    spacing          : 0px;
+    background-color : inherit;
+    border-color     : inherit;
+    orientation      : horizontal;
+    padding          : 8px 4px 8px 4px;
+    text-color       : @color-neonwhite;
+
+}
+
+element selected {
+    background-color : @color-neonblue;
+    border-color     : transparent;
+    text-color       : @color-neonorange;
+}
+
+element-icon {
+    background-color : transparent;
+    border-color     : inherit;
+    size             : 1.5em;
+    cursor           : inherit;
+    text-color       : inherit;
+    horizontal-align : 0.5;
+    vertical-align   : 0.5;
+}
+
+element-text {
+    background-color : transparent;
+    border-color     : inherit;
+    cursor           : inherit;
+    highlight        : inherit;
+    text-color       : inherit;
+    horizontal-align : 0.5;
+    vertical-align   : 0.5;
+}
+
+scrollbar {
+    background-color : inherit;
+    border           : 0;
+    handle-width     : 10px;
+    handle-color     : @color-chromesilver;
+    width            : 4px;
+}
