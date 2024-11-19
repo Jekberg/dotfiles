@@ -1,0 +1,45 @@
+# The mako man pages describes the available options
+# man 5 mako
+
+icons=1
+actions=1
+history=1
+max-history=64
+max-visible=8
+sort=-priority
+layer=top
+anchor=top-center
+format=<b>%s</b>\n<i>%b</i>\n- %a
+on-button-left=invoke-default-action
+on-button-middle=none
+on-button-right=dismiss
+font=monospace 10
+background-color=#28282BD0
+text-color=#FBFFFFD0
+width=480
+height=270
+outer-margin=16,0,0,0
+margin=16,0,16,0
+padding=2,2,2,2
+border-size=2
+border-radius=10
+icon-location=left
+max-icon-size=128
+markup=1
+text-alignment=left
+group-by=app-name,urgency
+
+[urgency="low"]
+border-color=#39FF14D0
+default-timeout=120000
+
+[urgency="normal"]
+border-color=#467AFFD0
+default-timeout=30000
+
+[urgency="critical"]
+border-color=#F70135D0
+default-timeout=0
+
+[mode="do-not-disturb"]
+invisible=1
