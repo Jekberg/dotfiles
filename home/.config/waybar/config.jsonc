@@ -1,0 +1,100 @@
+{
+    /*
+     * Generic and general.
+     */
+    "layer": "top",
+    "position": "top",
+    "spacing": 16,
+    "fixed-center": true,
+    "passthrough": false,
+
+    /*
+     * Margins for a floaty feel.
+     */
+    "margin-top": 4,
+    "margin-right": 8,
+    "margin-bottom": 0,
+    "margin-left": 8,
+
+    /*
+     * Module positions and organisation.
+     *
+     * I keep the centre module for one module as when I add more than once,
+     * the module I want in the centre gets pushed off centre.
+     */
+    "modules-left": [
+        "group/utilities",
+        "group/hardware",
+        "wlr/taskbar",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "tray",
+        "group/system",
+        "wireplumber",
+        "group/local"
+    ],
+
+    /*
+     * Grouping of modules.
+     *
+     * Keeping the groups in the same file as the left, right and centre
+     * modules makes it easier to organise modules.
+     */
+    "group/utilities": {
+        "orientation": "inherit",
+        "modules": [
+            "custom/launcher",
+            "custom/kill-window",
+            "custom/notifications",
+            "custom/power"
+        ]
+    },
+    "group/system": {
+        "orientation": "inherit",
+        "modules": [
+            "systemd-failed-units",
+            "custom/updates"
+        ]
+    },
+    "group/hardware": {
+        "orientation": "inherit",
+        "modules": [
+            "cpu",
+            "custom/gpu",
+            "memory"
+        ]
+    },
+    "group/local": {
+        "orientation": "inherit",
+        "modules": [
+            "custom/weather",
+            "clock"
+        ]
+    },
+
+    /*
+     * The module configs are split into individual files.
+     */
+    "include": [
+        "~/.config/waybar/modules/clock.jsonc",
+        "~/.config/waybar/modules/cpu.jsonc",
+        "~/.config/waybar/modules/gpu.jsonc",
+        "~/.config/waybar/modules/kill-window.jsonc",
+        "~/.config/waybar/modules/launcher.jsonc",
+        "~/.config/waybar/modules/memory.jsonc",
+        "~/.config/waybar/modules/notifications.jsonc",
+        "~/.config/waybar/modules/power.jsonc",
+        "~/.config/waybar/modules/systemd-failed-units.jsonc",
+        "~/.config/waybar/modules/taskbar.jsonc",
+        "~/.config/waybar/modules/tray.jsonc",
+        "~/.config/waybar/modules/updates.jsonc",
+        "~/.config/waybar/modules/weather.jsonc",
+        "~/.config/waybar/modules/window.jsonc",
+        "~/.config/waybar/modules/wireplumber.jsonc",
+        "~/.config/waybar/modules/workspaces.jsonc"
+    ]
+}

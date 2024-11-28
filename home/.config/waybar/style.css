@@ -1,0 +1,242 @@
+/*
+ * Define the colours used throughout the styling.
+ *
+ * Annoyingly, using hex RGBA format does not seem to work.
+ */
+@define-color color-neonred      rgba(247,   1,  53, 0.81) /* #F70135D0 */;
+@define-color color-neonorange   rgba(255,  92,   9, 0.81) /* #FF5C00D0 */;
+@define-color color-neongold     rgba(255, 196,  45, 0.81) /* #FFC4D2D0 */;
+@define-color color-neonpurple   rgba(206,  54, 254, 0.81) /* #CE36FED0 */;
+@define-color color-neonblue     rgba( 70, 122, 255, 0.81) /* #467AFFD0 */; 
+@define-color color-neongreen    rgba( 57, 255,  20, 0.81) /* #39FF14D0 */; 
+@define-color color-neonwhite    rgba(251, 255, 255, 0.81) /* #FBFFFFD0 */; 
+@define-color color-neonpink     rgba(251,  73, 197, 0.81) /* #FB49C5D0 */; 
+@define-color color-neoncyan     rgba( 75, 249, 252, 0.81) /* #4BF0FCD0 */; 
+@define-color color-matteblack   rgba( 40,  40,  45, 0.81) /* #28282BD0 */;
+@define-color color-chromesilver rgba(224, 224, 224, 0.81) /* #E0E0E0D0 */;
+
+/*
+ * Global defaults.
+ *
+ * Making it easier to ensure a consistent look. But individual modules may
+ * override or expand on the styling.
+ */
+* {
+    background          : transparent;
+    border-radius       : 16px;
+    font-family         : FontAwesome, Roboto, 'monospace';
+    font-size           : 16px;
+    margin              : 0px 0px 0px 0px;
+    opacity             : 1.0;
+    padding             : 0px 0px 0px 0px;
+    transition-property : none;
+}
+
+/*
+ * The main waybar component.
+ */
+#waybar {
+    background : @color-matteblack;
+}
+
+/*
+ * Generic module styling.
+ *
+ * Keep a little space between all the modules. Making it easier to visually
+ * parse. And for the left, right and centre modules just keep some spacing
+ * around the sides.
+ */
+.module {
+    margin  : 0px 4px 0px 4px;
+    padding : 0px 2px 0px 2px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    margin : 0px 4px 0px 4px;
+}
+
+/*
+ * Generic elements.
+ *
+ * This is just some baselines. Let each individual module be more specific.
+ */
+button {
+    border        : none;
+    border-radius : 0;
+}
+
+menu {
+    background : @color-matteblack;
+}
+
+menuitem {
+    border : none;
+}
+
+menuitem:hover {
+    background : @color-neonblue;
+    color      : @color-neonorange;
+}
+
+tooltip {
+    background : @color-matteblack;
+}
+
+/*
+ * Clock
+ */
+#clock {
+    color : @color-neonwhite;
+}
+
+/*
+ * CPU.
+ */
+#cpu {
+    color : @color-neonorange;
+}
+
+/*
+ * GPU.
+ */
+#custom-gpu {
+    color : @color-neonpurple;
+}
+
+/*
+ * Kill window.
+ */
+#custom-kill-window {
+    border-radius : 0px;
+    color         : @color-neonorange;
+}
+
+#custom-kill-window:hover {
+    box-shadow : inset 0px -3px @color-neonorange;
+}
+
+/*
+ * Launcher.
+ */
+#custom-launcher {
+    border-radius : 0px;
+    color         : @color-neonblue;
+}
+
+#custom-launcher:hover {
+    box-shadow : inset 0px -3px @color-neonblue;
+}
+
+/*
+ * Memory.
+ */
+#memory {
+    color : @color-neonpink;
+}
+
+/*
+ * Notifications.
+ */
+#custom-notifications {
+    border-radius : 0px;
+    color         : @color-neongold;
+}
+
+#custom-notifications:hover {
+    box-shadow : inset 0px -3px @color-neongold;
+}
+
+/*
+ * Power.
+ */
+#custom-power {
+    border-radius : 0px;
+    color         : @color-neonred;
+}
+
+/*
+ * Systemd failed units.
+ */
+#systemd-failed-units,
+#systemd-failed-units.degraded {
+    color : @color-neonred;
+}
+
+#systemd-failed-units.ok {
+    color : @color-neongreen;
+}
+
+/*
+ * Taskbar
+ */
+#taskbar button {
+    margin : 0px 4px 0px 4px;
+}
+
+#custom-power:hover {
+    box-shadow : inset 0px -3px @color-neonred;
+}
+
+/*
+ * Updates.
+ */
+#custom-updates {
+    color : @color-neonpink;
+}
+
+/*
+ * Weather.
+ */
+#custom-weather {
+    color : @color-neonwhite;
+}
+
+/*
+ * Window
+ */
+#window {
+    color : @color-neaonwhite;
+}
+
+
+/*
+ * Wireplumber.
+ */
+#wireplumber {
+    color : @color-neoncyan;
+}
+
+#wireplumber:hover {
+    border-radius : 0px;
+    box-shadow    : inset 0px -3px @color-neoncyan;
+}
+
+/*
+ * Workspaces.
+ */
+#workspaces button {
+    color   : @color-neonwhite;
+    padding : 0px 2px 0px 2px;
+}
+
+#workspaces button:hover {
+    box-shadow : inset 0px -3px @color-neonwhite;
+}
+
+#workspaces button.active {
+    color : @color-neoncyan;
+}
+
+#workspaces button.active:hover {
+    box-shadow : inset 0px -3px @color-neoncyan;
+}
+
+#workspaces button.urgent {
+    color : @color-neonorange;
+}
+
+#workspaces button.urgent:hover {
+    box-shadow : inset 0px -3px @color-neonorange;
+}

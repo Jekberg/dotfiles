@@ -1,0 +1,25 @@
+/*
+ * Ideally this module should only execute whenever the mode of mako changes,
+ * the closest option I can find for this is to re-run the script when an event
+ * occurs e.g. click. But this won't catch cases where mako is updated via
+ * another channel. A workaround is to poll mako every so often to see if the
+ * mode has changed.
+ */
+
+{
+    "custom/notifications": {
+        "format": "{icon}",
+        "format-icons": {
+            "unmuted": "",
+            "muted": ""
+        },
+        "tooltip": true,
+        "tooltip-format": "Notifications are {}",
+        "on-click": "makoctl mode -t silent",
+        "on-right-click": "makoctl dismiss --all",
+        "exec-on-event": true,
+        "restart-interval": 120,
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/notifications.py | jq -c"
+    }
+}
