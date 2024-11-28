@@ -1,0 +1,18 @@
+{
+    "wlr/taskbar": {
+        "all-outputs": true,
+        "format": "{icon}",
+        "icon-size": 18,
+        "markup": true,
+        "tooltip": true,
+        "tooltip-format": "{title}",
+        "active-first": true,
+        "sort-by-app-id": false,
+        "on-click": "activate",
+        "on-click-middle": "fullscreen",
+        "on-click-left": "minimize-raise",
+        "ignore-list": [
+            "Alacritty"
+        ]
+    }
+}

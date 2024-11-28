@@ -1,0 +1,20 @@
+{
+    "wireplumber": {
+        "format": "{icon} {volume:>3}%",
+        "format-muted": " ",
+        "format-icons": {
+            "headphone": "",
+            "headset": "",
+            "default": [
+                "",
+                "",
+                ""
+	    ]
+        },
+        "tooltip": true,
+        "tooltip-format": "{node_name}",
+        "max-length": 8,
+        "max-volume": 100,
+        "on-click": "pavucontrol"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "custom/updates": {
+        "format": " {:>3}",
+        "max-length": 9,
+        "tooltip": true,
+        "format-tooltip": "{}",
+        "interval": 3600,
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/check-updates.py | jq -c"
+    }
+}

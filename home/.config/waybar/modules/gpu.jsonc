@@ -1,0 +1,11 @@
+{
+    "custom/gpu": {
+        "format" : " {:>3}%",
+        "max-length": 8,
+        "tooltip": true,
+        "format-tooltip": "{}",
+        "interval" : 2,
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/gpu-stats.py | jq -c"
+    }
+}
