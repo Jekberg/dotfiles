@@ -1,0 +1,39 @@
+# For the configuration options:
+# man 5 alacritty
+
+[general]
+live_config_reload = true
+working_directory  = "None"
+ipc_socket         = true
+
+import = [
+    "~/.config/alacritty/colours.toml",
+    "~/.config/alacritty/cursor.toml",
+    "~/.config/alacritty/fonts.toml",
+    "~/.config/alacritty/hints.toml",
+    "~/.config/alacritty/window.toml"
+]
+
+[env]
+TERM  = "xterm-256color"
+
+[scrolling]
+history    = 100000
+multiplier = 3
+
+[bell]
+animation = "EaseOutQuad"
+duration  = 200
+color     = "#A0A0A0"
+command   = "None"
+
+[selection]
+semantic_escape_chars = ",│‘|:\"' ()[]{}<>\t!"
+save_to_clipboard     = true
+
+[terminal]
+osc52              = "CopyPaste"
+shell              = "/bin/zsh"
+
+[mouse]
+hide_when_typing = false

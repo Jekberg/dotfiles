@@ -1,0 +1,8 @@
+[cursor]
+style            = { shape = "Block", blinking = "On" }
+vi_mode_style    = { shape = "Block", blinking = "Off" }
+blink_interval   = 500
+blink_timeout    = 10
+unfocused_hollow = true
+thickness        = 0.20
+
