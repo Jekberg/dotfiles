@@ -1,0 +1,15 @@
+[window]
+dimensions                = { columns = 0, lines = 0 }
+position                  = "None"
+padding                   = { x = 0, y = 0 }
+dynamic_padding           = true
+dynamic_title             = true
+decorations               = "Buttonless"
+decorations_theme_variant = "Dark"
+opacity                   = 0.7
+blur                      = true
+startup_mode              = "Maximized"
+title                     = "Terminal"
+class                     = { instance = "Alacritty", general = "Alacritty" }
+resize_increments         = false
+option_as_alt             = "None"
