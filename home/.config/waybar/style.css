@@ -156,6 +156,22 @@ tooltip {
     color         : @color-neonred;
 }
 
+#custom-power:hover {
+    box-shadow : inset 0px -3px @color-neonred;
+}
+
+/*
+ * Submap.
+ */
+#submap {
+    border-radius : 0px;
+    color         : @color-neonwhite;
+}
+
+#submap:hover {
+    box-shadow : inset 0px -3px @color-neonwhite;
+}
+
 /*
  * Systemd failed units.
  */
@@ -175,8 +191,8 @@ tooltip {
     margin : 0px 4px 0px 4px;
 }
 
-#custom-power:hover {
-    box-shadow : inset 0px -3px @color-neonred;
+#taskbar button:hover {
+    box-shadow : inset 0px -3px @color-neonwhite;
 }
 
 /*
@@ -192,14 +208,6 @@ tooltip {
 #custom-weather {
     color : @color-neonwhite;
 }
-
-/*
- * Window
- */
-#window {
-    color : @color-neaonwhite;
-}
-
 
 /*
  * Wireplumber.

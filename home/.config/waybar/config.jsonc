@@ -26,7 +26,7 @@
         "group/utilities",
         "group/hardware",
         "wlr/taskbar",
-        "hyprland/window"
+        "hyprland/submap"
     ],
     "modules-center": [
         "hyprland/workspaces"
@@ -88,12 +88,12 @@
         "~/.config/waybar/modules/memory.jsonc",
         "~/.config/waybar/modules/notifications.jsonc",
         "~/.config/waybar/modules/power.jsonc",
+        "~/.config/waybar/modules/submap.jsonc",
         "~/.config/waybar/modules/systemd-failed-units.jsonc",
         "~/.config/waybar/modules/taskbar.jsonc",
         "~/.config/waybar/modules/tray.jsonc",
         "~/.config/waybar/modules/updates.jsonc",
         "~/.config/waybar/modules/weather.jsonc",
-        "~/.config/waybar/modules/window.jsonc",
         "~/.config/waybar/modules/wireplumber.jsonc",
         "~/.config/waybar/modules/workspaces.jsonc"
     ]
