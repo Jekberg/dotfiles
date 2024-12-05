@@ -6,5 +6,4 @@ My personal dot files for Arch Linux.
 
 This is a non-exhastive list which are yet to be completed.
 
-- Hyprland
 - Media player
