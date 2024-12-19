@@ -10,4 +10,3 @@ export VISUAL=nvim
 
 export ENABLE_VKBASALT=1
 export RADV_PERFTEST='sam'
-

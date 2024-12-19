@@ -2,14 +2,17 @@ alacritty
 blueman
 corectl
 fastfetch
+gamemode
 hyprland
 hyprpaper
 hypridle
 hyprlock
 rofi-wayland
 mako
+mangohud
 network-manager-applet
 nwg-dock-hyprland
+rose-pine-hyprcursor
 jq
 kwallet
 pacman-contrib
@@ -18,6 +21,7 @@ pipewire-pulse
 ttf-font-awesome
 ttf-roboto
 udiskie
+yay
 waybar
 wireplumber
 wlogout
