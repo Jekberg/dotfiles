@@ -116,6 +116,17 @@ tooltip {
 #custom-kill-window:hover {
     box-shadow : inset 0px -3px @color-neonorange;
 }
+/*
+ * Language.
+ */
+#language {
+    border-radius : 0px;
+    color         : @color-neonwhite;
+}
+
+#language:hover {
+    box-shadow : inset 0px -3px @color-neonwhite;
+}
 
 /*
  * Launcher.

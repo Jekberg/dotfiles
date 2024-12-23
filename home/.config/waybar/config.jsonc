@@ -34,7 +34,7 @@
     "modules-right": [
         "tray",
         "group/system",
-        "wireplumber",
+        "group/io",
         "group/local"
     ],
 
@@ -68,6 +68,13 @@
             "memory"
         ]
     },
+    "group/io": {
+        "orientation": "inherit",
+        "modules": [
+            "hyprland/language",
+            "wireplumber"
+        ]
+    },
     "group/local": {
         "orientation": "inherit",
         "modules": [
@@ -84,6 +91,7 @@
         "~/.config/waybar/modules/cpu.jsonc",
         "~/.config/waybar/modules/gpu.jsonc",
         "~/.config/waybar/modules/kill-window.jsonc",
+        "~/.config/waybar/modules/language.jsonc",
         "~/.config/waybar/modules/launcher.jsonc",
         "~/.config/waybar/modules/memory.jsonc",
         "~/.config/waybar/modules/notifications.jsonc",
