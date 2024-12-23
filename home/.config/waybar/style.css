@@ -85,6 +85,13 @@ tooltip {
 }
 
 /*
+ * Battery
+ */
+#battery {
+    color : @color-neonyellow;
+}
+
+/*
  * Clock
  */
 #clock {

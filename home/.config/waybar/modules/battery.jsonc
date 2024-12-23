@@ -1,0 +1,20 @@
+{
+    "battery": {
+        "format": "{icon} {capacity:>3}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "max-length": 8,
+        "tooltip": true,
+        "tooltip-format": "{timeTo}",
+        "interval": 120,
+        "states": {
+            "warning": 20,
+            "critical": 10
+        }
+    }
+}

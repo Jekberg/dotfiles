@@ -65,7 +65,8 @@
         "modules": [
             "cpu",
             "custom/gpu",
-            "memory"
+            "memory",
+            "battery"
         ]
     },
     "group/io": {
@@ -87,6 +88,7 @@
      * The module configs are split into individual files.
      */
     "include": [
+        "~/.config/waybar/modules/battery.jsonc",
         "~/.config/waybar/modules/clock.jsonc",
         "~/.config/waybar/modules/cpu.jsonc",
         "~/.config/waybar/modules/gpu.jsonc",
