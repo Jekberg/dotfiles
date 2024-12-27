@@ -6,7 +6,6 @@
         "format-tooltip": "{}",
         "interval" : 2,
         "return-type": "json",
-        "exec-if": "radeontop",
         "exec": "~/.config/waybar/scripts/gpu-stats.py | jq -c"
     }
 }
