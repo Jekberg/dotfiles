@@ -7,9 +7,8 @@
 
 set -o errexit -o nounset -o pipefail
 
-echo "Installing packages!"
-MISSING="$(grep -vxF -f <(pacman -Qq) packages.txt || echo)"
-echo $MISSING > /dev/stderr
+echo "Installing packages!" > /dev/stderr
+MISSING="$(scripts/checkdeps.sh || true)"
 if [[ -n "${MISSING}" ]]
 then
     if ! pacman -Qi yay &> /dev/null
