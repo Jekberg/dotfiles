@@ -7,19 +7,23 @@
 
 set -o errexit -o nounset -o pipefail
 
-if ! pacman -Qi yay &> /dev/null
-then
-    # Not all package dependencies are official arch packages. Some comes from
-    # the AUR. Install a AUR helper to make it convinient to install packages.
-    echo "Please install yay" > /dev/stderr
-    exit 0
-fi
-
 echo "Installing packages!"
 MISSING="$(grep -vxF -f <(pacman -Qq) packages.txt || echo)"
 echo $MISSING > /dev/stderr
 if [[ -n "${MISSING}" ]]
 then
+    if ! pacman -Qi yay &> /dev/null
+    then
+        # Not all package dependencies are official arch packages. Some comes
+        # from the AUR. Install a AUR helper to make it convinient to install
+        # packages.
+        echo "Please install yay:" > /dev/stderr
+        echo > /dev/stderr
+        echo "git clone https://aur.archlinux.org/yay.git && cd yay" > /dev/stderr
+        echo "makepkg -si" > /dev/stderr
+        exit 0
+    fi
+
     # Some packages are from the AUR so we can install everything using yay
     yay -S ${MISSING}
 fi
