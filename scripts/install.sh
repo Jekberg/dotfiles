@@ -29,9 +29,16 @@ then
 fi
 
 echo "Installing home files!" > /dev/stderr
-HOME_FILES=$(find  home/{.config,.local}/ -mindepth 1 -maxdepth 1 -type d,f)
+HOME_FILES=$(find  home/ -type f)
 for LOCAL_PATH in $HOME_FILES
 do
-    TARGET_PATH="$(dirname $HOME/${LOCAL_PATH#home/})"
+    if ! [[ -d "${HOME}" ]]
+    then
+        echo "The $HOME directory for $USER, does not exist!" > /dev/stderr
+        exit 1
+    fi
+
+    TARGET_PATH="$HOME/${LOCAL_PATH#home/}"
+    mkdir -p $(dirname "${TARGET_PATH}")
     cp -vr "${LOCAL_PATH}" "${TARGET_PATH}" > /dev/stderr
 done
