@@ -1,5 +1,6 @@
 alacritty
 blueman
+fastfetch
 hyprland
 hyprpaper
 hypridle

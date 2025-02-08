@@ -1,0 +1,170 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "general": {
+        "multithreading": true,
+        "processingTimeout": 100
+    },
+    "logo": {
+        "type": "auto",
+        "padding": {
+            "top": 2,
+            "left": 10,
+            "right": 4
+        },
+        "printRemaining": false,
+        "recache": false,
+        "position":  "left"
+    },
+    "display": {
+        "stat": false,
+        "pipe": false,
+        "showErrors": false,
+        "disableLinewrap": true,
+        "hideCursor": false,
+        "separator": "",
+        "color": {
+            "keys": "white",
+            "title": "blue",
+            "output": "white",
+            "separator": "white"
+        },
+        "key": {
+            "width": 0,
+            "type": "string",
+            "paddingLeft": true
+        },
+        "size": {
+            "binaryPrefix": "iec",
+            "maxPrefix": "TB",
+            "ndigits": 2
+        },
+        "noBuffer": false,
+        "constants": [
+        ]
+    },
+    "modules": [
+        {
+            "type": "custom",
+            "key": "╭──────────╮    ",
+            "keyColor": "yellow",
+            "format": "system",
+            "outputColor": "yellow"
+        },
+        {
+            "type": "os",
+            "key": "│ os       │  ├─ ",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "packages",
+            "key": "│ packages │  ├─ ",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "locale",
+            "key": "│ locale   │  ├─ ",
+	    "keyColor": "yellow"
+        },
+        {
+            "type": "uptime",
+            "key": "│ uptime   │  ├─ ",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "custom",
+            "key": "╰──────────╯  ┴  ",
+            "keyColor": "yellow",
+            "format": ""
+        },
+        "break",
+        {
+            "type": "custom",
+            "key": "╭──────────╮    ",
+            "keyColor": "green",
+            "format": "software",
+            "outputColor": "green"
+        },
+        {
+            "type": "kernel",
+            "key": "│ kernel   │  ├─ ",
+            "keyColor": "green"
+        },
+        {
+            "type": "terminal",
+            "key": "│ terminal │  ├─ ",
+            "keyColor": "green"
+        },
+        {
+            "type": "shell",
+            "key": "│ shell    │  ├─ ",
+            "keyColor": "green"
+        },
+        {
+            "type": "editor",
+            "key": "│ editor   │  ├─ ",
+            "keyColor": "green"
+        },
+        {
+            "type": "de",
+            "key": "│ de       │  ├─ ",
+            "keyColor": "green"
+        },
+        {
+            "type": "wm",
+            "key": "│ wm       │  ├─ ",
+            "keyColor": "green"
+        },
+        {
+            "type": "custom",
+            "key": "╰──────────╯  ┴  ",
+            "keyColor": "green",
+            "format": ""
+        },
+        "break",
+        {
+            "type": "custom",
+            "key": "╭──────────╮    ",
+            "keyColor": "magenta",
+            "format": "hardware",
+            "outputColor": "magenta"
+        },
+        {
+            "type": "board",
+            "key": "│ board    │  ├─ ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "cpu",
+            "key": "│ cpu      │  ├─ ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "gpu",
+            "key": "│ gpu      │  ├─ ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "memory",
+            "key": "│ memory   │  ├─ ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "battery",
+            "key": "│ battery  │  ├─ ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "display",
+            "key": "│ display  │  ├─ ",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "custom",
+            "key": "╰──────────╯  ┴  ",
+            "keyColor": "magenta",
+            "format": ""
+        },
+        "break",
+        "colors"
+  ]
+}
