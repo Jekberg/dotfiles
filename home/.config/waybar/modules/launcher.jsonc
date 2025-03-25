@@ -1,8 +1,0 @@
-{
-    "custom/launcher": {
-        "format": "",
-        "on-click": "~/.local/bin/app-launcher.sh",
-        "tooltip": true,
-        "tooltip-format": "Launcher"
-    }
-}

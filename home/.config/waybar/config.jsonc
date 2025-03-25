@@ -46,8 +46,6 @@
     "group/utilities": {
         "orientation": "inherit",
         "modules": [
-            "custom/launcher",
-            "custom/kill-window",
             "custom/notifications",
             "custom/power"
         ]
