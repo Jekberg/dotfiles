@@ -6,8 +6,8 @@
 #
 # Exampels:
 #
-# update.sh /path/to/file
-# update.sh /path/to/dir
+# mirror-files.sh /path/to/file
+# mirror-files.sh /path/to/dir
 
 set -o errexit -o nounset -o pipefail
 
