@@ -25,6 +25,7 @@
     "modules-left": [
         "group/utilities",
         "group/hardware",
+        "group/system",
         "hyprland/submap"
     ],
     "modules-center": [
@@ -32,7 +33,6 @@
     ],
     "modules-right": [
         "tray",
-        "group/system",
         "group/io",
         "group/local"
     ],
