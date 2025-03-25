@@ -8,6 +8,7 @@ hyprlock
 rofi-wayland
 mako
 network-manager-applet
+nwg-dock-hyprland
 jq
 pacman-contrib
 pavucontrol
