@@ -1,0 +1,52 @@
+/*
+ * Define common colours.
+ */
+@define-color color-neonblue   rgba( 75, 122, 255, 0.81); /* #467AFFD0 */
+@define-color color-neonwhite  rgba(251, 255, 255, 0.81); /* #FBFFFFD0 */
+@define-color color-neonorange rgba(255,  92,   9, 0.81); /* #FF5C09D0 */
+@define-color color-matteblack rgba( 40,  40,  45, 0.81); /* #28282BD0 */
+
+/*
+ * Define the global generic style.
+ *
+ * We can get more specific on a per element basis.
+ */
+* {
+    background    : none;
+    border        : none;
+    box-shadow    : none;
+    font-size     : 14px;
+}
+
+menu {
+    background-color : @color-matteblack;
+}
+
+menuitem:hover {
+    background-color : @color-neonblue;
+    color            : @color-neonorange;
+}
+
+tooltip {
+    background : @color-matteblack;
+}
+
+#box {
+    padding : 2px 8px 2px 8px;
+}
+
+#active {
+    border-bottom : solid 2px;
+    border-color  : @color-neonwhite;
+}
+
+button {
+    padding      : 2px 2px 2px 2px;
+    margin-left  : 6px;
+    margin-right : 6px;
+    color        : @color-neonwhite;
+}
+
+button:hover {
+    background-color : @color-neonwhite;
+}
