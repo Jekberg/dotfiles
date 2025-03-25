@@ -203,17 +203,6 @@ tooltip {
 }
 
 /*
- * Taskbar
- */
-#taskbar button {
-    margin : 0px 4px 0px 4px;
-}
-
-#taskbar button:hover {
-    box-shadow : inset 0px -3px @color-neonwhite;
-}
-
-/*
  * Updates.
  */
 #custom-updates {

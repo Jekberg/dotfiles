@@ -25,7 +25,6 @@
     "modules-left": [
         "group/utilities",
         "group/hardware",
-        "wlr/taskbar",
         "hyprland/submap"
     ],
     "modules-center": [
