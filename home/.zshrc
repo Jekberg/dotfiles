@@ -231,13 +231,14 @@ function load-plugin()
     # without modifications. So we define a search order where we expect to
     # find plugins. Likewise, we may want to install plugins for a specific
     # user only, so we first search in the home directory.
-    local plugins_dirs=("${HOME}/.local/zsh/plugins"
-                        "/usr/share/zsh/plugins"
-                        "/usr/share"
+    local plugin_paths=("${HOME}/.local/zsh/plugins/${plugin_name}/${plugin_file}"
+                        "/usr/share/zsh/plugin/${plugin_name}/${plugin_file}"
+                        "/usr/share/zsh/${plugin_name}/${plugin_file}"
+                        "/usr/share/zsh/site-functions/${plugin_file}"
+                        "/usr/share/${plugin_name}/${plugin_file}"
                         )
-    for plugins_dir in $plugins_dirs
+    for plugin_path in $plugin_paths
     do
-        local plugin_path="${plugins_dir}/${plugin_name}/${plugin_file}"
         [[ -f "${plugin_path}" ]] && source "${plugin_path}" && break
     done
 }
