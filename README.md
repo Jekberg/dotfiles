@@ -1,6 +1,6 @@
 # DotFiles
 
-My personal dot files for Arch Linux.
+My personal dot files for Linux.
 
 #### TODO
 
