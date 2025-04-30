@@ -11,10 +11,10 @@
     /*
      * Margins for a floaty feel.
      */
-    "margin-top": 4,
-    "margin-right": 8,
+    "margin-top": 0,
+    "margin-right": 0,
     "margin-bottom": 0,
-    "margin-left": 8,
+    "margin-left": 0,
 
     /*
      * Module positions and organisation.

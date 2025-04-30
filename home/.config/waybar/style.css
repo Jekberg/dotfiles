@@ -23,7 +23,7 @@
  */
 * {
     background          : transparent;
-    border-radius       : 16px;
+    border-radius       : 0px;
     font-family         : FontAwesome, Roboto, 'monospace';
     font-size           : 16px;
     margin              : 0px 0px 0px 0px;
