@@ -203,13 +203,6 @@ tooltip {
 }
 
 /*
- * Updates.
- */
-#custom-updates {
-    color : @color-neonpink;
-}
-
-/*
  * Weather.
  */
 #custom-weather {

@@ -96,7 +96,6 @@
         "~/.config/waybar/modules/submap.jsonc",
         "~/.config/waybar/modules/systemd-failed-units.jsonc",
         "~/.config/waybar/modules/tray.jsonc",
-        "~/.config/waybar/modules/updates.jsonc",
         "~/.config/waybar/modules/weather.jsonc",
         "~/.config/waybar/modules/wireplumber.jsonc",
         "~/.config/waybar/modules/workspaces.jsonc"
