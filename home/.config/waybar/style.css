@@ -5,7 +5,7 @@
  */
 @define-color color-neonred      rgba(247,   1,  53, 0.81) /* #F70135D0 */;
 @define-color color-neonorange   rgba(255,  92,   9, 0.81) /* #FF5C00D0 */;
-@define-color color-neonyellow     rgba(255, 196,  45, 0.81) /* #FFC4D2D0 */;
+@define-color color-neonyellow   rgba(255, 196,  45, 0.81) /* #FFC4D2D0 */;
 @define-color color-neonpurple   rgba(206,  54, 254, 0.81) /* #CE36FED0 */;
 @define-color color-neonblue     rgba( 70, 122, 255, 0.81) /* #467AFFD0 */; 
 @define-color color-neongreen    rgba( 57, 255,  20, 0.81) /* #39FF14D0 */; 
