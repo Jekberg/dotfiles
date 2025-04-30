@@ -113,17 +113,6 @@ tooltip {
 }
 
 /*
- * Kill window.
- */
-#custom-kill-window {
-    border-radius : 0px;
-    color         : @color-neonorange;
-}
-
-#custom-kill-window:hover {
-    box-shadow : inset 0px -3px @color-neonorange;
-}
-/*
  * Language.
  */
 #language {
@@ -135,17 +124,6 @@ tooltip {
     box-shadow : inset 0px -3px @color-neonwhite;
 }
 
-/*
- * Launcher.
- */
-#custom-launcher {
-    border-radius : 0px;
-    color         : @color-neonblue;
-}
-
-#custom-launcher:hover {
-    box-shadow : inset 0px -3px @color-neonblue;
-}
 
 /*
  * Memory.
