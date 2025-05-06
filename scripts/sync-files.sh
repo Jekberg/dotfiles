@@ -17,4 +17,9 @@ case $TARGET_PATH in
 "${HOME}/"*)
     LOCAL_PATH="$(dirname home/${TARGET_PATH#${HOME}/})/"
     rsync -avA --delete "${TARGET_PATH}" "${LOCAL_PATH}"
+    ;;
+"/etc/"*)
+    LOCAL_PATH="$(dirname etc/${TARGET_PATH#/etc/})/"
+    rsync -avA --delete "${TARGET_PATH}" "${LOCAL_PATH}"
+    ;;
 esac
