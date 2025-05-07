@@ -1,0 +1,99 @@
+From dbaa138348a0374b977a2efcde907280d1ef5fe8 Mon Sep 17 00:00:00 2001
+From: John Berg <john.berg.96bits@gmail.com>
+Date: Thu, 21 Nov 2024 18:52:00 +0000
+Subject: [PATCH 1/5] Add named constants for the margins
+
+This makes it easier to understand which entry of the ``margin`` array
+corresponds to a given direction. We also update all uses of the
+``margin`` array to use the named constants for indexing. Whilst we are
+here, we also make the change to only do the string to int conversion once
+for the ``--margin option``. There is no functional changes to the
+application apart of this patch.
+
+Signed-off-by: John Berg <john.berg.96bits@gmail.com>
+---
+ main.c | 39 ++++++++++++++++++++++++++-------------
+ 1 file changed, 26 insertions(+), 13 deletions(-)
+
+diff --git a/main.c b/main.c
+index 1031af6..deac299 100644
+--- a/main.c
++++ b/main.c
+@@ -32,6 +32,20 @@ typedef struct
+     gboolean circular;
+ } button;
+ 
++enum
++{
++    MARGIN_TOP,
++    MARGIN_BOTTOM,
++    MARGIN_LEFT,
++    MARGIN_RIGHT,
++
++    /*
++     * The total number of margin values. This must be defined last in the
++     * enum.
++     */
++    MARGIN_MAX
++};
++
+ static const int default_size = 100;
+ static char *command = NULL;
+ static char *layout_path = NULL;
+@@ -44,7 +58,7 @@ static int num_of_monitors = 0;
+ static GtkWindow **window = NULL;
+ static int buttons_per_row = 3;
+ static int primary_monitor = -1;
+-static int margin[] = {230, 230, 230, 230};
++static int margin[MARGIN_MAX] = {230, 230, 230, 230};
+ static int space[] = {0, 0};
+ static gboolean show_bind = FALSE;
+ static gboolean no_span = FALSE;
+@@ -106,22 +120,21 @@ static gboolean process_args(int argc, char *argv[])
+         switch (c)
+         {
+         case 'm':
+-            margin[0] = atoi(optarg);
+-            margin[1] = atoi(optarg);
+-            margin[2] = atoi(optarg);
+-            margin[3] = atoi(optarg);
++            int m = atoi(optarg);
++            for (int i = 0; i < MARGIN_MAX; i++)
++                margin[i] = m;
+             break;
+         case 'L':
+-            margin[2] = atoi(optarg);
++            margin[MARGIN_LEFT] = atoi(optarg);
+             break;
+         case 'T':
+-            margin[0] = atoi(optarg);
++            margin[MARGIN_TOP] = atoi(optarg);
+             break;
+         case 'B':
+-            margin[1] = atoi(optarg);
++            margin[MARGIN_BOTTOM] = atoi(optarg);
+             break;
+         case 'R':
+-            margin[3] = atoi(optarg);
++            margin[MARGIN_RIGHT] = atoi(optarg);
+             break;
+         case 'c':
+             space[1] = atoi(optarg);
+@@ -631,10 +644,10 @@ static void load_buttons(GtkContainer *container)
+     gtk_grid_set_row_spacing(GTK_GRID(grid), space[0]);
+     gtk_grid_set_column_spacing(GTK_GRID(grid), space[1]);
+ 
+-    gtk_widget_set_margin_top(grid, margin[0]);
+-    gtk_widget_set_margin_bottom(grid, margin[1]);
+-    gtk_widget_set_margin_start(grid, margin[2]);
+-    gtk_widget_set_margin_end(grid, margin[3]);
++    gtk_widget_set_margin_top(grid, margin[MARGIN_TOP]);
++    gtk_widget_set_margin_bottom(grid, margin[MARGIN_BOTTOM]);
++    gtk_widget_set_margin_start(grid, margin[MARGIN_LEFT]);
++    gtk_widget_set_margin_end(grid, margin[MARGIN_RIGHT]);
+ 
+     int num_col = 0;
+     if ((num_buttons % buttons_per_row) == 0)
+-- 
+2.49.0
+

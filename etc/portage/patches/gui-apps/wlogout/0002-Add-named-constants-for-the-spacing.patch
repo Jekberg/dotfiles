@@ -1,0 +1,74 @@
+From 7115129608e130a4d1f1f9678c332d7da985680c Mon Sep 17 00:00:00 2001
+From: John Berg <john.berg.96bits@gmail.com>
+Date: Thu, 21 Nov 2024 20:03:05 +0000
+Subject: [PATCH 2/5] Add named constants for the spacing
+
+This makes it clearer what each index of the space array is intended to
+be. Update all the uses of the ``space`` array to use the named
+constants. This patch does not change the functionality of the
+application.
+
+Signed-off-by: John Berg <john.berg.96bits@gmail.com>
+---
+ main.c | 22 +++++++++++++++++-----
+ 1 file changed, 17 insertions(+), 5 deletions(-)
+
+diff --git a/main.c b/main.c
+index deac299..5617705 100644
+--- a/main.c
++++ b/main.c
+@@ -46,6 +46,18 @@ enum
+     MARGIN_MAX
+ };
+ 
++enum
++{
++    SPACING_ROW,
++    SPACING_COLUMN,
++
++    /*
++     * The total number of spacing values. This mas be defined last in the
++     * enum.
++     */
++    SPACING_MAX,
++};
++
+ static const int default_size = 100;
+ static char *command = NULL;
+ static char *layout_path = NULL;
+@@ -59,7 +71,7 @@ static GtkWindow **window = NULL;
+ static int buttons_per_row = 3;
+ static int primary_monitor = -1;
+ static int margin[MARGIN_MAX] = {230, 230, 230, 230};
+-static int space[] = {0, 0};
++static int space[SPACING_MAX] = {0, 0};
+ static gboolean show_bind = FALSE;
+ static gboolean no_span = FALSE;
+ static gboolean layershell = FALSE;
+@@ -137,10 +149,10 @@ static gboolean process_args(int argc, char *argv[])
+             margin[MARGIN_RIGHT] = atoi(optarg);
+             break;
+         case 'c':
+-            space[1] = atoi(optarg);
++            space[SPACING_COLUMN] = atoi(optarg);
+             break;
+         case 'r':
+-            space[0] = atoi(optarg);
++            space[SPACING_ROW] = atoi(optarg);
+             break;
+         case 'l':
+             layout_path = g_strdup(optarg);
+@@ -641,8 +653,8 @@ static void load_buttons(GtkContainer *container)
+     GtkWidget *grid = gtk_grid_new();
+     gtk_container_add(container, grid);
+ 
+-    gtk_grid_set_row_spacing(GTK_GRID(grid), space[0]);
+-    gtk_grid_set_column_spacing(GTK_GRID(grid), space[1]);
++    gtk_grid_set_row_spacing(GTK_GRID(grid), space[SPACING_ROW]);
++    gtk_grid_set_column_spacing(GTK_GRID(grid), space[SPACING_COLUMN]);
+ 
+     gtk_widget_set_margin_top(grid, margin[MARGIN_TOP]);
+     gtk_widget_set_margin_bottom(grid, margin[MARGIN_BOTTOM]);
+-- 
+2.49.0
+

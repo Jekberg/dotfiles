@@ -1,0 +1,4 @@
+dev-vcs/git
+dev-util/perf
+llvm-core/clang
+sys-devel/gcc

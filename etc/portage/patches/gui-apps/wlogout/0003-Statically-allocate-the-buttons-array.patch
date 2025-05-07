@@ -1,0 +1,160 @@
+From fd6c50ddd271ee08b4e8649fe2c814e847b0a07a Mon Sep 17 00:00:00 2001
+From: John Berg <john.berg.96bits@gmail.com>
+Date: Thu, 21 Nov 2024 23:30:55 +0000
+Subject: [PATCH 3/5] Statically allocate the buttons array
+
+There is currently no means by a user to change the number of buttons.
+This is fixed to an upper limit of 100 in the ``default_size`` variable.
+Though as the ``default_size`` is not a constant expression, it cannot
+be used to define a fixed-size array in the global scope. Since the
+``default_size`` never changes, we can substitute it for a constant
+(macro) which enables us to define the ``buttons`` as a fixed size array
+and eliminating the need to allocate memory dynamically. This makes
+sense as this is what the application will be doing anyways. There is no
+functional change intended by this patch.
+
+Signed-off-by: John Berg <john.berg.96bits@gmail.com>
+---
+ main.c | 42 ++++++++++++++++++++----------------------
+ 1 file changed, 20 insertions(+), 22 deletions(-)
+
+diff --git a/main.c b/main.c
+index 5617705..8cbc60e 100644
+--- a/main.c
++++ b/main.c
+@@ -58,11 +58,12 @@ enum
+     SPACING_MAX,
+ };
+ 
+-static const int default_size = 100;
++#define DEFAULT_SIZE 100
++
+ static char *command = NULL;
+ static char *layout_path = NULL;
+ static char *css_path = NULL;
+-static button *buttons = NULL;
++static button buttons[DEFAULT_SIZE];
+ static GtkWidget *gtk_window = NULL;
+ static int num_buttons = 0;
+ static int draw = 0;
+@@ -202,7 +203,7 @@ static gboolean process_args(int argc, char *argv[])
+ 
+ static gboolean get_layout_path()
+ {
+-    char *buf = malloc(default_size * sizeof(char));
++    char *buf = malloc(DEFAULT_SIZE * sizeof(char));
+     if (!buf)
+     {
+         fprintf(stderr, "Failed to allocate memory\n");
+@@ -213,23 +214,23 @@ static gboolean get_layout_path()
+     if (!config_path)
+     {
+         config_path = getenv("HOME");
+-        int n = snprintf(buf, default_size, "%s/.config", config_path);
++        int n = snprintf(buf, DEFAULT_SIZE, "%s/.config", config_path);
+         if (n != 0)
+         {
+             free(buf);
+-            buf = malloc((default_size * sizeof(char)) + (sizeof(char) * n));
+-            snprintf(buf, (default_size * sizeof(char)) + (sizeof(char) * n),
++            buf = malloc((DEFAULT_SIZE * sizeof(char)) + (sizeof(char) * n));
++            snprintf(buf, (DEFAULT_SIZE * sizeof(char)) + (sizeof(char) * n),
+                      "%s/.config", config_path);
+         }
+         config_path = g_strdup(buf);
+     }
+ 
+-    int n = snprintf(buf, default_size, "%s/wlogout/layout", config_path);
++    int n = snprintf(buf, DEFAULT_SIZE, "%s/wlogout/layout", config_path);
+     if (n != 0)
+     {
+         free(buf);
+-        buf = malloc((default_size * sizeof(char)) + (sizeof(char) * n));
+-        snprintf(buf, (default_size * sizeof(char)) + (sizeof(char) * n),
++        buf = malloc((DEFAULT_SIZE * sizeof(char)) + (sizeof(char) * n));
++        snprintf(buf, (DEFAULT_SIZE * sizeof(char)) + (sizeof(char) * n),
+                  "%s/wlogout/layout", config_path);
+     }
+     free(config_path);
+@@ -266,7 +267,7 @@ static gboolean get_layout_path()
+ 
+ static gboolean get_css_path()
+ {
+-    char *buf = malloc(default_size * sizeof(char));
++    char *buf = malloc(DEFAULT_SIZE * sizeof(char));
+     if (!buf)
+     {
+         fprintf(stderr, "Failed to allocate memory\n");
+@@ -277,23 +278,23 @@ static gboolean get_css_path()
+     if (!config_path)
+     {
+         config_path = getenv("HOME");
+-        int n = snprintf(buf, default_size, "%s/.config", config_path);
++        int n = snprintf(buf, DEFAULT_SIZE, "%s/.config", config_path);
+         if (n != 0)
+         {
+             free(buf);
+-            buf = malloc((default_size * sizeof(char)) + (sizeof(char) * n));
+-            snprintf(buf, (default_size * sizeof(char)) + (sizeof(char) * n),
++            buf = malloc((DEFAULT_SIZE * sizeof(char)) + (sizeof(char) * n));
++            snprintf(buf, (DEFAULT_SIZE * sizeof(char)) + (sizeof(char) * n),
+                      "%s/.config", config_path);
+         }
+         config_path = g_strdup(buf);
+     }
+ 
+-    int n = snprintf(buf, default_size, "%s/wlogout/style.css", config_path);
++    int n = snprintf(buf, DEFAULT_SIZE, "%s/wlogout/style.css", config_path);
+     if (n != 0)
+     {
+         free(buf);
+-        buf = malloc((default_size * sizeof(char)) + (sizeof(char) * n));
+-        snprintf(buf, (default_size * sizeof(char)) + (sizeof(char) * n),
++        buf = malloc((DEFAULT_SIZE * sizeof(char)) + (sizeof(char) * n));
++        snprintf(buf, (DEFAULT_SIZE * sizeof(char)) + (sizeof(char) * n),
+                  "%s/wlogout/style.css", config_path);
+     }
+     free(config_path);
+@@ -363,7 +364,7 @@ static gboolean get_buttons(FILE *json)
+     fread(buffer, 1, length, json);
+ 
+     jsmn_parser p;
+-    jsmntok_t *tok = malloc(default_size * sizeof(jsmntok_t));
++    jsmntok_t *tok = malloc(DEFAULT_SIZE * sizeof(jsmntok_t));
+     if (!tok)
+     {
+         free(buffer);
+@@ -374,12 +375,12 @@ static gboolean get_buttons(FILE *json)
+     int numtok, i = 1;
+     do
+     {
+-        numtok = jsmn_parse(&p, buffer, length, tok, default_size * i);
++        numtok = jsmn_parse(&p, buffer, length, tok, DEFAULT_SIZE * i);
+         if (numtok == JSMN_ERROR_NOMEM)
+         {
+             i++;
+             jsmntok_t *tmp =
+-                realloc(tok, ((default_size * i) * sizeof(jsmntok_t)));
++                realloc(tok, ((DEFAULT_SIZE * i) * sizeof(jsmntok_t)));
+             if (!tmp)
+             {
+                 free(tok);
+@@ -724,8 +725,6 @@ static void load_css()
+ 
+ int main(int argc, char *argv[])
+ {
+-    buttons = malloc(sizeof(button) * default_size);
+-
+     g_set_prgname("wlogout");
+     gtk_init(&argc, &argv);
+     if (process_args(argc, argv))
+@@ -793,6 +792,5 @@ int main(int argc, char *argv[])
+         free(buttons[i].action);
+         free(buttons[i].text);
+     }
+-    free(buttons);
+     free(command);
+ }
+-- 
+2.49.0
+

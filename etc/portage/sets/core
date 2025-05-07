@@ -1,0 +1,12 @@
+net-misc/networkmanager
+sys-boot/grub
+sys-fs/dosfstools
+sys-fs/e2fsprogs
+sys-fs/lvm2
+sys-fs/xfsprogs
+sys-kernel/dracut
+sys-kernel/gentoo-kernel
+sys-kernel/gentoo-sources
+sys-kernel/installkernel
+sys-kernel/linux-firmware
+sys-kernel/modprobed-db
