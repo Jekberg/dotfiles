@@ -145,6 +145,18 @@ tooltip {
 }
 
 /*
+ * Player.
+ */
+#custom-player {
+    border-radius : 0px;
+    color         : @color-neonblue;
+}
+
+#custom-player:hover {
+    box-shadow : inset 0px -3px @color-neonblue;
+}
+
+/*
  * Power.
  */
 #custom-power {

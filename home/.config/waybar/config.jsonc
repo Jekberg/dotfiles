@@ -47,6 +47,7 @@
         "orientation": "inherit",
         "modules": [
             "custom/notifications",
+            "custom/player",
             "custom/power"
         ]
     },
@@ -92,6 +93,7 @@
         "~/.config/waybar/modules/language.jsonc",
         "~/.config/waybar/modules/memory.jsonc",
         "~/.config/waybar/modules/notifications.jsonc",
+        "~/.config/waybar/modules/player.jsonc",
         "~/.config/waybar/modules/power.jsonc",
         "~/.config/waybar/modules/submap.jsonc",
         "~/.config/waybar/modules/systemd-failed-units.jsonc",

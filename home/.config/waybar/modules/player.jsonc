@@ -1,0 +1,8 @@
+{
+    "custom/player": {
+        "format" : "",
+        "tooltip": true,
+        "tooltip-format": "Media player",
+        "on-click": "eww open --toggle media-player"
+    }
+}
