@@ -1,0 +1,64 @@
+$color-neonblue     : rgba( 70, 122, 255, 0.81) /* #467AFFD0 */; 
+$color-neonwhite    : rgba(251, 255, 255, 0.81) /* #FBFFFFD0 */; 
+$color-matteblack   : rgba( 40,  40,  45, 0.81) /* #28282BD0 */;
+
+window {
+    background: transparent;
+}
+
+label {
+    color: $color-neonwhite;
+    border: none;
+}
+
+.player-widget {
+    background    : $color-matteblack;
+    border-radius : 16px;
+    padding       : 0px 8px 0px 8px;
+
+    .player-thumbnail {
+        background-repeat   : no-repeat;
+        background-position : center;
+        margin              : 4px 8px 4px 8px;
+    }
+    
+    .player-information {
+        margin : 16px 0px 0px 0px;
+    }
+
+    .player-control {
+        background    : transparent;
+        border        : none;
+        border-radius : 0px;
+        margin        : 16px 0px 8px 0px;
+
+        button {
+            background    : inherit;
+            border-radius : inherit;
+            border        : inherit;
+            box-shadow    : none;
+            color         : $color-neonwhite;
+        }
+    }
+
+    progressbar {
+        border-radius : 16px;
+        background    : transparent;
+        margin        : 0px 0px 4px 0px;
+        padding       : 0px 0px 0px 0px;
+        min-height    : 8px;
+
+        progress {
+          border-radius : inherit;
+          background    : $color-neonblue;
+          min-height    : inherit;
+        }
+
+        trough {
+            border-radius : inherit;
+            border        : none;
+            background    : $color-neonwhite;
+            min-height    : inherit;
+        }
+    }
+}
