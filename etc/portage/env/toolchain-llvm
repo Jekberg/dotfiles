@@ -1,7 +1,13 @@
-LLVM=1
 CC="clang"
 CXX="clang++"
 CPP="clang-cpp"
 AR="llvm-ar"
 NM="llvm-nm"
+LD="ld.lld"
 RANLIB="llvm-ranlib"
+STRIP="llvm-strip"
+OBJCOPY="llvm-objcopy"
+OBJDUMP="llvm-objdump"
+READELF="llvm-readelf"
+
+LLVM=1
