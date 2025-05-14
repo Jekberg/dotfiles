@@ -192,12 +192,12 @@ tooltip {
  * Wireplumber.
  */
 #wireplumber {
-    color : @color-neoncyan;
+    color : @color-neonwhite;
 }
 
 #wireplumber:hover {
     border-radius : 0px;
-    box-shadow    : inset 0px -3px @color-neoncyan;
+    box-shadow    : inset 0px -3px @color-neonwhite;
 }
 
 /*
