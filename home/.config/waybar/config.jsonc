@@ -47,8 +47,7 @@
         "orientation": "inherit",
         "modules": [
             "custom/notifications",
-            "custom/player",
-            "custom/power"
+            "custom/player"
         ]
     },
     "group/system": {

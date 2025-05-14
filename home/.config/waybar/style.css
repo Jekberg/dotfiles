@@ -156,17 +156,6 @@ tooltip {
     box-shadow : inset 0px -3px @color-neonblue;
 }
 
-/*
- * Power.
- */
-#custom-power {
-    border-radius : 0px;
-    color         : @color-neonred;
-}
-
-#custom-power:hover {
-    box-shadow : inset 0px -3px @color-neonred;
-}
 
 /*
  * Submap.
