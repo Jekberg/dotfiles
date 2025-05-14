@@ -92,6 +92,17 @@ tooltip {
 }
 
 /*
+ * Bluetooth
+ */
+#bluetooth {
+    color : @color-neonwhite;
+}
+
+#bluetooth.connected {
+    color : @color-neonblue;
+}
+
+/*
  * Clock
  */
 #clock {
@@ -130,6 +141,17 @@ tooltip {
  */
 #memory {
     color : @color-neonpink;
+}
+
+/*
+ *
+ */
+#network {
+    color : @color-neonwhite;
+}
+
+#network:hover {
+    box-shadow : inset 0px -3px @color-neonwhite;
 }
 
 /*

@@ -33,7 +33,7 @@
     ],
     "modules-right": [
         "tray",
-        "group/io",
+        "group/settings",
         "group/local"
     ],
 
@@ -66,11 +66,13 @@
             "battery"
         ]
     },
-    "group/io": {
+    "group/settings": {
         "orientation": "inherit",
         "modules": [
             "hyprland/language",
-            "wireplumber"
+            "wireplumber",
+            "network",
+            "bluetooth"
         ]
     },
     "group/local": {
@@ -86,11 +88,14 @@
      */
     "include": [
         "~/.config/waybar/modules/battery.jsonc",
+        "~/.config/waybar/modules/bluetooth.jsonc",
         "~/.config/waybar/modules/clock.jsonc",
         "~/.config/waybar/modules/cpu.jsonc",
         "~/.config/waybar/modules/gpu.jsonc",
         "~/.config/waybar/modules/language.jsonc",
+        "~/.config/waybar/modules/logo.jsonc",
         "~/.config/waybar/modules/memory.jsonc",
+        "~/.config/waybar/modules/network.jsonc",
         "~/.config/waybar/modules/notifications.jsonc",
         "~/.config/waybar/modules/player.jsonc",
         "~/.config/waybar/modules/power.jsonc",
