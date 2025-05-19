@@ -1,4 +1,5 @@
 app-emulation/virt-manager  gui
+app-office/libreoffice      clang
 app-text/xmlto              text
 app-misc/cmatrix            -X
 app-misc/fastfetch          -X
@@ -15,12 +16,13 @@ dev-qt/qt5compat            qml
 dev-qt/qtdeclarative        opengl
 dev-qt/qtcharts             qml
 dev-qt/qtgui                egl
-gnome-extra/nm-applet       appindicator
+gui-apps/eww                -X
 gui-apps/rofi-wayland       windowmode
-gui-apps/waybar             tray pipewire
+gui-apps/waybar             tray pipewire network
 gui-wm/hyprland             systemd legacy-render
-kde-frameworks/sonnet       qml
+kde-apps/dolphin            -handbook
 kde-frameworks/kconfig      qml
+kde-frameworks/sonnet       qml
 llvm-core/clang-common      default-lld
 llvm-core/clang-runtime     default-lld
 media-fonts/fontawesome     ttf
@@ -43,5 +45,6 @@ sys-fs/lvm2                 lvm
 sys-kernel/installkernel    dracut grub
 sys-kernel/gentoo-kernel    savedconfig
 sys-libs/zlib               minizip
+www-client/firefox          -X -telemetry
 x11-libs/gdk-pixbuf         jpeg
 x11-terms/alacritty         -X

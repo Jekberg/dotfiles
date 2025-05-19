@@ -4,14 +4,15 @@ app-emulation/virt-manager
 app-misc/corectrl
 app-misc/fastfetch
 app-misc/figlet
+app-misc/lf
 app-misc/openrgb
 app-misc/piper
+app-misc/radeontop
+app-misc/sl
 app-misc/tmux
 app-office/libreoffice
-gnome-extra/nm-applet
 gui-apps/eww
 gui-apps/mako
-gui-apps/nwg-dock-hyprland
 gui-apps/rofi-wayland
 gui-apps/waybar
 gui-apps/wlogout
@@ -19,7 +20,6 @@ kde-apps/dolphin
 mail-client/thunderbird
 media-sound/pavucontrol
 net-im/discord
-net-wireless/blueman
 sys-fs/udiskie
 sys-process/htop
 www-client/firefox
