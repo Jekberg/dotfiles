@@ -1,4 +1,6 @@
+app-admin/sudo
 app-misc/fastfetch
+app-misc/radeontop
 app-shells/zsh
 app-shells/gentoo-zsh-completions
 app-shells/zsh-syntax-highlighting
@@ -22,6 +24,7 @@ media-fonts/fontawesome
 media-fonts/roboto
 media-fonts/symbols-nerd-font
 media-sound/pavucontrol
+net-misc/chrony
 net-misc/networkmanager
 sys-auth/hyprpolkitagent
 sys-boot/grub
