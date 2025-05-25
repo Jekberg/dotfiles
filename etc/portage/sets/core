@@ -41,4 +41,5 @@ sys-kernel/linux-firmware
 sys-kernel/modprobed-db
 www-client/google-chrome
 xfce-base/thunar
+x11-misc/xdg-user-dirs
 x11-terms/alacritty
