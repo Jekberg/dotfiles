@@ -1,7 +1,7 @@
 {
     "clock": {
         "interval": 1,
-        "format": " {:%Y-%m-%d %H:%M:%S}",
+        "format": " {:%H:%M:%S}",
         "max-length": 24,
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
