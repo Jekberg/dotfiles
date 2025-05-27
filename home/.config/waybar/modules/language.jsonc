@@ -1,6 +1,6 @@
 {
     "hyprland/language": {
-        "format": " {shortDescription}",
+        "format": "{shortDescription}",
         "on-click": "hyprctl switchxkblayout current next",
         "on-click-right": "hyprctl switchxkblayout current prev"
     }
