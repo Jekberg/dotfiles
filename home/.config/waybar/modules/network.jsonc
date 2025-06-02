@@ -1,13 +1,13 @@
 {
     "network": {
         "format": "{ifname}",
-        "format-wifi": "  {signalStrength:>3}%",
-        "format-ethernet": "",
         "format-disconnected": "",
+        "format-wifi": " ",
+        "format-ethernet": "",
         "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-        "tooltip-format-wifi": "{essid} ",
-        "tooltip-format-ethernet": "{ifname} ",
         "tooltip-format-disconnected": "Disconnected",
+        "tooltip-format-wifi": "{essid} {signalStrength:>4}% ",
+        "tooltip-format-ethernet": "{ifname} ",
         "max-length": 50
     }
 }
