@@ -192,18 +192,6 @@ tooltip {
 }
 
 /*
- * Systemd failed units.
- */
-#systemd-failed-units,
-#systemd-failed-units.degraded {
-    color : @color-neonred;
-}
-
-#systemd-failed-units.ok {
-    color : @color-neongreen;
-}
-
-/*
  * Weather.
  */
 #custom-weather {

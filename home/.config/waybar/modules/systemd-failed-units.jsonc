@@ -1,9 +1,0 @@
-{
-    "systemd-failed-units": {
-        "format": " {nr_failed:>3}",
-        "format-ok": "",
-        "user": true,
-        "system": true,
-        "hide-on-ok": false
-    }
-}

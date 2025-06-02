@@ -25,7 +25,6 @@
     "modules-left": [
         "group/utilities",
         "group/hardware",
-        "group/system",
         "hyprland/submap"
     ],
     "modules-center": [
@@ -48,13 +47,6 @@
         "modules": [
             "custom/notifications",
             "custom/player"
-        ]
-    },
-    "group/system": {
-        "orientation": "inherit",
-        "modules": [
-            "systemd-failed-units",
-            "custom/updates"
         ]
     },
     "group/hardware": {
