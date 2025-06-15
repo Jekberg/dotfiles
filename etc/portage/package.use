@@ -48,7 +48,6 @@ net-libs/gnutls              tools pkcs11
 net-misc/spice-gtk           usbredir
 net-wireless/wpa_supplicant  dbus
 sys-apps/systemd             policykit
-sys-devel/gcc                lto
 sys-fs/lvm2                  lvm
 sys-kernel/installkernel     dracut grub
 sys-kernel/gentoo-kernel     savedconfig
