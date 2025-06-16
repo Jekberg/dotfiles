@@ -1,6 +1,6 @@
 {
     "wireplumber": {
-        "format": "{icon} {volume:>3}%",
+        "format": "{icon}",
         "format-muted": " ",
         "format-icons": {
             "headphone": "",
@@ -9,10 +9,10 @@
                 "",
                 "",
                 ""
-	    ]
+            ]
         },
         "tooltip": true,
-        "tooltip-format": "{node_name}",
+        "tooltip-format": "{node_name} {volume}%",
         "max-length": 8,
         "max-volume": 100,
         "on-click": "pavucontrol"
