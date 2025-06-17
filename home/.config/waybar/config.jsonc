@@ -33,7 +33,7 @@
     "modules-right": [
         "tray",
         "group/settings",
-        "group/local"
+        "clock"
     ],
 
     /*
@@ -67,13 +67,6 @@
             "battery"
         ]
     },
-    "group/local": {
-        "orientation": "inherit",
-        "modules": [
-            "custom/weather",
-            "clock"
-        ]
-    },
 
     /*
      * The module configs are split into individual files.
@@ -94,7 +87,6 @@
         "~/.config/waybar/modules/submap.jsonc",
         "~/.config/waybar/modules/systemd-failed-units.jsonc",
         "~/.config/waybar/modules/tray.jsonc",
-        "~/.config/waybar/modules/weather.jsonc",
         "~/.config/waybar/modules/wireplumber.jsonc",
         "~/.config/waybar/modules/workspaces.jsonc"
     ]

@@ -192,13 +192,6 @@ tooltip {
 }
 
 /*
- * Weather.
- */
-#custom-weather {
-    color : @color-neonwhite;
-}
-
-/*
  * Wireplumber.
  */
 #wireplumber {
