@@ -159,11 +159,11 @@ tooltip {
  */
 #custom-notifications {
     border-radius : 0px;
-    color         : @color-neonyellow;
+    color         : @color-neonwhite;
 }
 
 #custom-notifications:hover {
-    box-shadow : inset 0px -3px @color-neonyellow;
+    box-shadow : inset 0px -3px @color-neonwhite;
 }
 
 /*
@@ -171,11 +171,11 @@ tooltip {
  */
 #custom-player {
     border-radius : 0px;
-    color         : @color-neonblue;
+    color         : @color-neonwhite;
 }
 
 #custom-player:hover {
-    box-shadow : inset 0px -3px @color-neonblue;
+    box-shadow : inset 0px -3px @color-neonwhite;
 }
 
 

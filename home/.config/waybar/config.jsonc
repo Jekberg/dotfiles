@@ -45,8 +45,6 @@
     "group/utilities": {
         "orientation": "inherit",
         "modules": [
-            "custom/notifications",
-            "custom/player"
         ]
     },
     "group/hardware": {
@@ -61,6 +59,8 @@
         "orientation": "inherit",
         "modules": [
             "hyprland/language",
+            "custom/notifications",
+            "custom/player",
             "wireplumber",
             "network",
             "bluetooth",
