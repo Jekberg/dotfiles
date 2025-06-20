@@ -24,14 +24,12 @@
      */
     "modules-left": [
         "group/utilities",
-        "group/hardware",
         "hyprland/submap"
     ],
     "modules-center": [
-        "hyprland/workspaces"
+        "group/hardware"
     ],
     "modules-right": [
-        "tray",
         "group/settings",
         "clock"
     ],
@@ -45,6 +43,8 @@
     "group/utilities": {
         "orientation": "inherit",
         "modules": [
+            "hyprland/workspaces",
+            "tray"
         ]
     },
     "group/hardware": {
