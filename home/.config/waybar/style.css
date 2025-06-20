@@ -208,25 +208,22 @@ tooltip {
  */
 #workspaces button {
     color   : @color-neonwhite;
-    padding : 0px 2px 0px 2px;
+    opacity : 0.5;
+    padding : 0px 1px 0px 1px;
 }
 
 #workspaces button:hover {
+    opacity    : 1.0;
     box-shadow : inset 0px -3px @color-neonwhite;
 }
 
 #workspaces button.active {
-    color : @color-neoncyan;
-}
-
-#workspaces button.active:hover {
-    box-shadow : inset 0px -3px @color-neoncyan;
+    color      : @color-neonwhite;
+    opacity    : 1.0;
+    box-shadow : inset 0px -3px @color-neonwhite;
 }
 
 #workspaces button.urgent {
-    color : @color-neonorange;
-}
-
-#workspaces button.urgent:hover {
-    box-shadow : inset 0px -3px @color-neonorange;
+    color   : @color-neonwhite;
+    opacity : 1.0;
 }
