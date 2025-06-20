@@ -43,6 +43,7 @@
     "group/utilities": {
         "orientation": "inherit",
         "modules": [
+            "custom/logo",
             "hyprland/workspaces",
             "tray"
         ]

@@ -135,6 +135,12 @@ tooltip {
     box-shadow : inset 0px -3px @color-neonwhite;
 }
 
+/*
+ * Logo.
+ */
+#custom-logo {
+    color : @color-neonpurple;
+}
 
 /*
  * Memory.
