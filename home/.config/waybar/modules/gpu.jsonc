@@ -1,6 +1,6 @@
 {
     "custom/gpu": {
-        "format" : " {:>3}%",
+        "format" : " {:>1}%",
         "max-length": 8,
         "tooltip": true,
         "format-tooltip": "{}",

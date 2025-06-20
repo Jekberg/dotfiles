@@ -1,7 +1,7 @@
 {
     "cpu": {
         "interval": 2,
-        "format": " {usage:>3}%",
+        "format": " {usage:>1}%",
         "max-length": 8,
         "tooltip": true
     }

@@ -113,14 +113,14 @@ tooltip {
  * CPU.
  */
 #cpu {
-    color : @color-neonorange;
+    color : @color-neonwhite;
 }
 
 /*
  * GPU.
  */
 #custom-gpu {
-    color : @color-neonpurple;
+    color : @color-neonwhite;
 }
 
 /*
@@ -146,7 +146,7 @@ tooltip {
  * Memory.
  */
 #memory {
-    color : @color-neonpink;
+    color : @color-neonwhite;
 }
 
 /*
