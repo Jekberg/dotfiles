@@ -60,6 +60,7 @@
         "orientation": "inherit",
         "modules": [
             "hyprland/language",
+            "idle_inhibitor",
             "custom/notifications",
             "custom/player",
             "wireplumber",
@@ -78,6 +79,7 @@
         "~/.config/waybar/modules/clock.jsonc",
         "~/.config/waybar/modules/cpu.jsonc",
         "~/.config/waybar/modules/gpu.jsonc",
+        "~/.config/waybar/modules/idle_inhibitor.jsonc",
         "~/.config/waybar/modules/language.jsonc",
         "~/.config/waybar/modules/logo.jsonc",
         "~/.config/waybar/modules/memory.jsonc",
