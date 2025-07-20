@@ -139,7 +139,14 @@ function fill-line() {
     print "${RAW_L}$(printf %${PADDING}s ${RAW_R})"
 }
 
+function set-window-title() {
+    local WINDOW_TITLE=$1
+    echo -en "\e]2;${WINDOW_TITLE} - zsh\a"
+}
+
 function zle-line-init {
+    set-window-title $(print -P '%~')
+
     # Only show the errno if there was an actual failed previous
     # command.
     RPROMPT='%0(?..%B%F{magenta}<%f${ERRNO_MSG}%F{magenta}>%f%b)'
