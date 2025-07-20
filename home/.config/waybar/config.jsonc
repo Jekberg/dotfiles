@@ -1,3 +1,11 @@
+/*
+ *  __        ___ __   ______    _    ____     ____ ___  _   _ _____ ___ ____
+ *  \ \      / / \\ \ / / __ )  / \  |  _ \   / ___/ _ \| \ | |  ___|_ _/ ___|
+ *   \ \ /\ / / _ \\ V /|  _ \ / _ \ | |_) | | |  | | | |  \| | |_   | | |  _
+ *    \ V  V / ___ \| | | |_) / ___ \|  _ <  | |__| |_| | |\  |  _|  | | |_| |
+ *     \_/\_/_/   \_\_| |____/_/   \_\_| \_\  \____\___/|_| \_|_|   |___\____|
+ */
+
 {
     /*
      * Generic and general.
@@ -7,10 +15,8 @@
     "spacing": 16,
     "fixed-center": true,
     "passthrough": false,
+    "reload_on_style_change": true,
 
-    /*
-     * Margins for a floaty feel.
-     */
     "margin-top": 0,
     "margin-right": 0,
     "margin-bottom": 0,
