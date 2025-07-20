@@ -118,20 +118,6 @@ tooltip {
 }
 
 /*
- * CPU.
- */
-#cpu {
-    color : @color-neonwhite;
-}
-
-/*
- * GPU.
- */
-#custom-gpu {
-    color : @color-neonwhite;
-}
-
-/*
  * Idle inhibitor.
  */
 #idle_inhibitor {
@@ -159,13 +145,6 @@ tooltip {
  */
 #custom-logo {
     color : @color-neonpurple;
-}
-
-/*
- * Memory.
- */
-#memory {
-    color : @color-neonwhite;
 }
 
 /*
@@ -226,6 +205,13 @@ tooltip {
 #wireplumber:hover {
     border-radius : 0px;
     box-shadow    : inset 0px -3px @color-neonwhite;
+}
+
+/*
+ * Window.
+ */
+#window {
+    color : @color-neonwhite;
 }
 
 /*
