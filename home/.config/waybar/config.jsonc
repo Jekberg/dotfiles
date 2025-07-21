@@ -54,14 +54,6 @@
             "tray"
         ]
     },
-    "group/hardware": {
-        "orientation": "inherit",
-        "modules": [
-            "cpu",
-            "custom/gpu",
-            "memory"
-        ]
-    },
     "group/settings": {
         "orientation": "inherit",
         "modules": [
