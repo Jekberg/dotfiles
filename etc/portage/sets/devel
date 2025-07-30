@@ -1,3 +1,4 @@
 dev-vcs/git
 dev-util/perf
 sys-devel/gcc
+llvm-core/lldb
