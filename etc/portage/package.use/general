@@ -3,10 +3,12 @@ app-emulation/libvirt        policykit
 app-emulation/qemu           -X spice virgl
 app-emulation/virt-manager   gui policykit
 app-office/libreoffice       clang
+app-shells/zsh               static
 app-text/xmlto               text
 app-text/poppler             cairo
 app-misc/cmatrix             -X
 app-misc/fastfetch           -X
+dev-build/make               static
 dev-lang/lazarus             qt6
 dev-lang/fpc                 source
 dev-libs/xmlsec              nss
