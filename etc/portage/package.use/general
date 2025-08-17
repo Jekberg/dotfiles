@@ -57,5 +57,8 @@ sys-kernel/linux-firmware    savedconfig
 sys-kernel/gentoo-kernel     savedconfig
 sys-libs/zlib                minizip
 www-client/firefox           -X hwaccel
+xfce-base/libxfce4ui         -X
+xfce-base/libxfce4windowing  -X
+xfce-base/xfce4-panel        -X
 x11-libs/gdk-pixbuf          jpeg
 x11-terms/alacritty          -X
