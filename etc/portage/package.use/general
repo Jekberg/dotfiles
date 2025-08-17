@@ -39,6 +39,7 @@ media-libs/harfbuzz          icu
 media-libs/libcanberra       alsa
 media-libs/libvpx            postproc
 media-libs/libsdl2           gles2
+media-libs/mesa              vaapi vdpau
 media-libs/tiff              jpeg
 media-plugins/alsa-plugins   pulseaudio
 media-sound/pavucontrol      sound
