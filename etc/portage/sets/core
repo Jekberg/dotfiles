@@ -1,9 +1,13 @@
+app-admin/eclean-kernel
 app-admin/sudo
+app-eselect/eselect-repository
 app-misc/fastfetch
+app-portage/eix
 app-shells/zsh
 app-shells/gentoo-zsh-completions
 app-shells/zsh-syntax-highlighting
 app-shells/zsh-completions
+dev-python/zstandard
 gnome-base/gnome-keyring
 gui-apps/eww
 gui-apps/grim
