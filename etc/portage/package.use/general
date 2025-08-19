@@ -15,6 +15,9 @@ dev-libs/xmlsec              nss
 dev-libs/libdbusmenu         gtk3
 dev-libs/libgudev            introspection
 dev-libs/libpcre             static-libs
+dev-libs/libpcre2            static-libs
+dev-libs/libpcre2            static-libs
+dev-libs/openssl             static-libs
 dev-python/pillow            webp tiff
 dev-qt/qtbase                libproxy icu
 dev-qt/qt5proxy              libproxy icu
@@ -50,15 +53,19 @@ net-dns/dnsmasq              script
 net-im/discord               appindicator
 net-libs/gnutls              tools pkcs11
 net-misc/spice-gtk           usbredir
+net-misc/wget                static
 net-wireless/wpa_supplicant  dbus
+sys-apps/findutils           static
+sys-apps/grep                static
 sys-apps/systemd             policykit
+sys-devel/patch              static
 sys-fs/lvm2                  lvm
 sys-kernel/installkernel     dracut grub
 sys-kernel/linux-firmware    savedconfig
 sys-kernel/gentoo-kernel     savedconfig
 sys-libs/gdbm                static-libs
 sys-libs/ncurses             static-libs
-sys-libs/zlib                minizip
+sys-libs/zlib                minizip static-libs
 www-client/firefox           -X hwaccel
 xfce-base/libxfce4ui         -X
 xfce-base/libxfce4windowing  -X
