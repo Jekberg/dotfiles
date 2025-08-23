@@ -1,3 +1,5 @@
+(include "player.yuck")
+
 (defwindow media-player
     :monitor 0
     :stacking "overlay"
@@ -5,102 +7,4 @@
         :x "16px"
         :y "16px"
         :anchor "top right")
-    (box
-        :orientation "horizontal"
-        :class "player-widget"
-        :spacing 0
-        :space-evenly false
-        (box
-            :class "player-thumbnail"
-            :width 160
-            :height 160
-            :valign "center"
-            :style  "background-image: image(url(\"${PLAYER_URL}\"));")
-        (box
-            :orientation "vertical"
-            :spacing 0
-            :space-evenly false
-            (box
-                :class "player-information"
-                :orientation "vertical"
-                :spacing 0
-                :space-evenly false
-                :valign "center"
-                :vexpand true
-                (label
-                    :valign "top"
-                    :vexpand true
-                    :text PLAYER_ARTIST
-                    :wrap true)
-                (label
-                    :valign "end"
-                    :vexpand true
-                    :text PLAYER_TITLE
-                    :wrap true
-                    :lines 3))
-            (box
-                :class "player-control"
-                :valign "end"
-                :vexpand true
-                :orientation "horizontal"
-                (button
-                    :onclick "playerctl previous"
-                    (label :text ""))
-                (button
-                    :onclick "playerctl play-pause"
-                    (label :text { PLAYER_STATUS == "Paused" ? "" : "" }))
-                (button
-                    :onclick "playerctl next"
-                    (label :text "")))
-            (progress
-                :valign "end"
-                :vexpand false
-                :flipped false
-                :value { 100 * (PLAYER_CURRENT_MS ?: 0) / (PLAYER_DURATION_MS ?: 1) }
-                :orientation "horizontal")
-            (box
-                :orientation "horizontal"
-                (label                        
-                    :halign "start"
-                    :text PLAYER_CURRENT_TIME)
-                (label
-                    :halign "end"
-                    :text PLAYER_DURATION_TIME)))))
-
-(deflisten PLAYER_STATUS
-     :initial "Paused"
-     `playerctl --follow status`)
-
-(deflisten PLAYER_URL
-    :initial "/dev/null"
-    `playerctl --follow metadata --format "{{mpris:artUrl}}"`)
-
-(deflisten PLAYER_ALBUM
-    :initial ""
-    `playerctl --follow metadata --format "{{xesam:album}}"`)
-
-(deflisten PLAYER_TITLE
-    :initial ""
-    `playerctl --follow metadata --format "{{xesam:title}}"`)
-
-(deflisten PLAYER_ARTIST
-    :initial ""
-    `playerctl --follow metadata --format "{{xesam:artist}}"`)
-
-;; TODO the position seem to not update properly if we change the
-;;      position in the track.
-(deflisten PLAYER_CURRENT_MS
-   :initial 0
-   `playerctl --follow metadata --format "{{position}}"`)
-
-(deflisten PLAYER_CURRENT_TIME
-   :initial 0
-   `playerctl --follow metadata --format "{{duration(position)}}"`)
-
-(deflisten PLAYER_DURATION_MS
-   :initial 1
-   `playerctl --follow metadata --format "{{mpris:length}}"`)
-
-(deflisten PLAYER_DURATION_TIME
-   :initial 1
-   `playerctl --follow metadata --format "{{duration(mpris:length)}}"`)
+    (player))
