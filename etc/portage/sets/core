@@ -1,7 +1,10 @@
 app-admin/eclean-kernel
 app-admin/sudo
+app-editors/neovim
 app-eselect/eselect-repository
 app-misc/fastfetch
+app-misc/lf
+app-misc/tmux
 app-portage/eix
 app-shells/zsh
 app-shells/gentoo-zsh-completions

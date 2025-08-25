@@ -1,11 +1,8 @@
 app-admin/bitwarden-desktop-bin
-app-editors/neovim
 app-misc/corectrl
 app-misc/figlet
-app-misc/lf
 app-misc/openrgb
 app-misc/piper
-app-misc/tmux
 app-office/libreoffice
 net-im/discord
 sys-process/htop
