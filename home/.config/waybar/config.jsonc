@@ -33,11 +33,10 @@
         "hyprland/submap"
     ],
     "modules-center": [
-        "hyprland/window"
+        "clock"
     ],
     "modules-right": [
-        "group/settings",
-        "clock"
+        "group/settings"
     ],
 
     /*
@@ -86,7 +85,6 @@
         "~/.config/waybar/modules/systemd-failed-units.jsonc",
         "~/.config/waybar/modules/tray.jsonc",
         "~/.config/waybar/modules/wireplumber.jsonc",
-        "~/.config/waybar/modules/window.jsonc",
         "~/.config/waybar/modules/workspaces.jsonc"
     ]
 }

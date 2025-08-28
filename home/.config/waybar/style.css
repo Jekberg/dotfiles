@@ -208,13 +208,6 @@ tooltip {
 }
 
 /*
- * Window.
- */
-#window {
-    color : @color-neonwhite;
-}
-
-/*
  * Workspaces.
  */
 #workspaces button {
