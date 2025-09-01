@@ -50,20 +50,31 @@
  * the same values over and over.
  */
 * {
-    /*
-     * Commonly used colours.
-     *
-     * Since the same color might be used in different contexts, keep the
-     * opacity consistent acroess all the colours. Around 81% opacity. Alas
-     * is does not seem possible to set the colour (in hex) and the opacity
-     * independently.
-     */
-    color-neonred      : #F70135D0;
-    color-neonblue     : #467AFFD0;
-    color-neonorange   : #FF5C00D0;
-    color-neonwhite    : #FBFFFFD0;
-    color-chromesilver : #E0E0E0D0;
-    color-matteblack   : #28282BD0;
+    catppuccin-rosewater : #F5E0DC;
+    catppuccin-flamingo  : #F1CCCC;
+    catppuccin-pink      : #E8B8DB;
+    catppuccin-mauve     : #C8A3F3;
+    catppuccin-red       : #F38BA8;
+    catppuccin-marroon   : #EBA0AC;
+    catppuccin-peach     : #FAB387;
+    catppuccin-yellow    : #F9E2AF;
+    catppuccin-green     : #A6E3A1;
+    catppuccin-teal      : #94E2D5;
+    catppuccin-sapphire  : #74C7EC;
+    catppuccin-blue      : #89B4FA;
+    catppuccin-lavender  : #B4BEFE;
+    catppuccin-text      : #CDD6F4;
+    catppuccin-subtext1  : #BAC2DE;
+    catppuccin-subtext0  : #A5ACC7;
+    catppuccin-overlay2  : #9399B2;
+    catppuccin-overlay1  : #7F849C;
+    catppuccin-overlay0  : #6C7086;
+    catppuccin-surface2  : #585B70;
+    catppuccin-surface1  : #45475A;
+    catppuccin-surface0  : #313244;
+    catppuccin-base      : #1E1E2E;
+    catppuccin-mantle    : #181825;
+    catppuccin-crust     : #11111B;
 
     /*
      * Global configurations.
@@ -71,14 +82,14 @@
      * Specific styling will be applied the components. But this will be the
      * defaults.
      */
-    background-color   : @color-matteblack;
+    background-color   : @catppuccin-base;
     border             : 0px;
     border-radius      : 10px 10px 10px 10px;
-    border-color       : @color-chromesilver;
+    border-color       : @catppuccin-overlay0;
     padding            : 0px;
-    placeholder-color  : @color-matteblack;
+    placeholder-color  : @catppuccin-crust;
     spacing            : 0px;
-    text-color         : @color-neonwhite;
+    text-color         : @catppuccin-rosewater;
 }
 
 /*
@@ -89,8 +100,8 @@ window {
     padding          : 2px 2px 2px 2px;
     width            : 720px;
     height           : 480px;
-    background-color : @color-matteblack;
-    border-color     : @color-chromesilver;
+    background-color : @catppuccin-base;
+    border-color     : @catppuccin-overlay0;
     children         : [ mainbox ];
     transparency     : "real";
 }
@@ -111,14 +122,14 @@ inputbar {
 }
 
 entry {
-    background-color : @color-neonwhite;
+    background-color : @catppuccin-rosewater;
     border           : 0px;
     border-color     : inherit;
     cursor           : text;
     horizontal-align : 0.5;
     vertical-align   : 0.5;
     placeholder      : "Search...";
-    text-color       : @color-matteblack;
+    text-color       : @catppuccin-crust;
 }
 
 /*
@@ -129,13 +140,13 @@ entry {
  */
 message {
     background-color : transparent;
-    text-color       : @color-neonblue;
+    text-color       : @catppuccin-blue;
     padding          : 0px 10px 0px 10px;
 }
 
 error-message {
     background-color : inherit;
-    text-color       : @color-neonred;
+    text-color       : @catppuccin-red;
     padding          : 10px 10px 10px 10px;
 }
 
@@ -169,14 +180,14 @@ element {
     border-color     : inherit;
     orientation      : horizontal;
     padding          : 8px 4px 8px 4px;
-    text-color       : @color-neonwhite;
+    text-color       : @catppuccin-subtext1;
 
 }
 
 element selected {
-    background-color : @color-neonblue;
+    background-color : @catppuccin-overlay2;
     border-color     : transparent;
-    text-color       : @color-neonorange;
+    text-color       : @catppuccin-crust;
 }
 
 element-icon {
@@ -203,6 +214,6 @@ scrollbar {
     background-color : inherit;
     border           : 0;
     handle-width     : 10px;
-    handle-color     : @color-chromesilver;
+    handle-color     : @catppuccin-surface2;
     width            : 4px;
 }

@@ -8,20 +8,35 @@
 
 /*
  * Define the colours used throughout the styling.
- *
- * Annoyingly, using hex RGBA format does not seem to work.
  */
-@define-color color-neonred      rgba(247,   1,  53, 0.81) /* #F70135D0 */;
-@define-color color-neonorange   rgba(255,  92,   9, 0.81) /* #FF5C00D0 */;
-@define-color color-neonyellow   rgba(255, 196,  45, 0.81) /* #FFC4D2D0 */;
-@define-color color-neonpurple   rgba(206,  54, 254, 0.81) /* #CE36FED0 */;
-@define-color color-neonblue     rgba( 70, 122, 255, 0.81) /* #467AFFD0 */; 
-@define-color color-neongreen    rgba( 57, 255,  20, 0.81) /* #39FF14D0 */; 
-@define-color color-neonwhite    rgba(251, 255, 255, 0.81) /* #FBFFFFD0 */; 
-@define-color color-neonpink     rgba(251,  73, 197, 0.81) /* #FB49C5D0 */; 
-@define-color color-neoncyan     rgba( 75, 249, 252, 0.81) /* #4BF0FCD0 */; 
-@define-color color-matteblack   rgba( 40,  40,  45, 0.81) /* #28282BD0 */;
-@define-color color-chromesilver rgba(224, 224, 224, 0.81) /* #E0E0E0D0 */;
+@define-color catppuccin-rosewater rgb(245, 224, 220) /* #F5E0DC */;
+@define-color catppuccin-flamingo  rgb(242, 205, 205) /* #F2CDCD */;
+@define-color catppuccin-pink      rgb(245, 194, 231) /* #F5C2E7 */;
+@define-color catppuccin-mauve     rgb(203, 166, 247) /* #CBA6F7 */;
+@define-color catppuccin-red       rgb(243, 139, 168) /* #F38BA8 */;
+@define-color catppuccin-maroon    rgb(235, 160, 172) /* #EBA0AC */;
+@define-color catppuccin-peach     rgb(250, 179, 135) /* #FAB387 */;
+@define-color catppuccin-yellow    rgb(249, 226, 175) /* #F9E2AF */;
+@define-color catppuccin-green     rgb(166, 227, 161) /* #A6E3A1 */;
+@define-color catppuccin-teal      rgb(148, 226, 213) /* #94E2D5 */;
+@define-color catppuccin-sky       rgb(137, 220, 235) /* #89DCEB */;
+@define-color catppuccin-sapphire  rgb(116, 199, 236) /* #74C7EC */;
+@define-color catppuccin-blue      rgb(137, 180, 250) /* #89B4FA */;
+@define-color catppuccin-lavender  rgb(180, 190, 254) /* #B4BEFE */;
+@define-color catppuccin-text      rgb(205, 214, 244) /* #CDD6F4 */;
+@define-color catppuccin-subtext1  rgb(186, 194, 222) /* #BAC2DE */;
+@define-color catppuccin-subtext0  rgb(166, 173, 200) /* #A6ADC8 */;
+@define-color catppuccin-overlay2  rgb(147, 153, 178) /* #9399B2 */;
+@define-color catppuccin-overlay1  rgb(127, 132, 156) /* #7F849C */;
+@define-color catppuccin-overlay0  rgb(108, 112, 134) /* #6C7086 */;
+@define-color catppuccin-surface2  rgb( 88,  91, 112) /* #585B70 */;
+@define-color catppuccin-surface1  rgb( 69,  71,  90) /* #45475A */;
+@define-color catppuccin-surface0  rgb( 49,  50,  68) /* #313244 */;
+@define-color catppuccin-base      rgb( 30,  30,  46) /* #1E1E2E */;
+@define-color catppuccin-mantle    rgb( 24,  24,  37) /* #181825 */;
+@define-color catppuccin-crust     rgb( 17,  17,  27) /* #010409 */;
+
+
 
 /*
  * Global defaults.
@@ -44,7 +59,8 @@
  * The main waybar component.
  */
 #waybar {
-    background : transparent;
+    background    : @catppuccin-base;
+    border-bottom : solid 1px @catppuccin-surface0;
 }
 
 /*
@@ -76,7 +92,8 @@ button {
 }
 
 menu {
-    background : @color-matteblack;
+    background : @catppuccin-base;
+    border     : solid 1px @catppuccin-surface0;
 }
 
 menuitem {
@@ -84,48 +101,48 @@ menuitem {
 }
 
 menuitem:hover {
-    background : @color-neonblue;
-    color      : @color-neonorange;
+    background : @catppuccin-overlay2;
+    color      : @catppuccin-text;
 }
 
 tooltip {
-    background : @color-matteblack;
+    background : @catppuccin-overlay0;
 }
 
 /*
  * Battery
  */
 #battery {
-    color : @color-neonwhite;
+    color : @catppuccin-text;
 }
 
 /*
  * Bluetooth
  */
 #bluetooth {
-    color : @color-neonwhite;
+    color : @catppuccin-text;
 }
 
 #bluetooth.connected {
-    color : @color-neonblue;
+    color : @catppuccin-blue;
 }
 
 /*
  * Clock
  */
 #clock {
-    color : @color-neonwhite;
+    color : @catppuccin-text;
 }
 
 /*
  * Idle inhibitor.
  */
 #idle_inhibitor {
-    color : @color-neonwhite;
+    color : @catppuccin-text;
 }
 
 #idle_inhibitor:hover {
-    box-shadow : inset 0px -3px @color-neonwhite;
+    box-shadow : inset 0px -3px @catppuccin-subtext0;
 }
 
 /*
@@ -133,29 +150,29 @@ tooltip {
  */
 #language {
     border-radius : 0px;
-    color         : @color-neonwhite;
+    color         : @catppuccin-text;
 }
 
 #language:hover {
-    box-shadow : inset 0px -3px @color-neonwhite;
+    box-shadow : inset 0px -3px @catppuccin-subtext0;
 }
 
 /*
  * Logo.
  */
 #custom-logo {
-    color : @color-neonpurple;
+    color : @catppuccin-mauve;
 }
 
 /*
  *
  */
 #network {
-    color : @color-neonwhite;
+    color : @catppuccin-text;
 }
 
 #network:hover {
-    box-shadow : inset 0px -3px @color-neonwhite;
+    box-shadow : inset 0px -3px @catppuccin-subtext0;
 }
 
 /*
@@ -163,11 +180,11 @@ tooltip {
  */
 #custom-notifications {
     border-radius : 0px;
-    color         : @color-neonwhite;
+    color         : @catppuccin-text;
 }
 
 #custom-notifications:hover {
-    box-shadow : inset 0px -3px @color-neonwhite;
+    box-shadow : inset 0px -3px @catppuccin-subtext0;
 }
 
 /*
@@ -175,59 +192,58 @@ tooltip {
  */
 #custom-player {
     border-radius : 0px;
-    color         : @color-neonwhite;
+    color         : @catppuccin-text;
 }
 
 #custom-player:hover {
-    box-shadow : inset 0px -3px @color-neonwhite;
+    box-shadow : inset 0px -3px @catppuccin-subtext0;
 }
-
 
 /*
  * Submap.
  */
 #submap {
     border-radius : 0px;
-    color         : @color-neonwhite;
+    color         : @catppuccin-text;
 }
 
 #submap:hover {
-    box-shadow : inset 0px -3px @color-neonwhite;
+    box-shadow : inset 0px -3px @catppuccin-subtext0;
 }
 
 /*
  * Wireplumber.
  */
 #wireplumber {
-    color : @color-neonwhite;
+    color : @catppuccin-text;
 }
 
 #wireplumber:hover {
     border-radius : 0px;
-    box-shadow    : inset 0px -3px @color-neonwhite;
+    box-shadow    : inset 0px -3px @catppuccin-subtext0;
 }
 
 /*
  * Workspaces.
  */
 #workspaces button {
-    color   : @color-neonwhite;
+    color   : @catppuccin-text;
     opacity : 0.5;
     padding : 0px 1px 0px 1px;
 }
 
 #workspaces button:hover {
     opacity    : 1.0;
-    box-shadow : inset 0px -3px @color-neonwhite;
+    box-shadow : inset 0px -3px @catppuccin-subtext0;
 }
 
 #workspaces button.active {
-    color      : @color-neonwhite;
+    color      : @catppuccin-text;
     opacity    : 1.0;
-    box-shadow : inset 0px -3px @color-neonwhite;
+    box-shadow : inset 0px -3px @catppuccin-subtext0;
 }
 
 #workspaces button.urgent {
-    color   : @color-neonwhite;
+    color   : @catppuccin-text;
     opacity : 1.0;
 }

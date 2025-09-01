@@ -1,53 +1,58 @@
 [colors]
-cursor                            = { text = "CellBackground", cursor = "CellForeground" }
-vi_mode_cursor                    = { text = "CellBackground", cursor = "CellForeground" }
-line_indicator                    = { foreground = "None", background = "None" }
-footer_bar                        = { foreground = "#181818", background = "#D8D8D8" }
-selection                         = { text = "CellBackground", background = "CellForeground" }
 indexed_colors                    = []
 transparent_background_colors     = false
 draw_bold_text_with_bright_colors = true
 
-[colors.primary]
-foreground        = "#D8D8D8"
-background        = "#000000"
-dim_foreground    = "#828482"
-bright_foreground = "#E0E0E0"
+[colors.cursor]
+text   = "CellBackground"
+cursor = "CellForeground"
 
-[colors.search]
-matches       = { foreground = "#181818", background = "#D8D8D8" }
-focused_match = { foreground = "#181818", background = "#467AFF" }
+[colors.footer_bar]
+foreground = "#BAC2DE"
+background = "#6C7086"
+
+[colors.line_indicator]
+foreground = "None"
+background = "None"
 
 [colors.hints]
-start = { foreground = "#181818", background = "#D8D8D8" }
-end   = { foreground = "#181818", background = "#467AFF" }
+start = { foreground = "#313244", background = "#F5E0DC" }
+end   = { foreground = "#313244", background = "#F2CDCD" }
+
+[colors.selection]
+text       = "CellBackground"
+background = "CellForeground"
+
+[colors.search]
+matches       = { foreground = "#313244", background = "#9399B2" }
+focused_match = { foreground = "#313244", background = "#F5E0DC" }
+
+[colors.vi_mode_cursor]
+text   = "CellBackground"
+cursor = "CellForeground"
+
+[colors.primary]
+foreground        = "#CDD6F4"
+background        = "#1E1E2E"
+dim_foreground    = "#181825"
+bright_foreground = "#BAC2DE"
 
 [colors.normal]
-black   = "#181818"
-white   = "#D8D8D8"
-red     = "#F70135"
-green   = "#39DD14"
-blue    = "#467AFF"
-yellow  = "#FFC422"
-magenta = "#EA00FF"
-cyan    = "#4BF0FC"
+black   = "#11111B"
+white   = "#A6ADC8"
+red     = "#F38BA8"
+green   = "#A6E3A1"
+blue    = "#89B4FA"
+yellow  = "#F9E2AF"
+magenta = "#CBA6F7"
+cyan    = "#94E2D5"
 
 [colors.bright]
-black   = "#6B6B6B"
-white   = "#FBFFFF"
-red     = "#FF5050"
-green   = "#50D050"
-blue    = "#8080FF"
-yellow  = "#C4C417"
-magenta = "#CF3FCF"
-cyan    = "#02D0D0"
-
-[colors.dim]
-black   = "#0F0F0F"
-white   = "#8E8E8E"
-red     = "#3F0000"
-green   = "#003F00"
-blue    = "#00003F"
-yellow  = "#FDCC0D"
-magenta = "#704D68"
-cyan    = "#4D7770"
+black   = "#313244"
+white   = "#BAC2DE"
+red     = "#EBA0AC"
+green   = "#A6E3A1"
+blue    = "#74C7EC"
+yellow  = "#F9E2AF"
+magenta = "#B4BEFE"
+cyan    = "#89DCEB"

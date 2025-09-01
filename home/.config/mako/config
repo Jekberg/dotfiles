@@ -14,8 +14,8 @@ on-button-left=invoke-default-action
 on-button-middle=none
 on-button-right=dismiss
 font=monospace 10
-background-color=#28282BD0
-text-color=#FBFFFFD0
+background-color=#1C1C2C
+text-color=#CDD6F4
 width=480
 height=270
 outer-margin=16,0,0,0
@@ -30,15 +30,15 @@ text-alignment=left
 group-by=app-name,urgency
 
 [urgency="low"]
-border-color=#39FF14D0
+border-color=#A6E3A1
 default-timeout=120000
 
 [urgency="normal"]
-border-color=#467AFFD0
+border-color=#F9E2AF
 default-timeout=30000
 
 [urgency="critical"]
-border-color=#F70135D0
+border-color=#F38BA8
 default-timeout=0
 
 [mode="silent"]
