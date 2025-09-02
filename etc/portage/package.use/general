@@ -56,5 +56,4 @@ www-client/firefox           -X hwaccel pgo
 xfce-base/libxfce4ui         -X
 xfce-base/libxfce4windowing  -X
 xfce-base/xfce4-panel        -X
-x11-libs/gdk-pixbuf          jpeg
 x11-terms/alacritty          -X
