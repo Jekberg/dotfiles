@@ -11,6 +11,7 @@ app-misc/fastfetch           -X
 dev-build/make               static
 dev-lang/lazarus             qt6
 dev-lang/fpc                 source
+dev-lang/python              pgo
 dev-libs/xmlsec              nss
 dev-libs/libdbusmenu         gtk3
 dev-libs/libgudev            introspection
@@ -66,7 +67,7 @@ sys-kernel/gentoo-kernel     savedconfig
 sys-libs/gdbm                static-libs
 sys-libs/ncurses             static-libs
 sys-libs/zlib                minizip static-libs
-www-client/firefox           -X hwaccel
+www-client/firefox           -X hwaccel pgo
 xfce-base/libxfce4ui         -X
 xfce-base/libxfce4windowing  -X
 xfce-base/xfce4-panel        -X
