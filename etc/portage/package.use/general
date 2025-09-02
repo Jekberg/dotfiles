@@ -51,9 +51,6 @@ net-misc/spice-gtk           usbredir
 net-wireless/wpa_supplicant  dbus
 sys-apps/systemd             policykit
 sys-fs/lvm2                  lvm
-sys-kernel/installkernel     dracut grub
-sys-kernel/linux-firmware    savedconfig
-sys-kernel/gentoo-kernel     savedconfig
 sys-libs/zlib                minizip
 www-client/firefox           -X hwaccel pgo
 xfce-base/libxfce4ui         -X

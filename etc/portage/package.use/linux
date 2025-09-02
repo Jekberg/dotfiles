@@ -1,0 +1,3 @@
+sys-kernel/installkernel  dracut grub
+sys-kernel/linux-firmware savedconfig
+sys-kernel/gentoo-kernel  savedconfig
