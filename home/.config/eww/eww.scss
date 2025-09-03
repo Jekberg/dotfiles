@@ -1,18 +1,43 @@
-$color-neonblue     : rgba( 70, 122, 255, 0.81) /* #467AFFD0 */; 
-$color-neonwhite    : rgba(251, 255, 255, 0.81) /* #FBFFFFD0 */; 
-$color-matteblack   : rgba( 40,  40,  45, 0.81) /* #28282BD0 */;
+$catppuccin-rosewater : rgb(245, 224, 220) /* #F5E0DC */;
+$catppuccin-flamingo  : rgb(242, 205, 205) /* #F2CDCD */;
+$catppuccin-pink      : rgb(245, 194, 231) /* #F5C2E7 */;
+$catppuccin-mauve     : rgb(203, 166, 247) /* #CBA6F7 */;
+$catppuccin-red       : rgb(243, 139, 168) /* #F38BA8 */;
+$catppuccin-maroon    : rgb(235, 160, 172) /* #EBA0AC */;
+$catppuccin-peach     : rgb(250, 179, 135) /* #FAB387 */;
+$catppuccin-yellow    : rgb(249, 226, 175) /* #F9E2AF */;
+$catppuccin-green     : rgb(166, 227, 161) /* #A6E3A1 */;
+$catppuccin-teal      : rgb(148, 226, 213) /* #94E2D5 */;
+$catppuccin-sky       : rgb(137, 220, 235) /* #89DCEB */;
+$catppuccin-sapphire  : rgb(116, 199, 236) /* #74C7EC */;
+$catppuccin-blue      : rgb(137, 180, 250) /* #89B4FA */;
+$catppuccin-lavender  : rgb(180, 190, 254) /* #B4BEFE */;
+$catppuccin-text      : rgb(205, 214, 244) /* #CDD6F4 */;
+$catppuccin-subtext1  : rgb(186, 194, 222) /* #BAC2DE */;
+$catppuccin-subtext0  : rgb(166, 173, 200) /* #A6ADC8 */;
+$catppuccin-overlay2  : rgb(147, 153, 178) /* #9399B2 */;
+$catppuccin-overlay1  : rgb(127, 132, 156) /* #7F849C */;
+$catppuccin-overlay0  : rgb(108, 112, 134) /* #6C7086 */;
+$catppuccin-surface2  : rgb( 88,  91, 112) /* #585B70 */;
+$catppuccin-surface1  : rgb( 69,  71,  90) /* #45475A */;
+$catppuccin-surface0  : rgb( 49,  50,  68) /* #313244 */;
+$catppuccin-base      : rgb( 30,  30,  46) /* #1E1E2E */;
+$catppuccin-mantle    : rgb( 24,  24,  37) /* #181825 */;
+$catppuccin-crust     : rgb( 17,  17,  27) /* #010409 */;
 
 window {
     background: transparent;
 }
 
 label {
-    color: $color-neonwhite;
-    border: none;
+    color  : $catppuccin-text;
+    border : none;
 }
 
+
 .player-widget {
-    background    : $color-matteblack;
+    background    : $catppuccin-base;
+    border        : solid 1px $catppuccin-surface0;
     border-radius : 16px;
     padding       : 0px 8px 0px 8px;
 
@@ -37,7 +62,7 @@ label {
             border-radius : inherit;
             border        : inherit;
             box-shadow    : none;
-            color         : $color-neonwhite;
+            color         : $catppuccin-text;
         }
     }
 
@@ -50,14 +75,14 @@ label {
 
         progress {
           border-radius : inherit;
-          background    : $color-neonblue;
+          background    : $catppuccin-lavender;
           min-height    : inherit;
         }
 
         trough {
             border-radius : inherit;
             border        : none;
-            background    : $color-neonwhite;
+            background    : $catppuccin-overlay0;
             min-height    : inherit;
         }
     }
