@@ -38,7 +38,7 @@ dim_foreground    = "#181825"
 bright_foreground = "#BAC2DE"
 
 [colors.normal]
-black   = "#11111B"
+black   = "#45475A"
 white   = "#A6ADC8"
 red     = "#F38BA8"
 green   = "#A6E3A1"
@@ -48,7 +48,7 @@ magenta = "#CBA6F7"
 cyan    = "#94E2D5"
 
 [colors.bright]
-black   = "#313244"
+black   = "#585B70"
 white   = "#BAC2DE"
 red     = "#EBA0AC"
 green   = "#A6E3A1"
