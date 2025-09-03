@@ -1,6 +1,6 @@
 */* ABI_X86: 64
 */* INPUT_DEVICES: libinput 
-*/* L10N: en-GB sv
+*/* L10N: -* en-US en-GB sv
 */* LLVM_SLOT: 20
 */* PYTHON_SINGLE_TARGET: python3_13
 */* PYTHON_TARGETS: python3_13
