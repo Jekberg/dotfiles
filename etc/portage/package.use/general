@@ -1,4 +1,5 @@
 app-crypt/gcr                gtk
+app-crypt/pinentry           -X
 app-emulation/libvirt        policykit
 app-emulation/qemu           -X spice virgl
 app-emulation/virt-manager   gui policykit
