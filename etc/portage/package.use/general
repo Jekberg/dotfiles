@@ -29,8 +29,6 @@ gui-apps/eww                 -X
 gui-apps/rofi-wayland        windowmode
 gui-apps/waybar              tray pipewire network
 gui-wm/hyprland              systemd
-llvm-core/clang-common       default-lld
-llvm-core/clang-runtime      default-lld
 mail-client/thunderbird      -X clang hwaccel
 media-fonts/fontawesome      ttf
 media-libs/babl              introspection lcms
