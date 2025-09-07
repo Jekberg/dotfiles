@@ -4,9 +4,12 @@ dev-libs/libpcre   static-libs
 dev-libs/libpcre2  static-libs
 dev-libs/openssl   static-libs
 net-misc/wget      static
+sys-apps/acl       static-libs
 sys-apps/findutils static
 sys-apps/grep      static
+sys-apps/sed       static
 sys-devel/patch    static
 sys-libs/gdbm      static-libs
 sys-libs/ncurses   static-libs
 sys-libs/zlib      static-libs
+virtual/acl        static-libs
