@@ -32,6 +32,7 @@ gui-wm/hyprland              systemd
 mail-client/thunderbird      -X clang hwaccel
 media-fonts/fontawesome      ttf
 media-libs/babl              introspection lcms
+media-libs/freetype          harfbuzz
 media-libs/gegl              introspection cairo lcms
 media-libs/harfbuzz          icu
 media-libs/libcanberra       alsa
@@ -48,6 +49,7 @@ net-im/discord               appindicator
 net-libs/gnutls              tools pkcs11
 net-misc/spice-gtk           usbredir
 net-wireless/wpa_supplicant  dbus
+sys-apps/groff               -X
 sys-apps/systemd             policykit
 sys-fs/lvm2                  lvm
 sys-libs/zlib                minizip
