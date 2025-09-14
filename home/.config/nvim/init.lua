@@ -12,9 +12,12 @@
  |_____\___/_/   \_(_)___|_| \_|___| |_|
 ]]--
 
+require("config.lazy")
+
 vim.opt.expandtab   = true
 vim.opt.tabstop     = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth  = 4
 
 vim.cmd("highlight Normal ctermbg=none guibg=none")
+
