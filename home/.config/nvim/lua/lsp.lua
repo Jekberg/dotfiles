@@ -1,0 +1,32 @@
+local lsp_config = {}
+
+lsp_config['luals'] = {
+  cmd = { 'lua-language-server' },
+  filetypes = { 'lua' },
+  root_markers = { { '.luarc.json', '.luarc.jsonc' }, '.git' },
+  settings = {
+    Lua = {
+      runtime = {
+        version = 'LuaJIT',
+      }
+    }
+  }
+}
+
+lsp_config['clangd'] = {
+    cmd = { 'clangd' },
+    filetypes = { 'c','cc', 'cxx', 'cpp', 'h', 'hh', 'hxx', 'hpp' , 's'},
+    root_markers = { '.clangd', 'compile_command.json' },
+    capabilities = {
+        textDocument = {
+            semanticTokens = {
+                multilineTokenSupport = true,
+            }
+        }
+    }
+}
+
+for k,v in pairs(lsp_config) do
+    vim.lsp.config(k, v)
+    vim.lsp.enable(k)
+end

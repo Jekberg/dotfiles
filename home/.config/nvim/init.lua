@@ -13,6 +13,7 @@
 ]]--
 
 require("config.lazy")
+require("lsp")
 
 vim.opt.expandtab   = true
 vim.opt.tabstop     = 4
@@ -21,3 +22,10 @@ vim.opt.shiftwidth  = 4
 
 vim.cmd("highlight Normal ctermbg=none guibg=none")
 
+vim.lsp.enable('luals')
+vim.lsp.enable('clangd')
+
+vim.diagnostic.config({
+    virtual_text = true,
+    virtual_lines = { current_line = true }
+})
