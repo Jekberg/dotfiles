@@ -26,5 +26,4 @@ vim.cmd("highlight Normal ctermbg=none guibg=none")
 
 vim.diagnostic.config({
     virtual_text = true,
-    virtual_lines = { current_line = true }
 })
