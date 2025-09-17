@@ -6,6 +6,9 @@ lsp_config['luals'] = {
   root_markers = { { '.luarc.json', '.luarc.jsonc' }, '.git' },
   settings = {
     Lua = {
+      diagnostics = {
+          globals = { 'vim' },
+      },
       runtime = {
         version = 'LuaJIT',
       }
