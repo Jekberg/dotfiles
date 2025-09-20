@@ -10,9 +10,7 @@ app-shells/zsh
 app-shells/gentoo-zsh-completions
 app-shells/zsh-syntax-highlighting
 app-shells/zsh-completions
-dev-lua/luarocks
 dev-python/zstandard
-dev-util/lua-language-server
 gnome-base/gnome-keyring
 gui-apps/eww
 gui-apps/grim
