@@ -11,6 +11,7 @@ app-misc/fastfetch           -X
 dev-lang/lazarus             qt6
 dev-lang/fpc                 source
 dev-lang/python              pgo
+dev-lang/rust                lto rust-analyer
 dev-libs/xmlsec              nss
 dev-libs/libdbusmenu         gtk3
 dev-libs/libgudev            introspection
