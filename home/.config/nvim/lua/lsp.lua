@@ -29,6 +29,12 @@ lsp_config['clangd'] = {
     }
 }
 
+lsp_config['rust-analyzer'] = {
+    cmd = { 'rust-analyzer' },
+    filetypes = { 'rust' },
+    root_markers = { 'Cargo.toml', 'Cargo.lock' }
+}
+
 for k,v in pairs(lsp_config) do
     vim.lsp.config(k, v)
     vim.lsp.enable(k)
