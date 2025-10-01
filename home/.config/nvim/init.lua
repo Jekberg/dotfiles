@@ -13,6 +13,7 @@
 ]]--
 
 require("config.lazy")
+require("style")
 require("lsp")
 
 vim.opt.number         = true
@@ -22,8 +23,11 @@ vim.opt.tabstop        = 4
 vim.opt.softtabstop    = 4
 vim.opt.shiftwidth     = 4
 
-vim.cmd("highlight Normal ctermbg=none guibg=none")
+vim.opt.cursorline     = true
+vim.opt.cursorlineopt  = 'number'
 
 vim.diagnostic.config({
     virtual_text = true,
 })
+
+vim.treesitter.start()
