@@ -57,6 +57,14 @@ local scheme = {
     strings         = { fg = catppuccin.green },
     symbols         = { fg = catppuccin.red },
     type            = { fg = catppuccin.yellow },
+
+    link            = { fg = catppuccin.blue },
+    heading1        = { fg = catppuccin.red },
+    heading2        = { fg = catppuccin.peach },
+    heading3        = { fg = catppuccin.yellow },
+    heading4        = { fg = catppuccin.green },
+    heading5        = { fg = catppuccin.sapphire },
+    heading6        = { fg = catppuccin.lavender },
 }
 
 local highlighting = {
@@ -103,6 +111,14 @@ local highlighting = {
     ['@type.builtin']          = scheme.builtin,
     ['@variable']              = scheme.symbols,
     ['@variable.parameter']    = scheme.parameters,
+
+    ['@markup.link']           = scheme.link,
+    ['@markup.heading.1']      = scheme.heading1,
+    ['@markup.heading.2']      = scheme.heading2,
+    ['@markup.heading.3']      = scheme.heading3,
+    ['@markup.heading.4']      = scheme.heading4,
+    ['@markup.heading.5']      = scheme.heading5,
+    ['@markup.heading.6']      = scheme.heading6,
 }
 
 for key, value in pairs(highlighting) do
