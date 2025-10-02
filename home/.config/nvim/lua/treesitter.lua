@@ -3,37 +3,47 @@ local paths = {
 }
 
 local treesitter_configs = {
-    rust = { 'libtree-sitter-rust.so' }
+    rust   = { 'libtree-sitter-rust.so' },
+    python = { 'libtree-sitter-python.so' },
 }
 
-local function load_parser(name)
-    if vim.treesitter.language.add(name) then
+local function try_parser(lang, path)
+    local status, _ = pcall(function ()
+        vim.treesitter.language.add(lang, { path = path })
+    end)
+    return not status
+end
+
+local function load_parser(lang)
+    if vim.treesitter.language.add(lang) then
         -- No need to do anything
         return true
     end
 
-    if not treesitter_configs[name] then
-        -- The language is not supported
-        return false
-    end
-
-    -- Try to find a parser, this is a last ditch effort
-    for _, parser in pairs(treesitter_configs[name]) do
-        for _, path in pairs(paths) do
-            local parser_path = path .. '/' .. parser
-            local status, _ = pcall(function ()
-                vim.treesitter.language.add(name, { path = parser_path })
-            end)
-
-            if not status then
-                -- Sanity check that we found a parser
-                return vim.treesitter.language.add(name)
+    local parsers = treesitter_configs[lang]
+    if parsers then
+        -- Try to find a parser, this is a last ditch effort
+        for _, parser in pairs(parsers) do
+            for _, path in pairs(paths) do
+                local parser_path = path .. '/' .. parser
+                if try_parser(lang, parser_path) then
+                    -- Sanity check that we found a parser
+                    return vim.treesitter.language.add(lang)
+                end
             end
         end
     end
 
+    -- Maybe we can guess the parser name?
+    for _, path in pairs(paths) do
+        local parser_path = path .. '/libtree-sitter-' .. lang .. '.so'
+        if try_parser(lang, parser_path) then
+            return vim.treesitter.language.add(lang)
+        end
+    end
+
     -- Just in case, we shoud expect no parser if we reach this point
-    return vim.treesitter.language.add(name)
+    return vim.treesitter.language.add(lang)
 end
 
 vim.api.nvim_create_autocmd('FileType', {
