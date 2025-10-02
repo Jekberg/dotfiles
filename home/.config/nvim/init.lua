@@ -14,6 +14,7 @@
 
 require("config.lazy")
 require("style")
+require("treesitter")
 require("lsp")
 
 vim.opt.number         = true
@@ -29,5 +30,3 @@ vim.opt.cursorlineopt  = 'number'
 vim.diagnostic.config({
     virtual_text = true,
 })
-
-vim.treesitter.start()
