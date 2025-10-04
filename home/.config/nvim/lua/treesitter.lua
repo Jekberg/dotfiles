@@ -55,3 +55,20 @@ vim.api.nvim_create_autocmd('FileType', {
     end
 })
 
+--[[
+  Set folding automatically based on treesitte.
+
+  TODO: It would be nice to rank the folding in order of preference e.g.
+
+  1. LSP
+  2. Tree Sitter
+  3. Indent
+
+  Or have a per language ranking.
+--]]
+
+vim.opt.foldenable = false
+vim.opt.foldcolumn = '0'
+vim.opt.foldlevel  = 10
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr   = 'v:lua.vim.treesitter.foldexpr()'
