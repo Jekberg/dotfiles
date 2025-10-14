@@ -227,23 +227,39 @@ tooltip {
  * Workspaces.
  */
 #workspaces button {
-    color   : @catppuccin-text;
-    opacity : 0.5;
+    color   : @catppuccin-rosewater;
     padding : 0px 1px 0px 1px;
 }
 
 #workspaces button:hover {
-    opacity    : 1.0;
-    box-shadow : inset 0px -3px @catppuccin-subtext0;
+    box-shadow : inset 0px -3px @catppuccin-rosewater;
 }
 
 #workspaces button.active {
-    color      : @catppuccin-text;
-    opacity    : 1.0;
-    box-shadow : inset 0px -3px @catppuccin-subtext0;
+    color      : @catppuccin-lavender;
+    box-shadow : inset 0px -3px @catppuccin-lavender;
+}
+
+#workspaces button.active.empty {
+    color : @catppuccin-lavender;
+}
+
+#workspaces button.active.empty:hover {
+    box-shadow : inset 0px -3px @catppuccin-lavender;
+}
+
+#workspaces button.empty {
+    color : @catppuccin-overlay0;
+}
+
+#workspaces button.empty:hover {
+    box-shadow : inset 0px -3px @catppuccin-overlay0;
 }
 
 #workspaces button.urgent {
-    color   : @catppuccin-text;
-    opacity : 1.0;
+    color : @catppuccin-yellow;
+}
+
+#workspaces button.urgent:hover {
+    box-shadow : inset 0px -3px @catppuccin-yellow;
 }
