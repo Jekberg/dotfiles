@@ -36,6 +36,7 @@
         "clock"
     ],
     "modules-right": [
+        "tray",
         "group/settings"
     ],
 
@@ -49,8 +50,7 @@
         "orientation": "inherit",
         "modules": [
             "custom/logo",
-            "hyprland/workspaces",
-            "tray"
+            "hyprland/workspaces"
         ]
     },
     "group/settings": {
