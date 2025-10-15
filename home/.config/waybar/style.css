@@ -36,8 +36,6 @@
 @define-color catppuccin-mantle    rgb( 24,  24,  37) /* #181825 */;
 @define-color catppuccin-crust     rgb( 17,  17,  27) /* #010409 */;
 
-
-
 /*
  * Global defaults.
  *
@@ -165,7 +163,7 @@ tooltip {
 }
 
 /*
- *
+ * Network.
  */
 #network {
     color : @catppuccin-text;
