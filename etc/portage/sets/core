@@ -1,4 +1,3 @@
-app-admin/eclean-kernel
 app-admin/sudo
 app-editors/neovim
 app-eselect/eselect-repository
@@ -11,7 +10,6 @@ app-shells/gentoo-zsh-completions
 app-shells/zsh-syntax-highlighting
 app-shells/zsh-completions
 dev-lang/rust
-dev-python/zstandard
 gnome-base/gnome-keyring
 gui-apps/eww
 gui-apps/grim
@@ -38,18 +36,11 @@ media-sound/pavucontrol
 net-misc/chrony
 net-misc/networkmanager
 sys-auth/hyprpolkitagent
-sys-boot/grub
 sys-fs/dosfstools
 sys-fs/e2fsprogs
 sys-fs/lvm2
 sys-fs/xfsprogs
 sys-fs/udiskie
-sys-kernel/dracut
-sys-kernel/gentoo-kernel
-sys-kernel/gentoo-sources
-sys-kernel/installkernel
-sys-kernel/linux-firmware
-sys-kernel/modprobed-db
 www-client/google-chrome
 xfce-base/thunar
 x11-misc/xdg-user-dirs
