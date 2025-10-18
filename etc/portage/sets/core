@@ -16,6 +16,17 @@ app-shells/gentoo-zsh-completions
 app-shells/zsh-syntax-highlighting
 app-shells/zsh-completions
 dev-lang/rust
+dev-libs/tree-sitter-c
+dev-libs/tree-sitter-cmake
+dev-libs/tree-sitter-cpp
+dev-libs/tree-sitter-json
+dev-libs/tree-sitter-lua
+dev-libs/tree-sitter-markdown
+dev-libs/tree-sitter-python
+dev-libs/tree-sitter-rust
+dev-vcs/git
+dev-util/lua-language-server
+dev-util/perf
 gnome-base/gnome-keyring
 gui-apps/eww
 gui-apps/grim
@@ -34,6 +45,7 @@ gui-libs/hyprcursor
 gui-libs/xdg-desktop-portal-hyprland
 gui-wm/hyprland
 llvm-core/clang
+llvm-core/lldb
 mail-client/thunderbird
 media-fonts/fontawesome
 media-fonts/roboto
@@ -42,7 +54,9 @@ media-sound/pavucontrol
 net-im/discord
 net-misc/chrony
 net-misc/networkmanager
+sys-apps/dtc
 sys-auth/hyprpolkitagent
+sys-devel/gcc
 sys-fs/dosfstools
 sys-fs/e2fsprogs
 sys-fs/lvm2
