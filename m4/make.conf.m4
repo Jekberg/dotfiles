@@ -10,7 +10,7 @@
 # | | | | | | (_| |   <  __/| (_| (_) | | | |  _|
 # |_| |_| |_|\__,_|_|\_\___(_)___\___/|_| |_|_|
 
-esyscmd(./scripts/recomend-jobs.py)dnl
+esyscmd(./scripts/gentoo/portage-genjobs.py)dnl
 
 EMERGE_DEFAULT_OPTS="--ask --quiet --verbose --jobs=${JOBS_EMERGE} --load=${LAVG_EMERGE}"
 
