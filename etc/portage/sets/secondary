@@ -20,6 +20,7 @@ gui-libs/hyprcursor
 gui-libs/xdg-desktop-portal-hyprland
 gui-wm/hyprland
 mail-client/thunderbird
+media-sound/cava
 media-sound/pavucontrol
 net-im/discord
 sys-auth/hyprpolkitagent
