@@ -8,17 +8,31 @@ import re
 
 gbyte_in_kbytes = 1000000
 
-def main():
+class Jobs:
     kbytes_per_job = 2 * gbyte_in_kbytes
-    nproc = total_nproc()
-    kbytes = total_kbytes()
+    def __init__(self):
+        self.sys_nproc = total_nproc()
+        self.sys_kbytes = total_kbytes()
+        self.max_nproc = int(self.sys_kbytes / Jobs.kbytes_per_job)
 
-    max_nproc = int(kbytes / kbytes_per_job)
-    make_nproc = min(nproc, max_nproc)
-    portage_nproc = int(max_nproc / make_nproc)
+    def jobs_make(self):
+        return min(self.sys_nproc, self.max_nproc)
 
-    print('MAKE={}'.format(make_nproc))
-    print('PORTAGE={}'.format(portage_nproc))
+    def jobs_emerge(self):
+        return int(self.max_nproc / self.jobs_make())
+
+    def lavg_make(self):
+        return self.sys_nproc
+
+    def lavg_emerge(self):
+        return self.sys_nproc
+
+def main():
+    jobs = Jobs()
+    print('JOBS_MAKE="{}"'.format(jobs.jobs_make()))
+    print('JOBS_EMERGE="{}"'.format(jobs.jobs_emerge()))
+    print('LAVG_MAKE="{}"'.format(jobs.lavg_make()))
+    print('LAVG_EMERGE="{}"'.format(jobs.lavg_emerge()))
 
 def total_nproc():
     nproc = 0
