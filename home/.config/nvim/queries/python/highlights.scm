@@ -56,6 +56,7 @@
 
 ; Operators
 [
+    "."
     "+"
     "-"
     "*"
@@ -101,6 +102,8 @@
 
 ; Types
 (type
+    (identifier) @type)
+(class_definition
     (identifier) @type)
 ((identifier) @type.builtin
     (#eq? @type.builtin "int")
