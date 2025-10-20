@@ -1,4 +1,4 @@
-#! /usr/bin/python3
+#! /usr/bin/env python3
 #
 # This is a small utility for determening how many jobs are appropriate
 # when invoking make and portage. This depends on the total amount of
