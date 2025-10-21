@@ -56,8 +56,8 @@ VI_MODE=
 # results in weird prompt redraws. Like wise %? also seem to mess with the
 # length calculations, so for now avoid it in the fill-line.
 PROMPT='
-$(fill-line "%F{magenta}(%f%D %T%F{magenta})%f %F{green}%~%f ${vcs_info_msg_0_} " "%B${VI_MODE}%b")
-%F{magenta}[%f%F{green}%n%f@%F{cyan}%m%f%F{magenta}]%f %B%F{blue}%%%f%b '
+$(fill-line "%F{7}(%f%F{6}%D %T%f%F{7})%f %F{4}%~%f ${vcs_info_msg_0_} " "%B${VI_MODE}%b")
+%F{7}[%f%F{1}%n%f%F{7}@%f%F{6}%m%f%F{7}]%f %B%F{7}%%%f%b '
 
 # We set the RPROMPT dynamically and clear it in the zle-line-init and
 # zle-line-finish widgets. This is so that we don't have text on the
@@ -67,17 +67,16 @@ RPROMPT=''
 
 # This is the error information to be displayed if and when a command returns a
 # non-zero error code.
-ERRNO_MSG="%F{yellow}errno%f %F{red}%?%f"
+ERRNO_MSG="%F{1}%?%f"
 
-GIT_COLOUR="#E84D31"
-GIT_BRANCH="%F{$GIT_COLOUR}%s%f%F{magenta}:%f%F{cyan}%b%f%c%u"
-GIT_ACTION="%F{magenta}(%f%F{magenta}%f%F{yellow}%a%f%f%F{magenta})%f"
+GIT_BRANCH="%F{7}[%f%F{6}%b%f%c%u%F{7}]%f"
+GIT_ACTION="%F{7}(%f%F{magenta}%f%F{6}%a%f%F{7})%f"
 
 zstyle ':vcs_info:git*' formats                  "${GIT_BRANCH}"
 zstyle ':vcs_info:git*' actionformats            "${GIT_BRANCH}${GIT_ACTION}"
 zstyle ':vcs_info:git*' branchformat             "%b"
-zstyle ':vcs_info:git*' stagedstr                "%F{green}+%f"
-zstyle ':vcs_info:git*' unstagedstr              "%F{red}*%f"
+zstyle ':vcs_info:git*' stagedstr                "%F{2}+%f"
+zstyle ':vcs_info:git*' unstagedstr              "%F{1}*%f"
 zstyle ':vcs_info:git*' check-for-changes        true
 zstyle ':vcs_info:git*' check-for-staged-changes true
 
@@ -149,7 +148,7 @@ function zle-line-init {
 
     # Only show the errno if there was an actual failed previous
     # command.
-    RPROMPT='%0(?..%B%F{magenta}<%f${ERRNO_MSG}%F{magenta}>%f%b)'
+    RPROMPT='%0(?..%B%F{7}<%f${ERRNO_MSG}%F{7}>%f%b)'
     vi-keymap-select
     zle reset-prompt
 }
