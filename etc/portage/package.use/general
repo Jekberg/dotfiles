@@ -43,6 +43,7 @@ media-libs/mesa              vaapi vdpau
 media-libs/tiff              jpeg
 media-plugins/alsa-plugins   pulseaudio
 media-sound/pavucontrol      sound
+media-video/ffmpeg           -X
 media-video/libva-utils      -X
 media-video/pipewire         -X sound-server
 net-dns/dnsmasq              script
