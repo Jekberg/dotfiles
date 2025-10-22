@@ -3,6 +3,8 @@ app-misc/corectrl
 app-misc/openrgb
 app-misc/piper
 app-office/libreoffice
+gnome-base/gnome-keyring
+gnome-base/librsvg
 gui-apps/eww
 gui-apps/grim
 gui-apps/hypridle

@@ -24,7 +24,6 @@ dev-libs/tree-sitter-rust
 dev-vcs/git
 dev-util/lua-language-server
 dev-util/perf
-gnome-base/gnome-keyring
 llvm-core/clang
 llvm-core/lldb
 media-fonts/fontawesome
