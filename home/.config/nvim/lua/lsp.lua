@@ -1,3 +1,12 @@
+-- Generic configuration common across every LSP
+vim.lsp.config('*', {
+    on_attach = function (client, bufnr)
+        vim.lsp.completion.enable(true, client.id, bufnr, {
+            autotrigger = true
+        })
+    end
+})
+
 local lsp_config = {
     clangd = {
         cmd = { 'clangd' },

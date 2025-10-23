@@ -24,6 +24,8 @@ vim.opt.tabstop        = 4
 vim.opt.softtabstop    = 4
 vim.opt.shiftwidth     = 4
 
+vim.opt.completeopt = "menuone,noinsert,popup"
+
 vim.opt.cursorline     = true
 vim.opt.cursorlineopt  = 'number'
 
