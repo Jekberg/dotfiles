@@ -9,4 +9,3 @@
 */* QEMU_USER_TARGETS: x86_64
 */* systemd udev dbus multilib dist-kernel wayland X qt6 icu opengl vulkan pulseaudio pipewire bluetooth gamepad
 */* -kde -gnome -qt5 -test -telemetry
-
