@@ -22,10 +22,14 @@ gui-libs/hyprcursor
 gui-libs/xdg-desktop-portal-hyprland
 gui-wm/hyprland
 mail-client/thunderbird
+media-fonts/fontawesome
+media-fonts/roboto
+media-fonts/symbols-nerd-font
 media-sound/cava
 media-sound/pavucontrol
 net-im/discord
 sys-auth/hyprpolkitagent
+sys-fs/udiskie
 www-client/firefox
 www-client/google-chrome
 xfce-base/thunar

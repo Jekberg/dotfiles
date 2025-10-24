@@ -26,9 +26,6 @@ dev-util/lua-language-server
 dev-util/perf
 llvm-core/clang
 llvm-core/lldb
-media-fonts/fontawesome
-media-fonts/roboto
-media-fonts/symbols-nerd-font
 net-misc/chrony
 net-misc/networkmanager
 sys-apps/dtc
@@ -37,6 +34,5 @@ sys-fs/dosfstools
 sys-fs/e2fsprogs
 sys-fs/lvm2
 sys-fs/xfsprogs
-sys-fs/udiskie
 sys-process/htop
 x11-misc/xdg-user-dirs
