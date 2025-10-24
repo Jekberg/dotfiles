@@ -5,6 +5,10 @@ app-misc/piper
 app-office/libreoffice
 gnome-base/gnome-keyring
 gnome-base/librsvg
+games-util/gamemode
+games-util/goverlay
+games-util/mangohud
+games-util/steam-launcher
 gui-apps/eww
 gui-apps/grim
 gui-apps/hypridle
@@ -20,6 +24,7 @@ gui-apps/wlogout
 gui-apps/wl-clipboard
 gui-libs/hyprcursor
 gui-libs/xdg-desktop-portal-hyprland
+gui-wm/gamescope
 gui-wm/hyprland
 mail-client/thunderbird
 media-fonts/fontawesome
