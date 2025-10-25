@@ -1,5 +1,7 @@
 app-admin/eclean-kernel
+dev-embedded/fwup
 dev-python/zstandard
+sys-apps/kexec-tools
 sys-boot/grub
 sys-kernel/dracut
 sys-kernel/gentoo-kernel

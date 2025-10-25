@@ -32,10 +32,14 @@ media-fonts/roboto
 media-fonts/symbols-nerd-font
 media-sound/cava
 media-sound/pavucontrol
+media-sound/playerctl
 net-im/discord
+net-wireless/blueman
 sys-auth/hyprpolkitagent
 sys-fs/udiskie
+sys-process/nvtop
 www-client/firefox
 www-client/google-chrome
 xfce-base/thunar
+x11-apps/mesa-progs
 x11-terms/alacritty
