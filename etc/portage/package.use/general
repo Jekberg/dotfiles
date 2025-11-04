@@ -1,62 +1,64 @@
-app-crypt/gcr                gtk
-app-crypt/pinentry           -X
-app-emulation/libvirt        policykit
-app-emulation/qemu           -X spice virgl
-app-emulation/virt-manager   gui policykit
-app-office/libreoffice       clang
-app-text/xmlto               text
-app-text/poppler             cairo
-app-misc/cmatrix             -X
-app-misc/fastfetch           -X
-dev-lang/lazarus             qt6
-dev-lang/fpc                 source
-dev-lang/python              pgo
-dev-lang/rust                clippy lto rust-analyzer rust-src rustfmt
-dev-libs/xmlsec              nss
-dev-libs/libdbusmenu         gtk3
-dev-libs/libgudev            introspection
-dev-python/pillow            webp tiff
-dev-qt/qtbase                libproxy icu
-dev-qt/qt5proxy              libproxy icu
-dev-qt/qtmultimedia          qml
-dev-qt/qt5compat             qml
-dev-qt/qtdeclarative         opengl
-dev-qt/qtcharts              qml
-dev-qt/qtgui                 egl
-kde-frameworks/kguiaddons    -X
-kde-frameworks/kwindowsystem -X
-kde-frameworks/sonnet        qml
-gui-apps/eww                 -X
-gui-apps/rofi-wayland        windowmode
-gui-apps/waybar              tray pipewire network
-gui-wm/hyprland              systemd
-mail-client/thunderbird      -X clang hwaccel
-media-fonts/fontawesome      ttf
-media-libs/babl              introspection lcms
-media-libs/freetype          harfbuzz
-media-libs/gegl              introspection cairo lcms
-media-libs/harfbuzz          icu
-media-libs/libcanberra       alsa
-media-libs/libvpx            postproc
-media-libs/libsdl2           gles2
-media-libs/mesa              vaapi vdpau
-media-libs/tiff              jpeg
-media-plugins/alsa-plugins   pulseaudio
-media-sound/pavucontrol      sound
-media-video/ffmpeg           -X
-media-video/libva-utils      -X
-media-video/pipewire         -X sound-server
-net-dns/dnsmasq              script
-net-im/discord               appindicator
-net-libs/gnutls              tools pkcs11
-net-misc/spice-gtk           usbredir
-net-wireless/wpa_supplicant  dbus
-sys-apps/groff               -X
-sys-apps/systemd             policykit
-sys-fs/lvm2                  lvm
-sys-libs/zlib                minizip
-www-client/firefox           -X hwaccel pgo
-xfce-base/libxfce4ui         -X
-xfce-base/libxfce4windowing  -X
-xfce-base/xfce4-panel        -X
-x11-terms/alacritty          -X
+app-crypt/gcr                 gtk
+app-crypt/pinentry            -X
+app-emulation/libvirt         policykit
+app-emulation/qemu            -X spice virgl
+app-emulation/virt-manager    gui policykit
+app-office/libreoffice        clang
+app-text/xmlto                text
+app-text/poppler              cairo
+app-misc/cmatrix              -X
+app-misc/fastfetch            -X
+dev-lang/lazarus              qt6
+dev-lang/fpc                  source
+dev-lang/python               pgo
+dev-lang/rust                 clippy lto rust-analyzer rust-src rustfmt
+dev-libs/xmlsec               nss
+dev-libs/libdbusmenu          gtk3
+dev-libs/libgudev             introspection
+dev-python/pillow             webp tiff
+dev-qt/qtbase                 libproxy icu
+dev-qt/qt5proxy               libproxy icu
+dev-qt/qtmultimedia           qml
+dev-qt/qt5compat              qml
+dev-qt/qtdeclarative          opengl
+dev-qt/qtcharts               qml
+dev-qt/qtgui                  egl
+kde-frameworks/kguiaddons     -X
+kde-frameworks/kwindowsystem  -X
+kde-frameworks/sonnet         qml
+gui-apps/eww                  -X
+gui-apps/rofi-wayland         windowmode
+gui-apps/waybar               tray pipewire network
+gui-wm/hyprland               systemd
+mail-client/thunderbird       -X clang hwaccel
+media-fonts/fontawesome       ttf
+media-libs/babl               introspection lcms
+media-libs/freetype           harfbuzz
+media-libs/gegl               introspection cairo lcms
+media-libs/harfbuzz           icu
+media-libs/libcanberra        alsa
+media-libs/libvpx             postproc
+media-libs/libsdl2            gles2
+media-libs/mesa               vaapi vdpau
+media-libs/tiff               jpeg
+media-plugins/alsa-plugins    pulseaudio
+media-sound/pavucontrol       sound
+media-video/ffmpeg            -X
+media-video/libva-utils       -X
+media-video/pipewire          -X sound-server
+net-dns/dnsmasq               script
+net-im/discord                appindicator
+net-libs/gnutls               tools pkcs11
+net-misc/spice-gtk            usbredir
+net-wireless/wpa_supplicant   dbus
+sys-apps/groff                -X
+sys-apps/systemd              policykit
+sys-fs/lvm2                   lvm
+sys-libs/zlib                 minizip
+www-client/chromium           -X -rar
+www-client/firefox            -X hwaccel pgo
+xfce-base/libxfce4ui          -X
+xfce-base/libxfce4windowing   -X
+xfce-base/xfce4-panel         -X
+x11-terms/alacritty           -X
+x11-themes/catppuccin-cursors -* mocha
