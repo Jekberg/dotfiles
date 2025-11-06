@@ -9,6 +9,7 @@ games-util/gamemode
 games-util/goverlay
 games-util/mangohud
 games-util/steam-launcher
+games-misc/fortune-mod
 gui-apps/eww
 gui-apps/grim
 gui-apps/hypridle
