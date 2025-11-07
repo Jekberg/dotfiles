@@ -91,6 +91,7 @@ virtual/libudev                ABI_X86: 32
 virtual/libusb                 ABI_X86: 32
 virtual/opengl                 ABI_X86: 32
 virtual/rust                   ABI_X86: 32
+virtual/zlib                   ABI_X86: 32
 x11-libs/cairo                 ABI_X86: 32
 x11-libs/extest                ABI_X86: 32
 x11-libs/gdk-pixbuf            ABI_X86: 32
