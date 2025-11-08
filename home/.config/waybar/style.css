@@ -118,7 +118,7 @@ tooltip {
  * Bluetooth
  */
 #bluetooth {
-    color : @catppuccin-text;
+    color : @catppuccin-overlay2;
 }
 
 #bluetooth.connected {
@@ -148,7 +148,7 @@ tooltip {
  */
 #language {
     border-radius : 0px;
-    color         : @catppuccin-text;
+    color         : @catppuccin-subtext0;
 }
 
 #language:hover {
