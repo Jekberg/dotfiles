@@ -1,0 +1,44 @@
+(defwidget sysstats []
+    (box
+        :orientation "v"
+        (cpustats)
+        (memstats)))
+
+(defwidget cpustats []
+    (box
+        :class "cpustats"
+        :orientation "h"
+        (_sysstats
+            :label ""
+            :value { EWW_CPU.avg })))
+
+(defwidget memstats []
+    (box
+        :class "memstats"
+        :orientation "h"
+        (_sysstats
+            :label ""
+            :value { 100 * EWW_RAM.used_mem / EWW_RAM.total_mem })))
+
+;; This is just a helper for stamping out the _real_ widgets.
+;; It is not intended to be used directly outside this file.
+(defwidget _sysstats [label value]
+    (box
+        :class "sysstats"
+        :space-evenly false
+        :orientation "h"
+        (label
+            :text "${label}")
+        (overlay
+            :halign  "end"
+            :hexpand true
+            (progress
+                :valign  "center"
+                :hexpand true
+                :flipped false
+                :value value
+                :orientation "h")
+            (label
+                :halign "center"
+                :valign "center"
+                :text   "${round(value,0)}%"))))

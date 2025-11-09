@@ -1,0 +1,6 @@
+{
+    "custom/control": {
+        "format": "",
+        "on-click": "eww open control-panel"
+    }
+}

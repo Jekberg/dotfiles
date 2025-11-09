@@ -1,6 +1,6 @@
 (defwidget player []
     (box
-        :orientation "horizontal"
+        :orientation "h"
         :class "player-widget"
         :spacing 0
         :space-evenly false

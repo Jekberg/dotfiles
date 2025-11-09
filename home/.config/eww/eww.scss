@@ -26,19 +26,140 @@ $catppuccin-mantle    : rgb( 24,  24,  37) /* #181825 */;
 $catppuccin-crust     : rgb( 17,  17,  27) /* #010409 */;
 
 window {
-    background: transparent;
+    background    : $catppuccin-base;
+    border        : solid 1px $catppuccin-overlay0;
+    border-radius : 16px;
+}
+
+button {
+    box-shadow : none;
+    border     : none;
 }
 
 label {
-    color  : $catppuccin-text;
-    border : none;
+    color      : $catppuccin-text;
+    border     : none;
+    box-shadow : none;
 }
 
+.control-panel {
+    padding : 16px 16px 16px 16px;
+}
+
+.logout-btn {
+    background    : transparent;
+    label {
+        color     : $catppuccin-red;
+    }
+}
+
+.notify-btn {
+    background    : transparent;
+    label {
+        color     : $catppuccin-yellow;
+    }
+}
+
+.volume {
+    all: unset;
+
+    button {
+        background : transparent;
+        border     : none;
+        box-shadow : none;
+    }
+
+    scale {
+        color : $catppuccin-teal;
+        trough {
+            all           : unset;
+            background    : $catppuccin-crust;
+            border-radius : 8px;
+            min-height    : 16px;
+        }
+
+    }
+
+    .volume-sink {
+        label {
+            color: $catppuccin-teal;
+        }
+
+        scale trough highlight {
+            all           : unset;
+            background    : $catppuccin-teal;
+            border-radius : 8px;
+            min-height    : 16px;
+        }
+    }
+
+    .volume-source {
+        label {
+            color: $catppuccin-rosewater;
+        }
+
+        scale trough highlight {
+            all           : unset;
+            background    : $catppuccin-rosewater;
+            border-radius : 8px;
+            min-height    : 16px;
+        }
+    }
+}
+
+.cpustats {
+    color : $catppuccin-maroon;
+
+    .sysstats progress {
+        min-width  : 16px;
+        background : $catppuccin-maroon;
+    }
+}
+
+.memstats {
+    color : $catppuccin-maroon;
+
+    .sysstats progress {
+        min-width  : 16px;
+        background : $catppuccin-maroon;
+    }
+}
+
+.sysstats {
+    margin  : 2px 0px 2px 0px;
+    padding : 0px 8px 0px 8px;
+
+    > label {
+        color : inherit;
+    }
+
+    > * {
+        margin : 0px 2px 0px 2px;
+    }
+
+    progressbar {
+        border-radius : 16px;
+        border        : 1px solid white;
+        padding       : 0px 0px 0px 0px;
+        min-height    : 16px;
+
+        progress {
+            border        : none;
+            border-radius : 16px;
+            background    : inherit;
+            min-height    : inherit;
+        }
+
+        trough {
+            border-radius : 16px;
+            border        : none;
+            background    : black;
+            min-height    : inherit;
+        }
+    }
+}
 
 .player-widget {
-    background    : $catppuccin-base;
-    border        : solid 1px $catppuccin-surface0;
-    border-radius : 16px;
     padding       : 0px 8px 0px 8px;
 
     .player-thumbnail {

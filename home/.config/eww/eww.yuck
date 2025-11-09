@@ -1,10 +1,26 @@
-(include "player.yuck")
+(include "modules/player.yuck")
+(include "modules/volume.yuck")
+(include "modules/stats.yuck")
+(include "settings.yuck")
 
-(defwindow media-player
+(defwindow control-panel
     :monitor 0
-    :stacking "overlay"
+    :exclusive true
+    :stacking "fg"
     :geometry (geometry
         :x "16px"
         :y "16px"
+        :width "360px"
+        :height "480px"
         :anchor "top right")
-    (player))
+    (eventbox
+        :class "control-panel"
+        :orientation "v"
+        :onhoverlost `${EWW_CMD} close control-panel`
+        (box
+            :hexpand true
+            :space-evenly false
+            :orientation "v"
+            (settings)
+            (player)
+            (sysstats))))

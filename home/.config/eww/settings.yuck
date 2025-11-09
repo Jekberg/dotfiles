@@ -1,0 +1,23 @@
+;; This is currently work in-progress,
+(defwidget settings []
+    (box
+        :hexpand true
+        :orientation "v"
+        :space-evenly false
+        (box
+            :halign "start"
+            :orientation "h"
+            :space-evenly false
+            (button
+                :class "logout-btn"
+                :halign "center"
+                :valign "center"
+                :onclick '~/.local/bin/power-menu.sh'
+                (label :text ""))
+            (button
+                :class "notify-btn"
+                :halign "center"
+                :valign "center"
+                :onclick "makoctl mode -t silent"
+        (volume)))
+

@@ -1,0 +1,47 @@
+(defwidget volume []
+    (box
+        :class "volume"
+        :hexpand true
+        :space-evenly false
+        :orientation "v"
+        (box
+            :class "volume-sink"
+            :hexpand true
+            :space-evenly false
+            :orientation "h"
+            (button
+                :halign "start"
+                :valign "center"
+                :onclick `wpctl set-mute @DEFAULT_SINK@ toggle`
+                (label :text {VOLUME.sink.muted ? "" : "" }))
+            (scale
+                :halign "fill"
+                :hexpand true
+                :orientation "h"
+                :min 0.0
+                :max 101.0
+                :value {100 * VOLUME.sink.volume }
+                :onchange `wpctl set-volume @DEFAULT_SINK@ {}%`))
+        (box
+            :class "volume-source"
+            :hexpand true
+            :space-evenly false
+            :orientation "h"
+            (button
+                :halign "start"
+                :valign "center"
+                :onclick `wpctl set-mute @DEFAULT_SOURCE@ toggle`
+                (label :text {VOLUME.source.muted ? "" : "" }))
+            (scale
+                :halign "fill"
+                :hexpand true
+                :orientation "h"
+                :min 0.0
+                :max 101.0
+                :value {100 * VOLUME.source.volume }
+                :onchange `wpctl set-volume @DEFAULT_SOURCE@ {}%`))
+            ))
+
+(deflisten VOLUME
+    :initial "{}"
+    `scripts/wpvol.lua`)

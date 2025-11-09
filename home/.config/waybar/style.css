@@ -156,6 +156,18 @@ tooltip {
 }
 
 /*
+ * Control.
+ */
+#custom-control {
+    color : @catppuccin-flamingo;
+}
+
+#custom-control:hover {
+    box-shadow : inset 0px -3px @catppuccin-flamingo;
+}
+
+
+/*
  * Logo.
  */
 #custom-logo {
@@ -182,18 +194,6 @@ tooltip {
 }
 
 #custom-notifications:hover {
-    box-shadow : inset 0px -3px @catppuccin-subtext0;
-}
-
-/*
- * Player.
- */
-#custom-player {
-    border-radius : 0px;
-    color         : @catppuccin-text;
-}
-
-#custom-player:hover {
     box-shadow : inset 0px -3px @catppuccin-subtext0;
 }
 
