@@ -111,7 +111,7 @@ tooltip {
  * Battery
  */
 #battery {
-    color : @catppuccin-text;
+    color : @catppuccin-yellow;
 }
 
 /*
