@@ -37,7 +37,7 @@
     ],
     "modules-right": [
         "tray",
-        "group/settings",
+        "group/status",
         "custom/control"
     ],
 
@@ -54,7 +54,7 @@
             "hyprland/workspaces"
         ]
     },
-    "group/settings": {
+    "group/status": {
         "orientation": "inherit",
         "modules": [
             "hyprland/language",
