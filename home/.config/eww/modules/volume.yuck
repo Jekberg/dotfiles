@@ -13,6 +13,7 @@
                 :halign "start"
                 :valign "center"
                 :onclick `wpctl set-mute @DEFAULT_SINK@ toggle`
+                :tooltip {VOLUME.sink.muted ? "Unmuted" : "Mute" }
                 (label :text {VOLUME.sink.muted ? "" : "" }))
             (scale
                 :halign "fill"
@@ -21,6 +22,7 @@
                 :min 0.0
                 :max 101.0
                 :value {100 * VOLUME.sink.volume }
+                :tooltip "${round(100 * VOLUME.sink.volume, 0)}%"
                 :onchange `wpctl set-volume @DEFAULT_SINK@ {}%`))
         (box
             :class "volume-source"
@@ -31,6 +33,7 @@
                 :halign "start"
                 :valign "center"
                 :onclick `wpctl set-mute @DEFAULT_SOURCE@ toggle`
+                :tooltip {VOLUME.source.muted ? "Unmuted" : "Mute" }
                 (label :text {VOLUME.source.muted ? "" : "" }))
             (scale
                 :halign "fill"
@@ -39,6 +42,7 @@
                 :min 0.0
                 :max 101.0
                 :value {100 * VOLUME.source.volume }
+                :tooltip "${round(100 * VOLUME.source.volume, 0)}%"
                 :onchange `wpctl set-volume @DEFAULT_SOURCE@ {}%`))
             ))
 
