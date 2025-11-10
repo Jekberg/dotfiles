@@ -19,5 +19,6 @@
                 :halign "center"
                 :valign "center"
                 :onclick "makoctl mode -t silent"
+                (label :text "")))
         (volume)))
 

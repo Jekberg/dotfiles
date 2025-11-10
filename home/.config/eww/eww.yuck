@@ -15,6 +15,7 @@
         :anchor "top right")
     (eventbox
         :class "control-panel"
+        :hexpand true
         :orientation "v"
         :onhoverlost `${EWW_CMD} close control-panel`
         (box
