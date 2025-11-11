@@ -13,12 +13,11 @@
 
 {
     "hyprland/window": {
-        "format": "{title}",
-        "max-length": 50,
+        "format": "{class}",
+        "max-length": 16,
+        "tooltip-format": "{title}",
         "rewrite": {
-            "(.*) — Mozilla Firefox": "$1",
-            "(.*) - Google Chrome": "$1",
-            "(.*) - zsh": "$1"
+            "org.corectrl.CoreCtrl": "corectrl"
         },
         "icon": false
     }
