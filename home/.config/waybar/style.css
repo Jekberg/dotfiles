@@ -84,6 +84,7 @@
  */
 #util,
 #workspaces,
+#window,
 #clock,
 #tray,
 #status,
@@ -234,6 +235,13 @@ tooltip {
 #wireplumber:hover {
     border-radius : 0px;
     box-shadow    : inset 0px -3px @catppuccin-subtext0;
+}
+
+/*
+ * Window.
+ */
+#window {
+    color : @catppuccin-subtext0;
 }
 
 /*
