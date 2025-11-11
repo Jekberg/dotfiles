@@ -252,6 +252,7 @@ tooltip {
 #workspaces button.active {
     color      : @catppuccin-lavender;
     box-shadow : inset 0px -3px @catppuccin-lavender;
+    padding    : 0px 4px 0px 4px;
 }
 
 #workspaces button.active.empty {
