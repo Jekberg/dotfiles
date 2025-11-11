@@ -10,17 +10,17 @@
     /*
      * Generic and general.
      */
-    "layer": "top",
+    "layer": "bottom",
     "position": "top",
     "spacing": 16,
     "fixed-center": true,
     "passthrough": false,
     "reload_on_style_change": true,
 
-    "margin-top": 0,
-    "margin-right": 0,
-    "margin-bottom": 0,
-    "margin-left": 0,
+    "margin-top": 4,
+    "margin-right": 2,
+    "margin-bottom": 2,
+    "margin-left": 2,
 
     /*
      * Module positions and organisation.
@@ -29,7 +29,8 @@
      * the module I want in the centre gets pushed off centre.
      */
     "modules-left": [
-        "group/utilities",
+        "custom/logo",
+        "hyprland/workspaces",
         "hyprland/submap"
     ],
     "modules-center": [
@@ -50,8 +51,6 @@
     "group/utilities": {
         "orientation": "inherit",
         "modules": [
-            "custom/logo",
-            "hyprland/workspaces"
         ]
     },
     "group/status": {

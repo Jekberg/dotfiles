@@ -57,8 +57,8 @@
  * The main waybar component.
  */
 #waybar {
-    background    : @catppuccin-base;
-    border-bottom : solid 1px @catppuccin-surface0;
+    background    : transparent;
+    border-bottom : none;
 }
 
 /*
@@ -76,7 +76,24 @@
 .modules-left,
 .modules-center,
 .modules-right {
-    margin : 0px 4px 0px 4px;
+    margin : 0px 2px 0px 2px;
+}
+
+/*
+ * The fist module will be displayed with background.
+ */
+#custom-logo,
+#workspaces,
+#submap,
+#clock,
+#tray,
+#status,
+#custom-control {
+    background    : @catppuccin-base;
+    border-radius : 8px;
+    border        : solid 2px @catppuccin-surface0;
+    box-shadow    : none;
+    padding       : 2px 8px 2px 8px;
 }
 
 /*
@@ -201,7 +218,6 @@ tooltip {
  * Submap.
  */
 #submap {
-    border-radius : 0px;
     color         : @catppuccin-text;
 }
 
