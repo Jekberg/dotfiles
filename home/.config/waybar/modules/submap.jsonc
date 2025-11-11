@@ -3,7 +3,7 @@
         "format": "{}",
         "max-length": 32,
         "on-click": "hyprctl dispatch submap reset",
-        "always-on": true,
+        "always-on": false,
         "default-submap": "default",
         "tooltips": false
     }
