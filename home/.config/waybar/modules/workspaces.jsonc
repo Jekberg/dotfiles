@@ -14,7 +14,6 @@
             "10": 0
         },
         "persistent-workspaces": {
-            "*": 10
         },
         "sort-by": "default",
         "active-only": false,
