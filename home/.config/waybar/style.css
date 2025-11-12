@@ -146,7 +146,7 @@ tooltip {
  * Clock
  */
 #clock {
-    color : @catppuccin-text;
+    color : @catppuccin-subtext0;
 }
 
 /*
