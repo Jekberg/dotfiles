@@ -1,0 +1,25 @@
+From 68cbb507d95c37c67fc68efe223381e6359d88fc Mon Sep 17 00:00:00 2001
+From: cebem1nt <mineewarik@gmail.com>
+Date: Fri, 24 Oct 2025 21:57:58 -0300
+Subject: [PATCH 1/1] fixing crash on group scrolling
+
+---
+ src/group.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/group.cpp b/src/group.cpp
+index 50841efd..294743d7 100644
+--- a/src/group.cpp
++++ b/src/group.cpp
+@@ -26,7 +26,7 @@ Gtk::RevealerTransitionType getPreferredTransitionType(bool is_vertical) {
+ 
+ Group::Group(const std::string& name, const std::string& id, const Json::Value& config,
+              bool vertical)
+-    : AModule(config, name, id, true, true),
++    : AModule(config, name, id, true, false),
+       box{vertical ? Gtk::ORIENTATION_VERTICAL : Gtk::ORIENTATION_HORIZONTAL, 0},
+       revealer_box{vertical ? Gtk::ORIENTATION_VERTICAL : Gtk::ORIENTATION_HORIZONTAL, 0} {
+   box.set_name(name_);
+-- 
+2.51.2
+
