@@ -13,8 +13,7 @@
         "tooltip-format": "Battery capacity {capacity}%\n{timeTo}",
         "interval": 120,
         "states": {
-            "warning": 20,
-            "critical": 10
+            "warning": 20
         }
     }
 }

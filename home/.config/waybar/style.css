@@ -131,6 +131,10 @@ tooltip {
     color : @catppuccin-yellow;
 }
 
+#battery.warning {
+    color : @catppuccin-red;
+}
+
 /*
  * Bluetooth
  */
@@ -195,11 +199,11 @@ tooltip {
  * Network.
  */
 #network {
-    color : @catppuccin-text;
+    color : @catppuccin-sky;
 }
 
 #network:hover {
-    box-shadow : inset 0px -3px @catppuccin-subtext0;
+    box-shadow : inset 0px -3px @catppuccin-sky;
 }
 
 /*
@@ -229,12 +233,12 @@ tooltip {
  * Wireplumber.
  */
 #wireplumber {
-    color : @catppuccin-text;
+    color : @catppuccin-teal;
 }
 
 #wireplumber:hover {
     border-radius : 0px;
-    box-shadow    : inset 0px -3px @catppuccin-subtext0;
+    box-shadow    : inset 0px -3px @catppuccin-teal;
 }
 
 /*
