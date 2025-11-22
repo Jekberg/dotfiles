@@ -32,11 +32,13 @@ window {
 }
 
 button {
+    background : transparent;
     box-shadow : none;
     border     : none;
 }
 
 label {
+    all        : unset;
     color      : $catppuccin-text;
     border     : none;
     box-shadow : none;
@@ -44,13 +46,6 @@ label {
 
 .control-panel {
     padding : 16px 16px 16px 16px;
-}
-
-.logout-btn {
-    background    : transparent;
-    label {
-        color     : $catppuccin-red;
-    }
 }
 
 .notify-btn {
@@ -206,5 +201,57 @@ label {
             background    : $catppuccin-overlay0;
             min-height    : inherit;
         }
+    }
+}
+
+.tools {
+    .logout label {
+        color : $catppuccin-red;
+    }
+
+    .screenshot label {
+        color : $catppuccin-teal;
+    }
+
+    .colour-picker label {
+        color : $catppuccin-rosewater;
+    }
+
+    .move label {
+        color : $catppuccin-yellow;
+    }
+
+    .resize label {
+        color : $catppuccin-mauve;
+    }
+
+    .kill label {
+        color : $catppuccin-maroon;
+    }
+}
+
+.shortcuts {
+    .terminal label {
+        color : $catppuccin-green;
+    }
+
+    .file-manager label {
+        color : $catppuccin-flamingo;
+    }
+
+    .office label {
+        color : $catppuccin-teal;
+    }
+
+    .email label {
+        color : $catppuccin-lavender;
+    }
+
+    .browser label {
+        color : $catppuccin-sky;
+    }
+
+    .passwords label {
+        color : $catppuccin-yellow;
     }
 }

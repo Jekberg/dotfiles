@@ -9,12 +9,6 @@
             :orientation "h"
             :space-evenly false
             (button
-                :class "logout-btn"
-                :halign "center"
-                :valign "center"
-                :onclick '~/.local/bin/power-menu.sh'
-                (label :text ""))
-            (button
                 :class "notify-btn"
                 :halign "center"
                 :valign "center"

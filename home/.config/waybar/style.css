@@ -222,7 +222,7 @@ tooltip {
  * Submap.
  */
 #submap {
-    color         : @catppuccin-text;
+    color         : @catppuccin-subtext0;
 }
 
 #submap:hover {

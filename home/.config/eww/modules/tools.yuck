@@ -1,0 +1,51 @@
+(defwidget tools []
+    (box
+        :class "tools"
+        :valign "start"
+        :orientation "v"
+        (_logout)
+        (_screenshot)
+        (_colourpicker)
+        (_submap
+            :class "move"
+            :name "Move"
+            :icon ""
+            :smap "move")
+        (_submap
+            :class "resize"
+            :name "Resize"
+            :icon ""
+            :smap "resize")
+        (_submap
+            :class "kill"
+            :name "Kill"
+            :icon ""
+            :smap "kill")))
+
+(defwidget _logout []
+    (button
+        :class "logout"
+        :tooltip "Logout"
+        :onclick '~/.local/bin/power-menu.sh'
+        (label :text "")))
+
+(defwidget _screenshot []
+    (button
+        :class "screenshot"
+        :tooltip "Screenshot"
+        :onclick `scripts/screenshot.sh`
+        (label :text "")))
+
+(defwidget _colourpicker []
+    (button
+        :class "colour-picker"
+        :tooltip "Colour picker"
+        :onclick `hyprpicker -a &`
+        (label :text "")))
+
+(defwidget _submap [?class name icon smap]
+    (button
+        :class "${class}"
+        :tooltip "${name}"
+        :onclick `hyprctl dispatch submap ${smap}`
+        (label :text "${icon}")))

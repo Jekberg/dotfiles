@@ -1,0 +1,43 @@
+(defwidget shortcuts [?valign]
+    (box
+        :class "shortcuts"
+        :valign "${valign}"
+        :space-evenly false
+        :orientation "v"
+        (_applauncher
+            :class "terminal"
+            :name "Terminal"
+            :icon ""
+            :exec "alacritty")
+        (_applauncher
+            :class "file-manager"
+            :name "File Manager"
+            :icon ""
+            :exec "thunar")
+        (_applauncher
+            :class "office"
+            :name "Office"
+            :icon ""
+            :exec "libreoffice")
+        (_applauncher
+            :class "email"
+            :name "Email"
+            :icon ""
+            :exec "thunderbird")
+        (_applauncher
+            :class "browser"
+            :name "Browser"
+            :icon ""
+            :exec "firefox")
+        (_applauncher
+            :class "passwords"
+            :name "Passwords"
+            :icon ""
+            :exec "bitwarden-desktop-bin")))
+
+(defwidget _applauncher [?class name icon exec]
+    (button
+        :class "${class}"
+        :tooltip name
+        :onclick `${exec} &`
+        (label :text icon)))

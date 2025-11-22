@@ -1,6 +1,8 @@
+(include "modules/apps.yuck")
 (include "modules/player.yuck")
 (include "modules/volume.yuck")
 (include "modules/stats.yuck")
+(include "modules/tools.yuck")
 (include "settings.yuck")
 
 (defwindow control-panel
@@ -25,3 +27,20 @@
             (settings)
             (player)
             (sysstats))))
+
+(defwindow sidebar-menu
+    :monitor 0
+    :exclusive true
+    :stacking "fg"
+    :geometry (geometry
+        :x "8px"
+        :y "0px"
+        :width "32px"
+        :height "90%"
+        :anchor "left center")
+    (box
+        :orientation "v"
+        (tools
+            :valign "start")
+        (shortcuts
+            :valign "end")))
