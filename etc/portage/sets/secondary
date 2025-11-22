@@ -39,6 +39,7 @@ net-wireless/blueman
 sys-auth/hyprpolkitagent
 sys-fs/udiskie
 sys-process/nvtop
+www-client/chromium
 www-client/firefox
 www-client/google-chrome
 xfce-base/thunar
