@@ -24,7 +24,7 @@ PKGDIR="/var/cache/binpkgs"
 PORTAGE_TMPDIR="/var/tmp"
 PORTAGE_NICENESS=2
 
-MAKEOPTS="-j ${JOBS_MAKE} -l ${LAVG_MAKE}"
+MAKEOPTS="-j${JOBS_MAKE} -l${LAVG_MAKE}"
 
 ifdef(CFG_FLAG_MACH, `', `define(CFG_FLAG_MACH, native)')dnl
 ifdef(CFG_FLAG_OLVL, `', `define(CFG_FLAG_OLVL, -O2)')dnl
