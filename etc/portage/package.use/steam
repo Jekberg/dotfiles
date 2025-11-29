@@ -44,6 +44,7 @@ media-libs/freetype            ABI_X86: 32
 media-libs/glu                 ABI_X86: 32
 media-libs/harfbuzz            ABI_X86: 32
 media-libs/lcms                ABI_X86: 32
+media-libs/libdisplay-info     ABI_X86: 32
 media-libs/libepoxy            ABI_X86: 32
 media-libs/libglvnd            ABI_X86: 32
 media-libs/libjpeg-turbo       ABI_X86: 32
