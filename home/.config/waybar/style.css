@@ -261,13 +261,19 @@ tooltip {
 }
 
 #workspaces button.active {
-    color      : @catppuccin-lavender;
-    box-shadow : inset 0px -3px @catppuccin-lavender;
-    padding    : 0px 4px 0px 4px;
+    background    : @catppuccin-lavender;
+    border-radius : 8px;
+    color         : @catppuccin-base;
+    box-shadow    : inset 0px -3px @catppuccin-lavender;
+    padding       : 0px 4px 0px 4px;
 }
 
 #workspaces button.active.empty {
-    color : @catppuccin-lavender;
+    color : @catppuccin-base;
+}
+
+#workspaces button.active:hover {
+    box-shadow : none;
 }
 
 #workspaces button.active.empty:hover {
