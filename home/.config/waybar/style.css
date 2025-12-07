@@ -184,9 +184,9 @@ tooltip {
 }
 
 #custom-control:hover {
-    box-shadow : inset 0px -3px @catppuccin-flamingo;
+    color      : @catppuccin-base;
+    background : @catppuccin-flamingo;
 }
-
 
 /*
  * Logo.
