@@ -1,3 +1,5 @@
+*/*                           LLVM_SLOT: -* 21
+dev-lang/python               LLVM_SLOT: *
 llvm-core/clang-common        default-lld
 llvm-core/clang-runtime       default-lld
 llvm-core/clang-linker-config default-lld
