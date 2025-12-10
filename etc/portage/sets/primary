@@ -31,6 +31,7 @@ llvm-core/lldb
 net-misc/chrony
 net-misc/networkmanager
 sys-apps/dtc
+sys-apps/lshw
 sys-devel/gcc
 sys-fs/dosfstools
 sys-fs/e2fsprogs
