@@ -30,6 +30,10 @@ dev-qt/qtgui                  egl
 kde-frameworks/kguiaddons     -X
 kde-frameworks/kwindowsystem  -X
 kde-frameworks/sonnet         qml
+llvm-core/clang-common        default-lld
+llvm-core/clang-runtime       default-lld
+llvm-core/clang-linker-config default-lld
+llvm-runtimes/clang-runtime   default-lld
 gui-apps/eww                  -X
 gui-apps/rofi-wayland         windowmode
 gui-apps/waybar               tray pipewire network
@@ -58,6 +62,9 @@ net-wireless/wpa_supplicant   dbus
 sys-apps/groff                -X
 sys-apps/systemd              policykit
 sys-fs/lvm2                   lvm
+sys-kernel/installkernel      dracut grub
+sys-kernel/linux-firmware     savedconfig
+sys-kernel/gentoo-kernel      savedconfig
 sys-libs/zlib                 minizip
 www-client/chromium           -X -rar
 www-client/firefox            -X hwaccel pgo
