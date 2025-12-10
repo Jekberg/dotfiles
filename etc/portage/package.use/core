@@ -1,13 +1,12 @@
 */*                           systemd udev dbus multilib dist-kernel wayland
 */*                           X qt6 icu opengl vulkan pulseaudio pipewire
-*/*                           bluetooth gamepad
+*/*                           bluetooth gamepad clang
 */*                           -kde -gnome -qt5 -test -telemetry
 app-crypt/gcr                 gtk
 app-crypt/pinentry            -X
 app-emulation/libvirt         policykit
 app-emulation/qemu            -X spice virgl
 app-emulation/virt-manager    gui policykit
-app-office/libreoffice        clang
 app-text/xmlto                text
 app-text/poppler              cairo
 app-misc/cmatrix              -X
@@ -38,7 +37,7 @@ gui-apps/eww                  -X
 gui-apps/rofi-wayland         windowmode
 gui-apps/waybar               tray pipewire network
 gui-wm/hyprland               systemd
-mail-client/thunderbird       -X clang hwaccel
+mail-client/thunderbird       -X hwaccel
 media-fonts/fontawesome       ttf
 media-libs/babl               introspection lcms
 media-libs/freetype           harfbuzz
