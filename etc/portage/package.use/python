@@ -1,0 +1,8 @@
+*/*                        PYTHON_TARGETS: -* python3_13 python3_14
+*/*                        PYTHON_SINGLE_TARGET: -* python3_14
+app-emulation/virt-manager PYTHON_SINGLE_TARGET: -* python3_13
+app-misc/piper             PYTHON_SINGLE_TARGET: -* python3_13
+app-office/libreoffice     PYTHON_SINGLE_TARGET: -* python3_13
+dev-libs/libratbag         PYTHON_SINGLE_TARGET: -* python3_13
+dev-util/pahole            PYTHON_SINGLE_TARGET: -* python3_13
+games-util/mangohud        PYTHON_SINGLE_TARGET: -* python3_13

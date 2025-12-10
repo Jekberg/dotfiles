@@ -1,9 +1,7 @@
 app-accessibility/at-spi2-core ABI_X86: 32
 app-arch/bzip2                 ABI_X86: 32
 app-arch/lz4                   ABI_X86: 32
-app-arch/xz-utils              ABI_X86: 32
 app-arch/zstd                  ABI_X86: 32
-app-crypt/p11-kit              ABI_X86: 32
 dev-db/sqlite                  ABI_X86: 32
 dev-lang/rust-bin              ABI_X86: 32
 dev-libs/dbus-glib             ABI_X86: 32

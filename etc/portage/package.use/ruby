@@ -1,0 +1,2 @@
+*/*                            RUBY_TARGETS: -* ruby34
+app-shells/zsh-autosuggestions RUBY_TARGETS: -* ruby32
