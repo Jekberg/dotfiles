@@ -57,6 +57,7 @@ media-libs/mesa                ABI_X86: 32
 media-libs/openal              ABI_X86: 32
 media-libs/opus                ABI_X86: 32
 media-libs/tiff                ABI_X86: 32
+media-libs/vulkan-loader       ABI_X86: 32
 media-sound/lame               ABI_X86: 32
 media-sound/mpg123-base        ABI_X86: 32
 media-video/pipewire           ABI_X86: 32
