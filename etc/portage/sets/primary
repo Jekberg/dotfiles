@@ -37,5 +37,7 @@ sys-fs/dosfstools
 sys-fs/e2fsprogs
 sys-fs/lvm2
 sys-fs/xfsprogs
+sys-process/btop
 sys-process/htop
 x11-misc/xdg-user-dirs
+x11-themes/catppuccin-btop
