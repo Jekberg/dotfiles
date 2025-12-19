@@ -28,7 +28,6 @@ kde-frameworks/kguiaddons     -X
 kde-frameworks/kwindowsystem  -X
 kde-frameworks/sonnet         qml
 llvm-core/clang-common        default-lld
-llvm-core/clang-runtime       default-lld
 llvm-core/clang-linker-config default-lld
 llvm-runtimes/clang-runtime   default-lld
 gui-apps/eww                  -X
