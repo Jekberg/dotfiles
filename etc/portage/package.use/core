@@ -1,6 +1,6 @@
 */*                           systemd udev dbus multilib dist-kernel wayland
 */*                           X qt6 icu opengl vulkan pulseaudio pipewire
-*/*                           bluetooth gamepad clang
+*/*                           bluetooth gamepad clang dri vaapi vdpau
 */*                           -kde -gnome -qt5 -test -telemetry
 app-crypt/gcr                 gtk
 app-crypt/pinentry            -X
@@ -42,7 +42,6 @@ media-libs/gegl               introspection cairo lcms
 media-libs/libcanberra        alsa
 media-libs/libvpx             postproc
 media-libs/libsdl2            gles2
-media-libs/mesa               vaapi vdpau
 media-libs/tiff               jpeg
 media-libs/virglrenderer      -X
 media-sound/pavucontrol       sound
