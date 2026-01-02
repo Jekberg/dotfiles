@@ -10,7 +10,7 @@
     /*
      * Generic and general.
      */
-    "layer": "bottom",
+    "layer": "top",
     "position": "top",
     "spacing": 16,
     "fixed-center": true,
