@@ -1,6 +1,6 @@
 */*                           systemd udev dbus multilib dist-kernel wayland
 */*                           X qt6 icu opengl vulkan pulseaudio pipewire
-*/*                           bluetooth gamepad clang dri vaapi vdpau
+*/*                           bluetooth gamepad clang dri vaapi vdpau zstd
 */*                           -kde -gnome -qt5 -test -telemetry
 app-crypt/gcr                 gtk
 app-crypt/pinentry            -X
