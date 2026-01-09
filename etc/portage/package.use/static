@@ -14,3 +14,4 @@ sys-libs/gdbm      static-libs
 sys-libs/ncurses   static-libs
 sys-libs/zlib      static-libs
 virtual/acl        static-libs
+virtual/zlib       static-libs
