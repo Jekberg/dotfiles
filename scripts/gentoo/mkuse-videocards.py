@@ -6,6 +6,7 @@
 import subprocess
 
 detect_videocards_comm = ['scripts/gentoo/detect-videocards.sh']
+generic_videocards = ['amdgpu', 'radeonsi', 'radeon', 'intel', 'nouveau', 'virgl']
 
 def main():
     useflags = select_videocards_useflags()
@@ -15,10 +16,11 @@ def select_videocards_useflags():
     output = str()
     result = subprocess.run(detect_videocards_comm, capture_output=True)
     result.check_returncode()
-    videocards = [videocard for videocard in result.stdout.decode('UTF-8').splitlines()]
+    videocards = [videocard for videocard in result.stdout.decode('UTF-8').splitlines()] or generic_videocards
 
     lines = []
     lines.append(('*/*', '-* ' + ' '.join(videocards)))
+
     if 'radeonsi' in videocards and 'radeon' not in videocards:
         # When it updating with radeonsi set but not radeon, libdrm fails to
         # build. The solution seems to be to add the radeon videocard option.
