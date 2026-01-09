@@ -14,20 +14,23 @@ then
     exit
 fi
 
-# Bootstrap some early packages which will be required.
-MAKEOPTS="-j$(nproc)"                      \
-uSE="default-ldd"                          \
-emerge -1uq app-eselect/eselect-repository \
-            app-portage/cpuid2cpuflags     \
-            llvm-core/clang
+# Packages which must be installed before we configure portage
+# to correctly bootstrap the actual installation.
+PKGS=("app-portage/cpuid2cpuflags"
+      "dev-lang/rust-bin"
+      "dev-vcs/git"
+      "llvm-core/clang"
+      "sys-apps/lshw"
+     )
 
-# Configure portage
-eselect repository enable guru
-emaint sync -r guru
-cp -r etc/portage /etc/
-echo "*/* $(cpuid2cpuflags)" > /etc/portage/package.use/cpuflags
-m4 m4/make.conf.m4 > /etc/portage/make.conf
+echo "Installing pakcages required for bootstrapping the system" > /dev/stderr
+MAKEOPTS="-j$(nproc)"     \
+USE="default-ldd"         \
+emerge --ignore-default-opts -1uq "${PKGS[@]}"
 
+scripts/gentoo/configure-portage.sh
+
+echo "Install..." > /dev/stderr
 # Do the main installation and cleanup
-emerge -uqDN --ignore-default-opts @primary
-emerge --depclean --ignore-default-opts
+emerge --ignore-default-opts -uqDN @primary @secondary
+emerge --ignore-default-opts --depclean

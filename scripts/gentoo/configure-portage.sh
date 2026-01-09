@@ -18,16 +18,6 @@ then
     exit 1
 fi
 
-# Packages needed to setup portage
-#
-# - app-portage/cpuid2cpuflags helps set the cpuflags
-# - dev-vcs/git is required to sync repos
-# - sys-apps/lshw is needed to detect hardware
-PACKAGES=("app-portage/cpuid2cpuflags"
-          "dev-vcs/git"
-          "sys-apps/lshw"
-         )
-
 # Directoreis in the PORTAGE_DIR which should exits.
 DIRS=("env/"
       "repos.conf/"
@@ -62,10 +52,6 @@ M4=("make.conf.m4"
     "package.use/videocards.m4"
    )
 
-
-echo "[PKG]  ${PACKAGES[@]}"
-MAKEOPTS="-j$(nproc)"                            \
-emerge --ignore-default-opts -1uq ${PACKAGES[@]}
 
 for path in ${DIRS[@]}
 do
