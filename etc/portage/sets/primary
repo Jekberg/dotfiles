@@ -8,6 +8,7 @@ app-misc/lf
 app-misc/figlet
 app-misc/sl
 app-misc/tmux
+app-portage/cpuid2cpuflags
 app-portage/eix
 app-shells/zsh
 app-shells/gentoo-zsh-completions
