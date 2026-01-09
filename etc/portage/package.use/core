@@ -51,6 +51,7 @@ net-dns/dnsmasq               script
 net-im/discord                appindicator
 net-libs/gnutls               tools pkcs11
 net-misc/spice-gtk            usbredir
+net-print/cups                -X
 net-wireless/wpa_supplicant   dbus
 sys-apps/groff                -X
 sys-apps/systemd              policykit
