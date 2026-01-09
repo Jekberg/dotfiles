@@ -7,7 +7,8 @@
 hw_to_videocards() {
     local description=$(cat /dev/stdin)
     case $description in
-        "Navi 31 [Radeon RX 7900 XT/7900 XTX/7900 GRE/7900M]")
+        "Navi 31 [Radeon RX 7900 XT/7900 XTX/7900 GRE/7900M]"| \
+        "Phoenix1")
             echo "amdgpu"
             echo "radeonsi"
             ;;
