@@ -84,9 +84,8 @@
  */
 #apps,
 #util,
-#clock,
 #status,
-#custom-control {
+#system {
     background    : @catppuccin-base;
     border-radius : 8px;
     border        : solid 2px @catppuccin-surface0;

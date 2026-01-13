@@ -35,9 +35,8 @@
     "modules-center": [
     ],
     "modules-right": [
-        "clock",
         "group/status",
-        "custom/control"
+        "group/system"
     ],
 
     /*
@@ -64,13 +63,20 @@
     "group/status": {
         "orientation": "inherit",
         "modules": [
-            "hyprland/language",
             "idle_inhibitor",
             "custom/notifications",
             "wireplumber",
             "network",
             "bluetooth",
             "battery"
+        ]
+    },
+    "group/system": {
+        "orientation": "inherit",
+        "modules": [
+            "hyprland/language",
+            "clock",
+            "custom/control"
         ]
     },
 
