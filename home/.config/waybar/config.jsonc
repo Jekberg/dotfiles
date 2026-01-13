@@ -30,7 +30,6 @@
      */
     "modules-left": [
         "group/util",
-        "hyprland/workspaces",
         "group/apps"
     ],
     "modules-center": [
@@ -51,6 +50,7 @@
         "orientation": "inherit",
         "modules": [
             "custom/logo",
+            "hyprland/workspaces",
             "hyprland/submap"
         ]
     },
