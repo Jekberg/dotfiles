@@ -49,8 +49,7 @@
         "orientation": "inherit",
         "modules": [
             "custom/logo",
-            "hyprland/workspaces",
-            "hyprland/submap"
+            "hyprland/workspaces"
         ]
     },
     "group/apps": {
@@ -63,6 +62,7 @@
     "group/status": {
         "orientation": "inherit",
         "modules": [
+            "hyprland/submap",
             "idle_inhibitor",
             "custom/notifications",
             "wireplumber",
