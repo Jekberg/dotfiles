@@ -82,11 +82,10 @@
 /*
  * The fist module will be displayed with background.
  */
+#apps,
 #util,
 #workspaces,
-#window,
 #clock,
-#tray,
 #status,
 #custom-control {
     background    : @catppuccin-base;

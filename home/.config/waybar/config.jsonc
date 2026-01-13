@@ -31,10 +31,9 @@
     "modules-left": [
         "group/util",
         "hyprland/workspaces",
-        "tray"
+        "group/apps"
     ],
     "modules-center": [
-        "hyprland/window"
     ],
     "modules-right": [
         "clock",
@@ -53,6 +52,13 @@
         "modules": [
             "custom/logo",
             "hyprland/submap"
+        ]
+    },
+    "group/apps": {
+        "orientation": "inherit",
+        "modules": [
+            "tray",
+            "hyprland/window"
         ]
     },
     "group/status": {
