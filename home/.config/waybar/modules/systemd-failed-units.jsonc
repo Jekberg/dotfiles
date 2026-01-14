@@ -1,0 +1,8 @@
+{
+    "systemd-failed-units": {
+        "format": "",
+        "system": true,
+        "user": true,
+        "hide-on-ok": true
+    }
+}

@@ -227,6 +227,13 @@ tooltip {
 }
 
 /*
+ * Systemd failed units.
+ */
+#systemd-failed-units {
+    color : @catppuccin-red;
+}
+
+/*
  * Wireplumber.
  */
 #wireplumber {
