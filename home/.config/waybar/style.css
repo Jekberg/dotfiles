@@ -90,7 +90,7 @@
     border-radius : 8px;
     border        : solid 2px @catppuccin-surface0;
     box-shadow    : none;
-    padding       : 2px 8px 2px 8px;
+    padding       : 2px 0px 2px 0px;
 }
 
 /*
@@ -248,6 +248,11 @@ tooltip {
 /*
  * Workspaces.
  */
+#workspaces {
+    margin  : 0px 2px 0px 2px;
+    padding : 0px 0px 0px 0px;
+}
+
 #workspaces button {
     color   : @catppuccin-rosewater;
     padding : 0px 1px 0px 1px;
