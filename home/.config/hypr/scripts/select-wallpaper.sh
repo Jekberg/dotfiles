@@ -12,5 +12,5 @@ WALLPAPER_FILE=$(echo "${WALLPAPERS}" | rofi -dmenu -p "Select wallpaper")
 
 WALLPAPER_PATH="${WALLPAPERS_DIR}/${WALLPAPER_FILE}"
 
-hyprctl hyprpaper reload ,"${WALLPAPER_PATH}" &&
+hyprctl hyprpaper wallpaper ,"${WALLPAPER_PATH}" &&
     echo "${WALLPAPER_PATH}" > ~/.cache/selected_wallpaper

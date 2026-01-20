@@ -12,4 +12,4 @@ then
 fi
 
 WALLPAPER_PATH=$(cat ~/.cache/selected_wallpaper)
-[[ -f "${WALLPAPER_PATH}" ]] && hyprctl hyprpaper reload ",${WALLPAPER_PATH}"
+[[ -f "${WALLPAPER_PATH}" ]] && hyprctl hyprpaper wallpaper ",${WALLPAPER_PATH}"
