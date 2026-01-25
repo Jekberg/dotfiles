@@ -27,6 +27,7 @@ dev-libs/tree-sitter-rust
 dev-vcs/git
 dev-util/lua-language-server
 dev-util/perf
+dev-util/xxd
 llvm-core/clang
 llvm-core/lldb
 net-misc/chrony
