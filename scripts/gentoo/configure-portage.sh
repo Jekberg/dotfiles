@@ -52,6 +52,9 @@ M4=("make.conf.m4"
     "package.use/videocards.m4"
    )
 
+# The enabled repos should are automatically detected.
+REPOS=$(portageq get_repos / | xargs -n1 | grep -vxF gentoo | xargs)
+
 
 for path in ${DIRS[@]}
 do
@@ -77,11 +80,5 @@ do
     m4 m4/${path} > ${PORTAGE_DIR}/${path%.m4}
 done
 
-for repo in $(portageq get_repos /)
-do
-    if [[ "${repo}" != "gentoo" ]]
-    then
-        emaint sync -r "${repo}"
-    fi
-done
-
+echo "Syncing ${REPOS[@]}"
+echo "${REPOS[@]}" | xargs -n1 echo -r | xargs emaint sync
