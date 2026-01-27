@@ -1,8 +1,0 @@
-{
-    "custom/power": {
-        "format" : "⏻",
-        "tooltip": true,
-        "tooltip-format": "Logout and reboot options",
-        "on-click": "~/.local/bin/power-menu.sh"
-    }
-}

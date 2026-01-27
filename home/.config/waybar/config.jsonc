@@ -93,7 +93,6 @@
         "~/.config/waybar/modules/logo.jsonc",
         "~/.config/waybar/modules/network.jsonc",
         "~/.config/waybar/modules/notifications.jsonc",
-        "~/.config/waybar/modules/power.jsonc",
         "~/.config/waybar/modules/submap.jsonc",
         "~/.config/waybar/modules/systemd-failed-units.jsonc",
         "~/.config/waybar/modules/tray.jsonc",
