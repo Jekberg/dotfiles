@@ -43,6 +43,7 @@
  * override or expand on the styling.
  */
 * {
+    all                 : unset;
     background          : transparent;
     border-radius       : 0px;
     font-family         : FontAwesome, Roboto, 'monospace';
@@ -261,8 +262,10 @@ tooltip {
 }
 
 #workspaces button {
-    color   : @catppuccin-rosewater;
-    padding : 0px 1px 0px 1px;
+    color         : @catppuccin-rosewater;
+    min-width     : 16px;
+    padding       : 0px 1px 0px 1px;
+    transition    : all ease-in-out 0.2s;
 }
 
 #workspaces button:hover {
@@ -274,7 +277,9 @@ tooltip {
     border-radius : 8px;
     color         : @catppuccin-base;
     box-shadow    : inset 0px -3px @catppuccin-lavender;
+    min-width     : 32px;
     padding       : 0px 4px 0px 4px;
+    transition    : all ease-in-out 0.2s;
 }
 
 #workspaces button.active.empty {
