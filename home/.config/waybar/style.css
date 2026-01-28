@@ -258,6 +258,7 @@ tooltip {
  */
 #workspaces {
     margin  : 0px 2px 0px 2px;
+    min-width: 200px;
     padding : 0px 0px 0px 0px;
 }
 
@@ -278,7 +279,7 @@ tooltip {
     color         : @catppuccin-base;
     box-shadow    : inset 0px -3px @catppuccin-lavender;
     min-width     : 32px;
-    padding       : 0px 4px 0px 4px;
+    padding       : 0px 0px 0px 0px;
     transition    : all ease-in-out 0.2s;
 }
 
