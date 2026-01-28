@@ -29,14 +29,17 @@
      * the module I want in the centre gets pushed off centre.
      */
     "modules-left": [
-        "group/util",
-        "group/apps"
+        "custom/logo",
+        "group/current",
+        "hyprland/submap"
     ],
     "modules-center": [
+        "hyprland/window"
     ],
     "modules-right": [
-        "group/status",
-        "group/system"
+        "group/environ",
+        "group/system",
+        "custom/control"
     ],
 
     /*
@@ -45,38 +48,29 @@
      * Keeping the groups in the same file as the left, right and centre
      * modules makes it easier to organise modules.
      */
-    "group/util": {
+    "group/current": {
         "orientation": "inherit",
         "modules": [
-            "custom/logo",
-            "hyprland/workspaces"
+            "hyprland/workspaces",
+            "tray"
         ]
     },
-    "group/apps": {
+    "group/environ": {
         "orientation": "inherit",
         "modules": [
-            "tray",
-            "hyprland/window"
+            "hyprland/language",
+            "clock"
         ]
     },
-    "group/status": {
+    "group/system": {
         "orientation": "inherit",
         "modules": [
-            "hyprland/submap",
             "idle_inhibitor",
             "custom/notifications",
             "wireplumber",
             "network",
             "bluetooth",
             "battery"
-        ]
-    },
-    "group/system": {
-        "orientation": "inherit",
-        "modules": [
-            "hyprland/language",
-            "clock",
-            "custom/control"
         ]
     },
 

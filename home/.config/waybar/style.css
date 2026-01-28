@@ -77,16 +77,6 @@
 .modules-left,
 .modules-center,
 .modules-right {
-    margin : 0px 2px 0px 2px;
-}
-
-/*
- * The fist module will be displayed with background.
- */
-#apps,
-#util,
-#status,
-#system {
     background    : @catppuccin-base;
     border-radius : 8px;
     border        : solid 2px @catppuccin-surface0;
