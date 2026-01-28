@@ -80,5 +80,5 @@ do
     m4 m4/${path} > ${PORTAGE_DIR}/${path%.m4}
 done
 
-echo "Syncing ${REPOS[@]}"
-echo "${REPOS[@]}" | xargs -n1 echo -r | xargs emaint sync
+echo "[REPOS] Syncing... ${REPOS[@]}"
+emerge -v --sync ${REPOS[@]}
