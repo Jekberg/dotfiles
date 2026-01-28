@@ -40,6 +40,11 @@ local lsp_config = {
         filetypes = { 'rust' },
         root_markers = { 'Cargo.toml', 'Cargo.lock' }
     },
+    pylsp = {
+        cmd = { 'pylsp' },
+        filetypes = { 'python' },
+        root_markers = { }
+    }
 }
 
 for k,v in pairs(lsp_config) do
