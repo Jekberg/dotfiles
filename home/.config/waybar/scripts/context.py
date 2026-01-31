@@ -11,17 +11,16 @@ __author__ = 'John Berg'
 
 import json
 import os
+import re
 import select
 import socket
 import sys
 
 def main():
     hyprland = Hyprland()
-    order = [
-                current_submap,
-                current_window,
-                current_workspace
-            ]
+    order = [ current_submap,
+              current_window,
+              current_workspace ]
 
     epoll = select.epoll()
     epoll.register(hyprland.socket_fd(), select.EPOLLIN)
@@ -97,12 +96,10 @@ def current_submap() -> dict:
     submap = submap.strip()
     if submap == 'default':
         return None # Don't show the default submap
-    return {
-            'text': '<b>-- {} --</b>'.format(submap),
-            'alt': 'submap',
-            'tooltip': 'todo',
-            'class': 'submap'
-            }
+    return { 'text': '<b>-- {} --</b>'.format(submap),
+             'alt': 'submap',
+             'tooltip': 'todo',
+             'class': 'submap' }
 
 def current_window() -> dict:
     # The activeworkspace seems better for reporting the active window than
@@ -113,14 +110,27 @@ def current_window() -> dict:
     title = json_obj['lastwindowtitle'] if 'lastwindowtitle' in json_obj else None
     if title is None:
         return None
+
+    simplify = [ (r'(.*) - zsh', r'\1'),
+                 (r'(.*) - Thunar', r'\1'),
+                 (r'(.*) - Discord', r'\1'),
+                 (r'(.*) - Chromium', r'\1'),
+                 (r'(.*) - Google Chrome', r'\1'),
+                 (r'(.*) - Mozilla Thunderbird', r'\1'),
+                 (r'(.*) — Mozilla Firefox', r'\1'),
+                 (r'(.*) — LibreOffice (.*)', r'\1')]
+    for regex, template in simplify:
+        match = re.match(regex, title)
+        if match:
+            title = match.expand(template)
+            break
+
     if title == '':
         return None # Don't show, not intetesting
-    return {
-            'text': title,
-            'alt': 'window',
-            'tooltip': 'todo',
-            'class': 'window'
-            }
+    return { 'text': title,
+             'alt': 'window',
+             'tooltip': 'todo',
+             'class': 'window' }
 
 def current_workspace() -> dict:
     result = Hyprland.command('j/activeworkspace')
@@ -129,12 +139,10 @@ def current_workspace() -> dict:
     if name is None:
         return None
 
-    return {
-            'text': '<i>workspace {}</i>'.format(name),
-            'alt': 'workspace',
-            'tooltip': 'todo',
-            'class': 'workspace'
-            }
+    return { 'text': '<i>workspace {}</i>'.format(name),
+             'alt': 'workspace',
+             'tooltip': 'todo',
+             'class': 'workspace' }
 
 if __name__ == '__main__':
     main()
