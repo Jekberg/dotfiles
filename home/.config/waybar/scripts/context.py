@@ -15,15 +15,26 @@ import re
 import select
 import socket
 import sys
+import subprocess
+
+text_maxlen = 64
+playerctl_comm = [ 'playerctl',
+                   '-F',
+                   '--format="{{status}} {{title}}"',
+                   'metadata']
 
 def main():
     hyprland = Hyprland()
+    playerctl_proc = subprocess.Popen(playerctl_comm, stdout=subprocess.PIPE)
+
     order = [ current_submap,
+              current_player,
               current_window,
               current_workspace ]
 
     epoll = select.epoll()
     epoll.register(hyprland.socket_fd(), select.EPOLLIN)
+    epoll.register(playerctl_proc.stdout.fileno(), select.EPOLLIN)
 
     while True:
         output = None
@@ -40,12 +51,15 @@ def main():
         #
         # Right now, we don't actually consume the event, we just use this to
         # detect if there has been any state changes.
-        epoll.poll()
-        hyprland.fetch_events()
+        fds = [fd for fd, evt in epoll.poll()]
+        if hyprland.socket_fd() in fds:
+            hyprland.fetch_events()
+        if playerctl_proc.stdout.fileno() in fds:
+            playerctl_proc.stdout.readline()
 
 class Hyprland:
     '''
-    This class is a wrapper for interacting with Hyprland via IPC. 
+    This class is a wrapper for interacting with Hyprland via IPC.
     '''
 
     instance = os.getenv('HYPRLAND_INSTANCE_SIGNATURE')
@@ -68,6 +82,7 @@ class Hyprland:
                 break # This seems like an unexpected exit
             buffer += result
 
+        print(buffer.decode('UTF-8'))
         return buffer.decode('UTF-8')
 
     def socket_fd(self):
@@ -85,6 +100,41 @@ class Hyprland:
                     break
                 buffer += result
         return buffer.decode('UTF-8')
+
+def current_submap() -> dict:
+    # The j/ flag should give us back JSON, but the python json parser does not
+    # accept it. But it is trivial to parse the raw submap output.
+    submap = Hyprland.command('/submap')
+    if submap is None:
+        return None # Unlikely but just in case
+
+    submap = submap.strip()
+    if submap == 'default':
+        return None # Don't show the default submap
+    return { 'text': '<b>-- {} --</b>'.format(submap),
+             'alt': 'submap',
+             'tooltip': 'todo',
+             'class': 'submap' }
+
+def current_player():
+    result = subprocess.run([ 'playerctl',
+                              '--format={{status}} - {{title}}',
+                              'metadata'],
+                            capture_output=True)
+    if result.returncode != 0:
+        return None
+    match = re.match(r'Playing - (.*)', result.stdout.decode('UTF-8'))
+    if match is None:
+        return None
+
+    player = '  <i>{}</i> '.format(match.expand(r'\1'));
+    if len(player) >= text_maxlen:
+        return None
+    print(len(player))
+    return { 'text': player,
+             'alt': 'player',
+             'tooltip': 'todo',
+             'class': 'player' }
 
 def current_submap() -> dict:
     # The j/ flag should give us back JSON, but the python json parser does not
@@ -125,6 +175,8 @@ def current_window() -> dict:
             title = match.expand(template)
             break
 
+    if len(title) > text_maxlen:
+        return None
     if title == '':
         return None # Don't show, not intetesting
     return { 'text': title,

@@ -148,6 +148,10 @@ tooltip {
     color : @catppuccin-subtext0;
 }
 
+#custom-context.player {
+    color : @catppuccin-teal;
+}
+
 #custom-context.window {
     color : @catppuccin-text;
 }
