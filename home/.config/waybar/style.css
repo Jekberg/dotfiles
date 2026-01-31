@@ -142,25 +142,6 @@ tooltip {
 }
 
 /*
- * Context
- */
-#custom-context {
-    color : @catppuccin-subtext0;
-}
-
-#custom-context.player {
-    color : @catppuccin-teal;
-}
-
-#custom-context.window {
-    color : @catppuccin-text;
-}
-
-#custom-context.submap {
-    color : @catppuccin-flamingo;
-}
-
-/*
  * Idle inhibitor.
  */
 #idle_inhibitor {
@@ -225,8 +206,23 @@ tooltip {
     box-shadow : inset 0px -3px @catppuccin-subtext0;
 }
 
-#submap:hover {
-    box-shadow : inset 0px -3px @catppuccin-subtext0;
+/*
+ * Overview
+ */
+#custom-overview {
+    color : @catppuccin-subtext0;
+}
+
+#custom-overview.player {
+    color : @catppuccin-teal;
+}
+
+#custom-overview.window {
+    color : @catppuccin-text;
+}
+
+#custom-overview.submap {
+    color : @catppuccin-flamingo;
 }
 
 /*
