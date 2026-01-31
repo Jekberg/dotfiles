@@ -82,7 +82,6 @@ class Hyprland:
                 break # This seems like an unexpected exit
             buffer += result
 
-        print(buffer.decode('UTF-8'))
         return buffer.decode('UTF-8')
 
     def socket_fd(self):
