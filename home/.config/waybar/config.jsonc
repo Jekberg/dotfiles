@@ -30,11 +30,10 @@
      */
     "modules-left": [
         "custom/logo",
-        "group/current",
-        "hyprland/submap"
+        "group/current"
     ],
     "modules-center": [
-        "hyprland/window"
+        "custom/context"
     ],
     "modules-right": [
         "group/environ",
@@ -81,17 +80,16 @@
         "~/.config/waybar/modules/battery.jsonc",
         "~/.config/waybar/modules/bluetooth.jsonc",
         "~/.config/waybar/modules/clock.jsonc",
+        "~/.config/waybar/modules/context.jsonc",
         "~/.config/waybar/modules/control.jsonc",
         "~/.config/waybar/modules/idle_inhibitor.jsonc",
         "~/.config/waybar/modules/language.jsonc",
         "~/.config/waybar/modules/logo.jsonc",
         "~/.config/waybar/modules/network.jsonc",
         "~/.config/waybar/modules/notifications.jsonc",
-        "~/.config/waybar/modules/submap.jsonc",
         "~/.config/waybar/modules/systemd-failed-units.jsonc",
         "~/.config/waybar/modules/tray.jsonc",
         "~/.config/waybar/modules/wireplumber.jsonc",
-        "~/.config/waybar/modules/window.jsonc",
         "~/.config/waybar/modules/workspaces.jsonc"
     ]
 }

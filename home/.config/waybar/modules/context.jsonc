@@ -1,0 +1,21 @@
+/*
+ * This module displays information depending on current context.
+ *
+ * For example, if a submap is active this information will be displayed.
+ * Otherwise, the current window might be displayed or the workspace. More
+ * relevent information takes precedence.
+ *
+ * NOTE: The context.py script runs continiously, when new information updates
+ *       it writes a new line. The way waybar decides to run a scrips seem to
+ *       depend on the module configuration. We rely on this module being a
+ *       "continious worker" but there is seemingly no direct way to tell
+ *       waybar that this is what we want.
+ */
+{
+    "custom/context": {
+        "format": "{}",
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/context.py",
+        "tooltip": false /* TODO */
+    }
+}
