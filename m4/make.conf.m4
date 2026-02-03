@@ -24,6 +24,9 @@ PKGDIR="/var/cache/binpkgs"
 PORTAGE_TMPDIR="/var/tmp"
 PORTAGE_NICENESS=2
 
+PORTAGE_COMPRESS="zstd"
+BINPKG_COMPRESS="zstd"
+
 MAKEOPTS="-j${JOBS_MAKE} -l${LAVG_MAKE}"
 
 ifdef(CFG_FLAG_MACH, `', `define(CFG_FLAG_MACH, native)')dnl
