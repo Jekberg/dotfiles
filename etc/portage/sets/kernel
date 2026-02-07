@@ -4,8 +4,8 @@ dev-python/zstandard
 sys-apps/kexec-tools
 sys-boot/grub
 sys-kernel/dracut
-sys-kernel/gentoo-kernel
-sys-kernel/gentoo-sources
 sys-kernel/installkernel
 sys-kernel/linux-firmware
 sys-kernel/modprobed-db
+sys-kernel/vanilla-kernel
+sys-kernel/vanilla-sources

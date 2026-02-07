@@ -58,7 +58,7 @@ sys-apps/systemd              policykit
 sys-fs/lvm2                   lvm
 sys-kernel/installkernel      dracut grub
 sys-kernel/linux-firmware     savedconfig
-sys-kernel/gentoo-kernel      savedconfig
+sys-kernel/vanilla-kernel     savedconfig
 sys-libs/zlib                 minizip
 www-client/chromium           -X -rar
 www-client/firefox            -X hwaccel pgo
